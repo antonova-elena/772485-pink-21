@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Приложение Пинк</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a class="logo__link" href="index.html">
+            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
+          </a>
+        </div>
+        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="nav__wrapper">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html">Главная</a></li>
+            <li class="nav__item"><a>Фотографии</a></li>
+            <li class="nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">Html Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="title">Фотографии пользователей</h1>
+    </header>
+    <main>
+      <section class="photo">
+        <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <ul class="photo__list">
+          <li class="photo__item photo__item--first">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="320" height="137" alt="">
+            <p class="photo__author">Анна <time class="postdate" datetime="2020-11-13T07:00">(5 минут назад)</time></p>
+            <p class="photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе задавайте свои вопросы!</p>
+            <p class="photo__likes">Нравится: 215</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Левон <time class="postdate" datetime="2020-11-13T02:00">(5 часов назад)</time></p>
+            <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photo__likes">Нравится: 356</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Антон <time class="postdate" datetime="2020-11-12T19:00">(12 часов назад)</time></p>
+            <p class="photo__description">Соседи будут рады!</p>
+            <p class="photo__likes">Нравится: 666</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Борис <time class="postdate" datetime="2020-11-12T03:00">(20 часов назад)</time></p>
+            <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <p class="photo__likes">Нравится: 215</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Сергей <time class="postdate" datetime="2020-11-12T06:00">(25 часов назад)</time></p>
+            <p class="photo__description">Самая кубанская в мире!</p>
+            <p class="photo__likes">Нравится: 4</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Максим <time class="postdate" datetime="2020-11-11T03:00">(40 часов назад)</time></p>
+            <p class="photo__description">Где снег-то?</p>
+            <p class="photo__likes">Нравится: 150</p>
+          </li>
+          <li class="photo__item">
+            <img class="photo__picture" src="https://via.placeholder.com/" width="280" height="180" alt="">
+            <p class="photo__author">Надежда <time class="postdate" datetime="2020-11-11T08:00">(45 часов назад)</time></p>
+            <p class="photo__description">Всем GM и взаимные лайки!</p>
+            <p class="photo__likes">Нравится: 2560</p>
+          </li>
+        </ul>
+      </section>
+      <section class="upload">
+        <h2 class="visually-hidden">Загрузить и отредактировать фото</h2>
+        <div class="upload__wrapper">
+          <p class="upload__title">Затмите их всех!</p>
+          <p class="upload__title">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <form class="upload__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label class="upload__label">
+            <input type="file" class="upload__input">
+              <img src="https://via.placeholder.com"  width="280" height="374" alt="">
+          </label>
+          <div class="edit">
+            <div class="edit__filter edit__filter--active">
+              <button class="edit__button--crop" type="button" title="Обрезать"><svg ></svg></button>
+              <div class="edit__range">
+                <div class="edit__scale">
+                  <button class="edit__toggle" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+            <div class="edit__filter">
+              <button class="edit__button--fill" type="button" title="Изменить заливку"><svg></svg></button>
+              <div class="edit__range">
+                <div class="edit__scale">
+                  <button class="edit__toggle" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+            <div class="edit__filter">
+              <button class="edit__button--contrast" type="button" title="Изменить контрастность"><svg></svg></button>
+              <div class="edit__range">
+                <div class="edit__scale">
+                  <button class="edit__toggle" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+            <div class="upload__inner">
+              <button class="upload__button upload__button--post" type="submit">Запостить</button>
+              <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="logo">
+          <img  class="logo-footer" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+            </li>
+            <li class="social__item">
+              <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="copyright__title">Разработано
+            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
