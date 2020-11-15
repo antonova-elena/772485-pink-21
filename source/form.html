@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Приложение Пинк</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a class="logo__link" href="index.html">
+            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
+          </a>
+        </div>
+        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="nav__wrapper">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html">Главная</a></li>
+            <li class="nav__item"><a href="catalog.html">Фотографии</a></li>
+            <li class="nav__item"><a>Конкурс</a></li>
+            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">Html Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </header>
+    <main>
+      <section class="feedback">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="feedback__wrapper-name">
+            <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+            <span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
+            <fieldset class="feedback__item">
+              <div class="feedback__inner-name">
+                <label class="feedback__label" for="surname">Фамилия:</label>
+                <input class="feedback__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+              </div>
+              <div class="feedback__inner-name">
+                <label class="feedback__label" for="name">Имя:</label>
+                <input class="feedback__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+              </div>
+              <div class="feedback__inner-name">
+                <label class="feedback__label" for="middlename">Отчество:</label>
+                <input class="feedback__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="feedback__item">
+            <h3 class="feedback__title">Ваши безбашенные достижения в путешествии</h3>
+            <div class="feedback__progress feedback__progress--goals">
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-1" id="goal-1" checked>
+                <label class="feedback__label-check" for="goal-1">Сделал селфи с акулой</label>
+              </div>
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-2" id="goal-2" checked>
+                <label class="feedback__label-check" for="goal-2">Обгорел на пляже</label>
+              </div>
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-3" id="goal-3">
+                <label class="feedback__label-check" for="goal-3">Видел Чака Норриса</label>
+              </div>
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-4" id="goal-4">
+                <label class="feedback__label-check" for="goal-4">Накупил сувениров</label>
+              </div>
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-5" id="goal-5" checked>
+                <label class="feedback__label-check" for="goal-5">Удержал башню</label>
+              </div>
+              <div class="feedback__inner-check">
+                <input class="feedback__input-check" type="checkbox" name="goal-6" id="goal-6">
+                <label class="feedback__label-check" for="goal-6">Разгромил отель</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__item">
+            <div class="feedback__inner-contacts">
+              <label class="feedback__label-contacts" for="tel">Номер телефона</label>
+              <input class="feedback__input-contacts" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="feedback__inner-contacts">
+              <label class="feedback__label-contacts" for="email">Адрес почты</label>
+              <input class="feedback__input-contacts" type="email" id="email" name="email" placeholder="Введите почту*">
+            </div>
+          </fieldset>
+          <fieldset class="feedback__item">
+            <h3 class="feedback__title">С каким приложением путешествовали?</h3>
+            <div class="feedback__inner-application">
+              <input class="feedback__input-radio" type="radio" name="application" id="ios" value="ios" checked>
+              <label class="feedback__label-radio" for="ios">Pink для iOS</label>
+            </div>
+            <div class="feedback__inner-application">
+              <input class="feedback__input-radio" type="radio" name="application" id="android" value="android">
+              <label class="feedback__label-radio" for="android">Pink на Android</label>
+            </div>
+            <div class="feedback__inner-application">
+              <input class="feedback__input-radio" type="radio" name="application" id="windows" value="windows">
+              <label class="feedback__label-radio" for="windows">Windows Phone</label>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__item">
+            <h3 class="feedback__title">Опишите свои эмоции</h3>
+            <div class="feedback__review">
+              <label class="feedback__label" for="review"></label>
+              <textarea name="review" id="review" placeholder="Можно прям в красках, не
+              стесняясь в выражениях"></textarea>
+            </div>
+          </fieldset>
+          <div class="feedback__wrapper-submit">
+            <div class="feedback__inner-submit">
+              <button class="feedback__button" type="submit">Отправить форму</button>
+            </div>
+            <p class="feedback-form__text"><sup>*</sup> — обязательные поля</p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="logo">
+          <img  class="logo-footer" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+            </li>
+            <li class="social__item">
+              <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="copyright__title">Разработано
+            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
