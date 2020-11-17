@@ -7,7 +7,7 @@
   <body class="page__body">
     <header class="header">
       <nav class="nav">
-        <div class="nav__logo">
+        <div class="nav__logo logo">
           <a class="logo__picture">
             <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
           </a>
@@ -70,13 +70,13 @@
             <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
-        <img src="https://via.placeholder.com" width="157" height="320" alt="">
+        <img class="advantages__picture" src="https://via.placeholder.com" width="157" height="320" alt="">
       </section>
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <div class="reviews__wrapper slider">
           <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews-item slider__item">
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Николай Петров</cite>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -95,7 +95,7 @@
         <table class="price__table slider">
           <thead class="slider__list">
             <tr>
-              <th class="price__title  price__title--transparent"></th>
+              <th class="price__title price__title--transparent"></th>
               <th class="price__title">
                 База
                 <span>1,99 USD</span>
@@ -104,7 +104,7 @@
                 Стандарт
                 <span>3,99 USD</span>
               </th>
-              <th class="price__title">
+              <th class="price__title slider__item">
                 Анлим
                 <span>9,99 USD</span>
               </th>
@@ -112,48 +112,39 @@
           </thead>
           <tbody>
             <tr class="price__row">
-              <td class="price__item  price__item--feature-title">Розовый фильтр</td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Розовый фильтр</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--title">Розовый фильтр</td>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Розовый фильтр</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Розовый фильтр</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
             </tr>
             <tr class="price__row">
-              <td class="price__item  price__item--feature-title">Смайлики</td>
-              <td class="price__item  price__item--no">
-                <span class="price__feature-title visually-hidden">Смайлики</span>
-                <span class="price__feature-status">Нет</span>
+              <td class="price__item price__item--title">Смайлики</td>
+              <td class="price__item price__item--no">
+                <span class="price__item-status">Нет</span>
               </td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Смайлики</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Смайлики</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
             </tr>
             <tr class="price__row">
-              <td class="price__item  price__item--feature-title">Комментарии</td>
-              <td class="price__item  price__item--no">
-                <span class="price__feature-title visually-hidden">Комментарии</span>
-                <span class="price__feature-status">Нет</span>
+              <td class="price__item price__item--title">Комментарии</td>
+              <td class="price__item price__item--no">
+                <span class="price__item-status">Нет</span>
               </td>
-              <td class="price__item  price__item--no">
-                <span class="price__feature-title visually-hidden">Комментарии</span>
-                <span class="price__feature-status">Нет</span>
+              <td class="price__item price__item--no">
+                <span class="price__item-status">Нет</span>
               </td>
-              <td class="price__item  price__item--yes">
-                <span class="price__feature-title visually-hidden">Комментарии</span>
-                <span class="price__feature-status">Да</span>
+              <td class="price__item price__item--yes">
+                <span class="price__item-status">Да</span>
               </td>
             </tr>
           </tbody>
@@ -189,10 +180,11 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="logo">
-          <img  class="logo-footer" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+        <div class="footer__logo logo">
+          <a class="logo__link" href="index.html">
+            <img  class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+          </a>
         </div>
-        <div class="social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
@@ -204,7 +196,6 @@
               <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
             </li>
           </ul>
-        </div>
         <div class="copyright">
           <p class="copyright__title">Разработано
             <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
