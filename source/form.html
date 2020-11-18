@@ -7,7 +7,7 @@
   <body class="page__body">
     <header class="header">
       <nav class="nav">
-        <div class="nav__logo">
+        <div class="nav__logo logo">
           <a class="logo__link" href="index.html">
             <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
           </a>
@@ -26,7 +26,7 @@
     </header>
     <main>
       <section class="feedback">
-        <form class="feedback__form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="feedback__wrapper-name">
             <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
             <span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
@@ -49,27 +49,27 @@
             <h3 class="feedback__title">Ваши безбашенные достижения в путешествии</h3>
             <div class="feedback__progress feedback__progress--goals">
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-1" id="goal-1" checked>
+                <input class="feedback__input-check" type="checkbox" name="took a selfie with a shark" id="goal-1" checked>
                 <label class="feedback__label-check" for="goal-1">Сделал селфи с акулой</label>
               </div>
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-2" id="goal-2" checked>
+                <input class="feedback__input-check" type="checkbox" name="burned on the beach" id="goal-2" checked>
                 <label class="feedback__label-check" for="goal-2">Обгорел на пляже</label>
               </div>
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-3" id="goal-3">
+                <input class="feedback__input-check" type="checkbox" name="saw chuck noris" id="goal-3">
                 <label class="feedback__label-check" for="goal-3">Видел Чака Норриса</label>
               </div>
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-4" id="goal-4">
+                <input class="feedback__input-check" type="checkbox" name="bought some souvenirs" id="goal-4">
                 <label class="feedback__label-check" for="goal-4">Накупил сувениров</label>
               </div>
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-5" id="goal-5" checked>
+                <input class="feedback__input-check" type="checkbox" name="held the tower" id="goal-5" checked>
                 <label class="feedback__label-check" for="goal-5">Удержал башню</label>
               </div>
               <div class="feedback__inner-check">
-                <input class="feedback__input-check" type="checkbox" name="goal-6" id="goal-6">
+                <input class="feedback__input-check" type="checkbox" name="trashed the hotel" id="goal-6">
                 <label class="feedback__label-check" for="goal-6">Разгромил отель</label>
               </div>
             </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="feedback__inner-contacts">
               <label class="feedback__label-contacts" for="email">Адрес почты</label>
-              <input class="feedback__input-contacts" type="email" id="email" name="email" placeholder="Введите почту*">
+              <input class="feedback__input-contacts" type="email" id="email" name="email" placeholder="Введите почту*" required>
             </div>
           </fieldset>
           <fieldset class="feedback__item">
@@ -111,29 +111,29 @@
             <div class="feedback__inner-submit">
               <button class="feedback__button" type="submit">Отправить форму</button>
             </div>
-            <p class="feedback-form__text"><sup>*</sup> — обязательные поля</p>
+            <p class="feedback__text"><sup>*</sup> — обязательные поля</p>
           </div>
         </form>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="logo">
-          <img  class="logo-footer" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+        <div class="footer__logo logo">
+          <a class="logo__link" href="index.html">
+            <img  class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+          </a>
         </div>
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
-            </li>
-            <li class="social__item">
-              <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
-            </li>
-          </ul>
-        </div>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+          </li>
+          <li class="social__item">
+            <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
+          </li>
+        </ul>
         <div class="copyright">
           <p class="copyright__title">Разработано
             <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
