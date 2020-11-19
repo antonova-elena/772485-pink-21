@@ -29,43 +29,57 @@
         <p class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="photo__list">
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/320x137" width="320" height="137" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/320x137" width="320" height="137" alt="">
+            </a>
             <p class="user-photo__author">Анна <time class="postdate" datetime="2020-11-13T07:05">(5 минут назад)</time></p>
             <p class="user-photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе задавайте свои вопросы!</p>
             <p class="user-photo__likes">Нравится: 215</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Левон <time class="postdate" datetime="2020-11-13T02:00">(5 часов назад)</time></p>
             <p class="user-photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <p class="user-photo__likes">Нравится: 356</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Антон <time class="postdate" datetime="2020-11-12T19:00">(12 часов назад)</time></p>
             <p class="user-photo__description">Соседи будут рады!</p>
             <p class="user-photo__likes">Нравится: 666</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Борис <time class="postdate" datetime="2020-11-12T11:00">(20 часов назад)</time></p>
             <p class="user-photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
             <p class="user-photo__likes">Нравится: 215</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Сергей <time class="postdate" datetime="2020-11-12T06:00">(25 часов назад)</time></p>
             <p class="user-photo__description">Самая кубанская в мире!</p>
             <p class="user-photo__likes">Нравится: 4</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Максим <time class="postdate" datetime="2020-11-11T03:00">(40 часов назад)</time></p>
             <p class="user-photo__description">Где снег-то?</p>
             <p class="user-photo__likes">Нравится: 150</p>
           </li>
           <li class="photo__item user-photo">
-            <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            <a class="user-photo__link" href="#">
+              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+            </a>
             <p class="user-photo__author">Надежда <time class="postdate" datetime="2020-11-10T22:00">(45 часов назад)</time></p>
             <p class="user-photo__description">Всем GM и взаимные лайки!</p>
             <p class="user-photo__likes">Нравится: 2560</p>
@@ -84,9 +98,9 @@
             <img src="https://via.placeholder.com/280x374"  width="280" height="374" alt="">
           </label>
           <div class="edit">
-            <div class="edit__filter edit__filter--active">
+            <div class="edit__filter">
               <button class="edit__button edit__button--crop" type="button" title="Обрезать"><svg ></svg></button>
-              <div class="edit__range range">
+              <div class="edit__range range edit__range--active">
                 <div class="range__scale"></div>
                 <button class="range__toggle" tabindex="0"></button>
               </div>
