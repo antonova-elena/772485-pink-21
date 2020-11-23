@@ -1,0 +1,19 @@
+.offer__wrapper {
+  border: 1px solid white;
+  padding-top: 28px;
+  padding-bottom: 38px;
+}
+
+.offer__list {
+  background-color: $backgroundblack;
+}
+
+.offer__title {
+  color: $white;
+
+  @include font-set(300, 24px, 29px);
+}
+
+.offer__description {
+  @include font-set(300, 14px, 24px);
+}

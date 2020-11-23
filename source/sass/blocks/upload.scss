@@ -1,0 +1,10 @@
+.upload {
+  background-color: $backgroundgrey;
+  border: 1px solid green;
+  padding-top: 29px;
+  padding-bottom: 41px;
+}
+
+.upload__title {
+  @include font-set(400, 14px, 30px);
+}
