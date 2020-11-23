@@ -1,1 +1,20 @@
-// Начните писать стили здесь
+@import "./fonts.scss";
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./global.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/offer.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/price.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/text-field.scss";
+@import "./blocks/check-field.scss";
+@import "./blocks/radio-field.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/user-photo.scss";
+@import "./blocks/upload.scss";
