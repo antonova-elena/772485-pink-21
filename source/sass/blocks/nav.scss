@@ -1,0 +1,10 @@
+.nav {
+  background-color: $black;
+}
+
+.nav__list {
+  color: $white;
+  border: 1px solid blue;
+
+  @include font-set(700, 18px, 32px);
+}

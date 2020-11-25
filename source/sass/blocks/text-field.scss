@@ -1,0 +1,10 @@
+.text-field__label {
+  color: $pink;
+  text-transform: uppercase;
+
+  @include font-set(400, 14px, 30px);
+}
+
+.text-field__input {
+  @include font-set(400, 18px, 30px);
+}

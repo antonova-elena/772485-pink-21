@@ -1,0 +1,8 @@
+.user-photo__author {
+  @include font-set(700, 14px, 30px);
+}
+
+.user-photo__likes {
+  color: $pink;
+  text-transform: uppercase;
+}

@@ -1,0 +1,21 @@
+.advantages {
+  border: 2px solid pink;
+}
+
+.advantages__wrapper {
+  background-color: $white;
+}
+
+.advantages__slogan {
+  @include font-set(300, 24px, 29px);
+}
+
+.advantages__list {
+  background-color: $backgroundgrey;
+}
+
+.advantages__title {
+  color: $black;
+
+  @include font-set(700, 18px, 24px);
+}

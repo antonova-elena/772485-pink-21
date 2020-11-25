@@ -1,0 +1,16 @@
+.reviews {
+  background-color: $white;
+  border: 1px solid yellow;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.reviews-item__author-name {
+  color: $black;
+
+  @include font-set(700, 18px, 30px);
+}
+
+.reviews-item__text {
+  @include font-set(400, 14px, 30px);
+}

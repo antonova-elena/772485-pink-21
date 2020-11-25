@@ -1,0 +1,35 @@
+.feedback {
+  background-color: $white;
+  border: 1px solid red;
+}
+
+.feedback__wrapper-name {
+  border: 1px solid blue;
+  padding-top: 54px;
+}
+
+.feedback__slogan {
+  @include font-set(400, 14px, 30px);
+}
+
+.feedback__title {
+  color: $pink;
+  text-transform: uppercase;
+
+  @include font-set(400, 14px, 18px);
+}
+
+.feedback__item {
+  padding-top: 42px;
+  padding-bottom: 44px;
+}
+
+.feedback__review {
+  @include font-set(400, 18px, 30px);
+}
+
+.feedback__text {
+  text-transform: uppercase;
+
+  @include font-set(400, 14px, 30px);
+}

@@ -1,0 +1,25 @@
+body {
+  color: $fontcolor;
+  font-family: "Open Sans", "Arial", sans-serif;
+  padding: 0 20px;
+
+  @include font-set(400, 14px, 24px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

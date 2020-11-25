@@ -1,0 +1,11 @@
+.header {
+  background-image: url("../img/back-mobile.png");
+  background-color: $black;
+  border: 1px solid red;
+}
+
+.header__title {
+  color: $white;
+
+  @include font-set(300, 24px, 33px);
+}
