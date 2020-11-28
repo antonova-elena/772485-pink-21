@@ -1,11 +1,15 @@
+@import "./viewports.scss";
 @import "./fonts.scss";
 @import "./colors.scss";
 @import "./mixins.scss";
 @import "./global.scss";
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/nav.scss";
 @import "./blocks/offer.scss";
 @import "./blocks/advantages.scss";
+@import "./blocks/investigation.scss";
 @import "./blocks/reviews.scss";
 @import "./blocks/price.scss";
 @import "./blocks/footer.scss";
@@ -18,3 +22,4 @@
 @import "./blocks/gallery.scss";
 @import "./blocks/user-photo.scss";
 @import "./blocks/upload.scss";
+@import "./blocks/controls.scss";

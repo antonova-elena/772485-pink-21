@@ -8,3 +8,17 @@
 .upload__title {
   @include font-set(400, 14px, 30px);
 }
+
+@media (min-width: $tablet-width) {
+  .upload__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .upload__form {
+    grid-gap: 80px;
+  }
+}

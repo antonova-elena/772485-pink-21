@@ -11,6 +11,26 @@
   @include font-set(700, 18px, 30px);
 }
 
+.reviews-item__author-description {
+  display: none;
+}
+
 .reviews-item__text {
   @include font-set(400, 14px, 30px);
+}
+
+@media (min-width: $tablet-width) {
+  .reviews-item__author-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reviews-item__author-name {
+    order: 2;
+  }
+
+  .reviews-item__author-description {
+    display: block;
+    order: 3;
+  }
 }
