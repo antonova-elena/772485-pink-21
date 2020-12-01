@@ -12,9 +12,8 @@
 
 .advantages__list {
   background-color: $backgroundgrey;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+  @include clear-list ();
 }
 
 .advantages__title {

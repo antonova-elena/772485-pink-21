@@ -6,6 +6,8 @@
 
 .offer__list {
   background-color: $backgroundblack;
+
+  @include clear-list ();
 }
 
 .offer__title {

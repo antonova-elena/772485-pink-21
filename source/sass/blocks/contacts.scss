@@ -10,9 +10,7 @@
 }
 
 .contacts__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include clear-list ();
 }
 
 .contacts__item a {
@@ -39,7 +37,10 @@
 
 @media (min-width: $desktop-width) {
   .contacts__list {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .contacts__item--email {
+    order: 2;
   }
 }

@@ -19,6 +19,7 @@
 }
 
 .feedback__item {
+  box-sizing: border-box;
   padding-top: 42px;
   padding-bottom: 44px;
 }
@@ -70,7 +71,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 960px;
+    max-width: 960px;
   }
 
   .feedback__item {
@@ -78,16 +79,15 @@
   }
 
   .feedback__item--name {
-    width: 431px;
+    max-width: 431px;
   }
 
   .feedback__item--app {
-    width: 431px;
+    max-width: 431px;
   }
 
   .feedback__wrapper-contacts {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -95,7 +95,7 @@
   .feedback__contacts {
     display: flex;
     flex-direction: column;
-    width: 371px;
+    min-width: 371px;
   }
 
   .feedback__progress {
