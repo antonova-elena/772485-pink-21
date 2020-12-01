@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Приложение Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -28,64 +29,70 @@
     <main>
       <section class="feedback">
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="feedback__wrapper-name">
-            <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-            <span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
-            <fieldset class="feedback__item">
-              <div class="feedback__name text-field">
-                <label class="text-field__label" for="surname">Фамилия:</label>
-                <input class="text-field__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
-              </div>
-              <div class="feedback__name text-field">
-                <label class="text-field__label" for="name">Имя:</label>
-                <input class="text-field__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
-              </div>
-              <div class="feedback__name text-field">
-                <label class="text-field__label" for="middlename">Отчество:</label>
-                <input class="text-field__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
-              </div>
-            </fieldset>
-          </div>
-          <fieldset class="feedback__item">
+          <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
+          </p>
+          <fieldset class="feedback__item feedback__item--name">
+            <div class="feedback__name text-field">
+              <label class="text-field__label" for="surname">Фамилия:</label>
+              <input class="text-field__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            </div>
+            <div class="feedback__name text-field">
+              <label class="text-field__label" for="name">Имя:</label>
+              <input class="text-field__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            </div>
+            <div class="feedback__name text-field">
+              <label class="text-field__label" for="middlename">Отчество:</label>
+              <input class="text-field__input" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
+            </div>
+          </fieldset>
+          <fieldset class="feedback__item feedback__item--goals">
             <h3 class="feedback__title">Ваши безбашенные достижения в путешествии</h3>
-            <div class="feedback__progress feedback__progress--goals">
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="took a selfie with a shark" id="goal-1" checked>
-                <label class="check-field__label" for="goal-1">Сделал селфи с акулой</label>
+            <div class="feedback__progress">
+              <div class="feedback__wrapper-progress">
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="took a selfie with a shark" id="goal-1" checked>
+                  <label class="check-field__label" for="goal-1">Сделал селфи с акулой</label>
+                </div>
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="burned on the beach" id="goal-2" checked>
+                  <label class="check-field__label" for="goal-2">Обгорел на пляже</label>
+                </div>
               </div>
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="burned on the beach" id="goal-2" checked>
-                <label class="check-field__label" for="goal-2">Обгорел на пляже</label>
+              <div class="feedback__wrapper-progress">
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="saw chuck noris" id="goal-3">
+                  <label class="check-field__label" for="goal-3">Видел Чака Норриса</label>
+                </div>
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="bought some souvenirs" id="goal-4">
+                  <label class="check-field__label" for="goal-4">Накупил сувениров</label>
+                </div>
               </div>
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="saw chuck noris" id="goal-3">
-                <label class="check-field__label" for="goal-3">Видел Чака Норриса</label>
-              </div>
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="bought some souvenirs" id="goal-4">
-                <label class="check-field__label" for="goal-4">Накупил сувениров</label>
-              </div>
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="held the tower" id="goal-5" checked>
-                <label class="check-field__label" for="goal-5">Удержал башню</label>
-              </div>
-              <div class="feedback__check check-field">
-                <input class="check-field__input" type="checkbox" name="trashed the hotel" id="goal-6">
-                <label class="check-field__label" for="goal-6">Разгромил отель</label>
+              <div class="feedback__wrapper-progress">
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="held the tower" id="goal-5" checked>
+                  <label class="check-field__label" for="goal-5">Удержал башню</label>
+                </div>
+                <div class="feedback__check check-field">
+                  <input class="check-field__input" type="checkbox" name="trashed the hotel" id="goal-6">
+                  <label class="check-field__label" for="goal-6">Разгромил отель</label>
+                </div>
               </div>
             </div>
           </fieldset>
-          <fieldset class="feedback__item">
-            <div class="feedback__contacts text-field">
-              <label class="text-field__label" for="tel">Номер телефона</label>
-              <input class="text-field__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
-            </div>
-            <div class="feedback__contacts text-field">
-              <label class="text-field__label" for="email">Адрес почты</label>
-              <input class="text-field__input" type="email" id="email" name="email" placeholder="Введите почту*" required>
+          <fieldset class="feedback__item feedback__item--contacts">
+            <div class="feedback__wrapper-contacts">
+              <div class="feedback__contacts text-field">
+                <label class="text-field__label" for="tel">Номер телефона</label>
+                <input class="text-field__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="feedback__contacts text-field">
+                <label class="text-field__label" for="email">Адрес почты</label>
+                <input class="text-field__input" type="email" id="email" name="email" placeholder="Введите почту*" required>
+              </div>
             </div>
           </fieldset>
-          <fieldset class="feedback__item">
+          <fieldset class="feedback__item feedback__item--app">
             <h3 class="feedback__title">С каким приложением путешествовали?</h3>
             <div class="feedback__radio radio-field">
               <input class="radio-field__input" type="radio" name="application" id="ios" value="ios" checked>
@@ -100,7 +107,7 @@
               <label class="radio-field__label" for="windows">Windows Phone</label>
             </div>
           </fieldset>
-          <fieldset class="feedback__item">
+          <fieldset class="feedback__item feedback__item--comments">
             <h3 class="feedback__title">Опишите свои эмоции</h3>
             <div class="feedback__review">
               <label class="feedback__label" for="review"></label>

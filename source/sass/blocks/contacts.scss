@@ -9,6 +9,15 @@
   @include font-set(300, 24px, 29px);
 }
 
+.contacts__list {
+  @include clear-list ();
+}
+
+.contacts__item a {
+  color: $pink;
+  text-decoration: none;
+}
+
 .contacts__title {
   @include font-set(700, 18px, 25px);
 }
@@ -17,4 +26,21 @@
   color: $pink;
 
   @include font-set(300, 24px, 33px);
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .contacts__item--email {
+    order: 2;
+  }
 }

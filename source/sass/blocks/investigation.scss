@@ -1,0 +1,13 @@
+.investigation {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .investigation {
+    display: block;
+  }
+
+  .investigation__link {
+    color: $pink;
+  }
+}

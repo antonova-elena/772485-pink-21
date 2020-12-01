@@ -12,10 +12,19 @@
 
 .advantages__list {
   background-color: $backgroundgrey;
+
+  @include clear-list ();
 }
 
 .advantages__title {
   color: $black;
 
   @include font-set(700, 18px, 24px);
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
