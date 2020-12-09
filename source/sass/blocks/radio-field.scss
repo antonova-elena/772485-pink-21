@@ -1,3 +1,23 @@
+.radio-field:not(:last-child) {
+  margin-bottom: 62px;
+}
+
 .radio-field__label {
+  margin-left: 31px;
+
   @include font-set(400, 18px, 30px);
+}
+
+.radio-field__inpit {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .radio-field__label {
+    margin-left: 22px;
+  }
+
+  .radio-field__input {
+    margin-left: 60px;
+  }
 }

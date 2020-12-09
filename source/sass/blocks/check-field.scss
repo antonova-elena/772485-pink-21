@@ -1,3 +1,15 @@
 .check-field__label {
+  padding-left: 22px;
+
   @include font-set(400, 18px, 30px);
+}
+
+.check-field__input {
+  margin-bottom: 69px;
+}
+
+@media (min-width: $tablet-width) {
+  .check-field__input {
+    margin-left: 60px;
+  }
 }

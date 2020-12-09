@@ -1,21 +1,238 @@
+.offer {
+  box-sizing: border-box;
+
+  background-image: url("../img/back-mobile.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 700px 462px;
+
+  min-height: 171px;
+  margin-top: -70px;
+
+  &--start {
+    background-image: url("../img/iphone-hand-mobile.png"),
+      url("../img/back-mobile.png");
+    background-position: left 0 top 184px, center top;
+    background-size: 256px 286px, 700px 462px;
+  }
+}
+
 .offer__wrapper {
   border: 1px solid white;
-  padding-top: 28px;
+  padding-top: 29px;
+
+  &--start {
+    padding-top: 0;
+  }
+}
+
+.offer__inner {
+  background-color: $backgroundblack;
+  padding-top: 56px;
   padding-bottom: 38px;
 }
 
-.offer__list {
-  background-color: $backgroundblack;
+.offer__inner--start {
+  margin-top: 220px;
+}
 
+.offer__list {
   @include clear-list ();
+
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 52px;
+  height: 56px;
 }
 
 .offer__title {
+  text-align: center;
+
+  min-height: 87px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-top: 99px;
+  padding-bottom: 54px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: $white;
 
   @include font-set(300, 24px, 29px);
 }
 
 .offer__description {
+  color: $white;
+  margin: 0;
+  text-align: center;
+
   @include font-set(300, 14px, 24px);
+}
+
+.offer__button {
+  box-sizing: border-box;
+  border-radius: 29px;
+  border: 3px solid $white;
+  color: $white;
+  margin-left: 20px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 38px;
+  padding-right: 39px;
+  text-decoration: none;
+
+  @include font-set(700, 18px, 18px);
+}
+
+@media (min-width: $tablet-width) {
+  .offer {
+    background-image: url("../img/bg-back-tablet.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 1200px 729px;
+
+    margin-top: -110px;
+
+    &--start {
+      background-image: url("../img/iphone-hand-tablet.png"),
+        url("../img/bg-back-tablet.jpg");
+      background-position: right -20px bottom 0, center;
+      background-repeat: no-repeat;
+      background-size: 700px 545px, 1200px 729px;
+    }
+  }
+
+  .offer__wrapper {
+    box-sizing: border-box;
+
+    padding-top: 80px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    width: 660px;
+
+    &--start {
+      padding-top: 110px;
+      background-repeat: no-repeat;
+    }
+
+    &--gallery {
+      min-height: 439px;
+    }
+  }
+
+  .offer__title {
+    @include font-set(300, 40px, 48px);
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 102px;
+    padding-bottom: 80px;
+    width: 480px;
+
+    &--start {
+      display: block;
+      min-height: 140px;
+      margin-top: 0;
+      margin-left: 30px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      width: 200px;
+    }
+  }
+
+  .offer__button {
+    margin-top: 31px;
+    margin-left: 0;
+    padding-left: 48px;
+    padding-right: 49px;
+  }
+
+  .offer__inner {
+    background-color: transparent;
+    margin-top: 46px;
+    min-width: 300px;
+  }
+
+  .offer__description {
+    @include font-set(300, 18px, 24px);
+
+    margin-top: 36px;
+    margin-bottom: 110px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer {
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 2560px 853px;
+
+    &--start {
+      background-position: center;
+      padding-top: 100px;
+    }
+  }
+
+  .offer__wrapper {
+    min-height: 284px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 800px;
+
+    &--start {
+      background-image: url("../img/iphone-hand-desktop.png");
+      background-position: right -116px bottom 0;
+      background-size: 1050px 645px;
+      padding-top: 20px;
+      width: 960px;
+    }
+  }
+
+  .offer__title {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 93px;
+    padding-bottom: 101px;
+    width: 100%;
+
+    @include font-set(300, 50px, 68px);
+
+    &--start {
+      display: block;
+      min-height: 165px;
+      margin-top: 0;
+      margin-left: 25px;
+      margin-bottom: 0;
+      padding-top: 100px;
+      padding-left: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+      width: 250px;
+    }
+  }
+
+  .offer__button {
+    margin-top: 53px;
+    padding-right: 32px;
+    padding-bottom: 14px;
+    padding-left: 31px;
+
+    @include font-set(700, 21px, 18px);
+  }
+
+  .offer__inner {
+    margin-top: 68px;
+    min-width: 300px;
+  }
+
+  .offer__description {
+    margin-top: 55px;
+    margin-bottom: 121px;
+    width: 300px;
+  }
 }

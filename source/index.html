@@ -8,10 +8,10 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav">
+      <nav class="nav nav--opened nav--nojs">
         <div class="nav__logo logo">
-          <a class="logo__picture">
-            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
+          <a class="logo__link-nav">
+            <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
           </a>
         </div>
         <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -24,29 +24,30 @@
           </ul>
         </div>
       </nav>
-      <div class="offer">
-        <p class="offer__title">Взгляните на жизнь иначе!</p>
-        <img src="https://via.placeholder.com" width="320" height="286" alt="Фото Приложение Пинк">
-        <div class="offer__wrapper">
-          <a class="offer__button button" href="#">Скачать приложение</a>
-          <ul class="offer__list">
-            <li class="offer__item">
-              <a class="offer__link" href="#">
-                <img src="https://via.placeholder.com/" width="47" height="56" alt="Ссылка для скачивания приложения для операционой системы IOS">
-              </a>
-            </li>
-            <li class="offer__item">
-              <a class="offer__link" href="#">
-                <img src="https://via.placeholder.com/" width="43" height="47" alt="Ссылка для скачивания приложения для операционой системы Android">
-              </a>
-            </li>
-            <li class="offer__item">
-              <a class="offer__link" href="#">
-                <img src="https://via.placeholder.com/" width="44" height="41" alt="Ссылка для скачивания приложения для операционой системы Microsoft">
-              </a>
-            </li>
-          </ul>
-          <p class="offer__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="offer offer--start">
+        <div class="offer__wrapper offer__wrapper--start">
+          <p class="offer__title offer__title--start">Взгляните на жизнь иначе!</p>
+          <div class="offer__inner offer__inner--start">
+            <a class="offer__button" href="#">Скачать приложение</a>
+            <ul class="offer__list">
+              <li class="offer__item">
+                <a class="offer__link" href="#">
+                  <img src="https://via.placeholder.com/" width="47" height="56" alt="Ссылка для скачивания приложения для операционой системы IOS">
+                </a>
+              </li>
+              <li class="offer__item">
+                <a class="offer__link" href="#">
+                  <img src="https://via.placeholder.com/" width="43" height="47" alt="Ссылка для скачивания приложения для операционой системы Android">
+                </a>
+              </li>
+              <li class="offer__item">
+                <a class="offer__link" href="#">
+                  <img src="https://via.placeholder.com/" width="44" height="41" alt="Ссылка для скачивания приложения для операционой системы Microsoft">
+                </a>
+              </li>
+            </ul>
+            <p class="offer__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </div>
       </div>
     </header>
@@ -55,8 +56,8 @@
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="advantages__wrapper">
-          <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-          <p class="advantages__slogan">Нам есть, что вам предложить!</p>
+          <p class="advantages__slogan advantages__slogan--top">Устали от серости мегаполиса?</p>
+          <p class="advantages__slogan advantages__slogan--bottom">Нам есть, что вам предложить!</p>
         </div>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -170,19 +171,19 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__intro">Остались вопросы?</p>
-        <p class="contacts__intro">Свяжитесь с нами!</p>
+        <p class="contacts__intro contacts__intro--bottom">Свяжитесь с нами!</p>
         <ul class="contacts__list">
           <li class="contacts__item">
             <p class="contacts__title">Звоните:</p>
-            <p class="contacts__description"><a class="phone" href="tel:+78125556666">тел.+7 (812) 555-66-66</a></p>
+            <p class="contacts__description contacts__description--phone"><a class="phone" href="tel:+78125556666">тел.+7 (812) 555-66-66</a></p>
           </li>
           <li class="contacts__item contacts__item--email">
             <p class="contacts__title">Пишите:</p>
-            <p class="contacts__description"><a class="email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            <p class="contacts__description contacts__description--email"><a class="email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--address">
             <p class="contacts__title">Приезжайте в гости:</p>
-            <address class="contacts__description">ул. Большая<br> Конюшенная, д. 19/8</address>
+            <address class="contacts__description contacts__description--address">ул. Большая<br> Конюшенная, д. 19/8</address>
           </li>
         </ul>
         <div class="map">
@@ -194,18 +195,18 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+            <img class="logo-full" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
           </a>
         </div>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+            <a class="social__link social__link--twitter" href="#"><span>Твиттер</span></a>
           </li>
           <li class="social__item">
-            <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            <a class=" social__link social__link--facebook" href="#"><span>Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
+            <a class="social__link social__link--youtube" href="#"><span>Ютюб</span></a>
           </li>
         </ul>
         <div class="copyright">

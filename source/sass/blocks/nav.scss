@@ -1,6 +1,76 @@
 .nav {
-  background-color: $black;
   min-height: 66px;
+  position: relative;
+  width: auto;
+
+  &--closed {
+    background-color: $black;
+    opacity: 0.3;
+  }
+
+  &--opened {
+    background: $fontcolor;
+  }
+}
+
+.nav__toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 21px;
+  width: 50px;
+  z-index: 1;
+}
+
+.nav--closed .nav__toggle::before {
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  content: "";
+  height: 24px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+
+  &:hover {
+    background-color: $pink;
+  }
+
+  &:active {
+    background-color: $pink;
+    opacity: 0.3;
+  }
+}
+
+.nav--opened .nav__toggle::after {
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  content: "";
+  height: 23px;
+  left: auto;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 23px;
+
+  &:hover {
+    background-color: $pink;
+  }
+
+  &:active {
+    background-color: $pink;
+    opacity: 0.3;
+  }
+}
+
+.nav--closed .nav__list {
+  display: none;
 }
 
 .nav__list {
@@ -10,7 +80,13 @@
 }
 
 .nav__list a {
+  border-top: 1px solid $black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: block;
   color: $white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -24,14 +100,38 @@
 }
 
 @media (min-width: $desktop-width) {
-  .nav__wrapper {
+  .nav {
     align-items: center;
     display: flex;
+    justify-content: space-between;
+    background-color: transparent;
   }
 
   .nav__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .nav__list a {
+    border: none;
+    display: inline-flex;
+    padding-top: 48px;
+    padding-bottom: 49px;
+    text-transform: none;
+
+    @include font-set(400, 18px, 18px);
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__item {
+    padding-right: 78px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }

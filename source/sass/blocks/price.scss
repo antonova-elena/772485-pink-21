@@ -3,6 +3,122 @@
   border: 1px solid brown;
 }
 
+.price__table {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 660px;
+}
+
+.price__title {
+  box-sizing: border-box;
+  background-color: $fontcolor;
+  border: 2px solid $bordercolor;
+  border-top: none;
+  border-bottom: none;
+  color: $white;
+  height: 94px;
+  text-transform: uppercase;
+  width: 152px;
+
+  @include font-set(700, 16px, 30px);
+}
+
+span {
+  display: block;
+
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.price__row {
+  background-color: $white;
+}
+
 .price__item {
+  box-sizing: border-box;
+  border: 2px solid $bordercolor;
+  border-top: none;
+  height: 59px;
+  padding-left: 20px;
+  text-transform: uppercase;
+
   @include font-set(400, 14px, 30px);
+}
+
+@media (min-width: $tablet-width) {
+  .price {
+    padding-top: 88px;
+    padding-bottom: 73px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .price__table {
+    width: 620px;
+  }
+
+  .price__title {
+    box-sizing: border-box;
+    height: 75px;
+    font-size: 16px;
+    width: 152px;
+
+    &--transparent {
+      border: none;
+      border-bottom: 2px solid $white;
+      display: table-cell;
+      visibility: hidden;
+    }
+  }
+
+  span {
+    margin-top: -5px;
+  }
+
+  .price__item {
+    height: 45px;
+    padding-left: 15px;
+
+    &--title {
+      display: table-cell;
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price__title {
+    height: 94px;
+    font-size: 18px;
+
+    @include font-set(700, 18px, 30px);
+
+    span {
+      margin-top: 0;
+
+      @include font-set(300, 24px, 30px);
+    }
+  }
+
+  .price__item {
+    @include font-set(400, 18px, 30px);
+    height: 59px;
+    padding-left: 22px;
+    width: 233px;
+  }
+
+  .price {
+    padding-top: 154px;
+    padding-bottom: 98px;
+    padding-right: 0;
+  }
+
+  .price__table {
+    width: 940px;
+  }
 }

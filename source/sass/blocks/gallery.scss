@@ -1,14 +1,25 @@
 .gallery {
   background-color: $white;
   border: 1px solid red;
-  padding-top: 54px;
+}
+
+.gallery__list-first {
+  @include clear-list ();
 }
 
 .gallery__list {
   @include clear-list ();
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .gallery__title {
+  margin: 0;
+  padding-top: 47px;
+  padding-bottom: 60px;
+  text-align: center;
+
   @include font-set(400, 14px, 30px);
 }
 

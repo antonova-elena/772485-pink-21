@@ -1,12 +1,19 @@
 .upload {
-  background-color: $backgroundgrey;
   border: 1px solid green;
   padding-top: 29px;
   padding-bottom: 41px;
 }
 
 .upload__title {
+  text-align: center;
+
   @include font-set(400, 14px, 30px);
+}
+
+.upload__form {
+  background-color: $backgroundgrey;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -14,11 +21,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    padding-top: 57px;
+    padding-bottom: 54px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .upload {
+    padding-bottom: 28px;
+  }
+
   .upload__form {
     grid-gap: 80px;
+    padding-bottom: 54px;
   }
 }

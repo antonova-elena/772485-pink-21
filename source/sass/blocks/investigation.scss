@@ -5,9 +5,53 @@
 @media (min-width: $tablet-width) {
   .investigation {
     display: block;
+    margin-bottom: 108px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .investigation__wrapper {
+    padding-top: 102px;
+    padding-bottom: 24px;
+  }
+
+  .investigation__title {
+    @include font-set(700, 30px, 36px);
+
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .investigation__description {
+    margin: 0;
+    margin-bottom: 24px;
   }
 
   .investigation__link {
     color: $pink;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .investigation {
+    background-color: $backgroundgrey;
+    margin-bottom: 72px;
+  }
+
+  .investigation__wrapper {
+    padding-top: 115px;
+    padding-bottom: 120px;
+  }
+
+  .investigation__title {
+    @include font-set(700, 30px, 30px);
+  }
+
+  .investigation__description {
+    @include font-set(400, 18px, 30px);
+  }
+
+  .investigation__link {
+    @include font-set(400, 18px, 30px);
   }
 }

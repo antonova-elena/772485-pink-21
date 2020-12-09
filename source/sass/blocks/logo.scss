@@ -1,8 +1,13 @@
-.logo__picture {
+.logo__link-nav {
+  display: block;
   height: 23px;
+  padding: 23px 23px;
+  padding-left: 20px;
+  width: 74px;
 
   @media (min-width: $tablet-width) {
     height: 40px;
+    padding-top: 27px;
     width: 145px;
   }
 

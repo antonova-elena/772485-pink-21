@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Приложение Пинк</title>
+    <title>Приложение Пинк Конкурс</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav">
+      <nav class="nav nav--opened nav--nojs">
         <div class="nav__logo logo">
-          <a class="logo__link" href="index.html">
-            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
+          <a class="logo__link-nav" href="index.html">
+            <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
           </a>
         </div>
         <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -24,12 +24,12 @@
           </ul>
         </div>
       </nav>
-      <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <h1 class="header__title">Конкурс на самое безбашенное<br> путешествие с Пинк</h1>
     </header>
     <main>
       <section class="feedback">
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
+          <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
           </p>
           <fieldset class="feedback__item feedback__item--name">
             <div class="feedback__name text-field">
@@ -46,7 +46,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--goals">
-            <h3 class="feedback__title">Ваши безбашенные достижения в путешествии</h3>
+            <h3 class="feedback__title feedback__title--goals">Ваши безбашенные<br> достижения в путешествии</h3>
             <div class="feedback__progress">
               <div class="feedback__wrapper-progress">
                 <div class="feedback__check check-field">
@@ -81,19 +81,20 @@
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--contacts">
+            <h3 class="feedback__title feedback__title--contacts">Контактная информация</h3>
             <div class="feedback__wrapper-contacts">
               <div class="feedback__contacts text-field">
-                <label class="text-field__label" for="tel">Номер телефона</label>
-                <input class="text-field__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
+                <label class="text-field__label text-field__label--contacts" for="tel">Номер телефона</label>
+                <input class="text-field__input text-field__input--contacts" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
               </div>
               <div class="feedback__contacts text-field">
-                <label class="text-field__label" for="email">Адрес почты</label>
-                <input class="text-field__input" type="email" id="email" name="email" placeholder="Введите почту*" required>
+                <label class="text-field__label text-field__label--contacts" for="email">Адрес почты</label>
+                <input class="text-field__input text-field__input--contacts" type="email" id="email" name="email" placeholder="Введите почту*" required>
               </div>
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--app">
-            <h3 class="feedback__title">С каким приложением путешествовали?</h3>
+            <h3 class="feedback__title feedback__title--app">С каким приложением путешествовали?</h3>
             <div class="feedback__radio radio-field">
               <input class="radio-field__input" type="radio" name="application" id="ios" value="ios" checked>
               <label class="radio-field__label" for="ios">Pink для iOS</label>
@@ -108,18 +109,17 @@
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--comments">
-            <h3 class="feedback__title">Опишите свои эмоции</h3>
+            <h3 class="feedback__title feedback__title--comments">Опишите свои эмоции</h3>
             <div class="feedback__review">
               <label class="feedback__label" for="review"></label>
-              <textarea class="feedback__review" name="review" id="review" placeholder="Можно прям в красках, не
-              стесняясь в выражениях"></textarea>
+              <textarea class="feedback__review" name="review" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
           <div class="feedback__wrapper-submit">
             <div class="feedback__submit">
               <button class="feedback__button" type="submit">Отправить форму</button>
             </div>
-            <p class="feedback__text"><sup>*</sup> — обязательные поля</p>
+            <p class="feedback__text"><sup>*</sup> — обязательные <span class="feedback__text-span">для заполнения</span> поля</p>
           </div>
         </form>
       </section>
@@ -128,18 +128,18 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+            <img class="logo-full" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
           </a>
         </div>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+            <a class="social__link social__link--twitter" href="#"><span>Твиттер</span></a>
           </li>
           <li class="social__item">
-            <a class=" social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            <a class=" social__link social__link--facebook" href="#"><span>Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
+            <a class="social__link social__link--youtube" href="#"><span>Ютюб</span></a>
           </li>
         </ul>
         <div class="copyright">

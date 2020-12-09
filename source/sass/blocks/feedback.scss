@@ -1,9 +1,16 @@
 .feedback {
   background-color: $white;
-  border: 1px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 26px;
 }
 
 .feedback__slogan {
+  margin: 0;
+  padding-top: 54px;
+  padding-bottom: 13px;
+  text-align: center;
+
   @include font-set(400, 14px, 30px);
 }
 
@@ -13,56 +20,214 @@
 
 .feedback__title {
   color: $pink;
+  margin: 0;
   text-transform: uppercase;
+  text-align: center;
 
   @include font-set(400, 14px, 18px);
 }
 
 .feedback__item {
   box-sizing: border-box;
+  border: none;
+  margin: 0;
   padding-top: 42px;
-  padding-bottom: 44px;
+
+  &--name {
+    padding-bottom: 15px;
+  }
+
+  &--goals {
+    background-color: $backgroundgrey;
+    padding-bottom: 55px;
+  }
+
+  &--app {
+    padding-bottom: 54px;
+  }
+
+  &--comments {
+    margin-bottom: 52px;
+  }
 }
 
-.feedback__review {
+.feedback__title--goals {
+  padding-bottom: 55px;
+}
+
+.feedback__title--app {
+  padding-bottom: 52px;
+}
+
+.feedback__title--contacts {
+  display: none;
+}
+
+.feedback__contacts {
+  flex-direction: column;
+}
+
+.feedback__review textarea {
+  box-sizing: border-box;
+  border: 2px solid $bordercolor;
+  border-radius: 1px;
+  padding-top: 20px;
+  padding-bottom: 134px;
+  padding-left: 21px;
+  padding-right: 24px;
+
   @include font-set(400, 18px, 30px);
 }
 
+.feedback__button {
+  background-color: $green;
+  border: 2px solid $green;
+  border-radius: 1px;
+  color: $white;
+  display: inline-block;
+  margin-bottom: 46px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  @include font-set(700, 18px, 30px);
+}
+
 .feedback__text {
+  margin: 0;
   text-transform: uppercase;
 
   @include font-set(400, 14px, 30px);
 }
 
+.feedback__text-span {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
+  .feedback {
+    margin-bottom: 50px;
+  }
+
   .feedback__form {
     display: flex;
     flex-direction: column;
+  }
+
+  .feedback__slogan {
+    padding-top: 100px;
+    padding-bottom: 82px;
   }
 
   .feedback__span {
     display: block;
   }
 
-  .feedback__item--app {
-    order: 1;
+  .feedback__item {
+    border: 2px solid $bordercolor;
+    border-radius: 1px;
+    margin-bottom: 65px;
+    padding: 0;
+
+    &--name {
+      border: none;
+    }
+
+    &--app {
+      order: 1;
+    }
+
+    &--contacts {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 37px;
+      order: 2;
+    }
+
+    &--goals {
+      padding-bottom: 61px;
+      order: 3;
+    }
+
+    &--comments {
+      order: 4;
+    }
   }
 
-  .feedback__item--contacts {
-    order: 2;
+  .feedback__title {
+    display: inline-block;
+    left: 50%;
+    padding-top: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+    position: relative;
+    top: -16px;
+    transform: translateX(-50%);
+    vertical-align: top;
+
+    @include font-set(400, 14px, 30px);
+
+    &--app {
+      padding-bottom: 61px;
+    }
+
+    &--goals {
+      padding-bottom: 60px;
+    }
   }
 
-  .feedback__item--goals {
-    order: 3;
+  .feedback__title--goals br {
+    display: none;
   }
 
-  .feedback__item--comments {
-    order: 4;
+  .feedback__name {
+    display: flex;
+    margin-bottom: 56px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .feedback__contacts {
+    display: flex;
+    min-width: 496px;
+  }
+
+  .feedback__review {
+    padding-top: 47px;
+    padding-bottom: 53px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .feedback__review textarea {
+    padding-top: 23px;
+    padding-bottom: 153px;
+    padding-left: 20px;
+    padding-right: 23px;
+    width: 100%;
   }
 
   .feedback__wrapper-submit {
     display: flex;
     order: 5;
+    width: 100%;
+  }
+
+  .feedback__button {
+    margin-top: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .feedback__text {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -74,7 +239,19 @@
     max-width: 960px;
   }
 
+  .feedback__slogan {
+    padding-top: 100px;
+    padding-left: 92px;
+    padding-right: 92px;
+  }
+
+  .feedback__span {
+    display: inline;
+    white-space: nowrap;
+  }
+
   .feedback__item {
+    margin-bottom: 69px;
     width: 100%;
   }
 
@@ -101,5 +278,18 @@
   .feedback__progress {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .feedback__review textarea {
+    padding-bottom: 89px;
+  }
+
+  .feedback__text {
+    min-width: 315px;
+  }
+
+  .feedback__text-span {
+    display: inline;
+    white-space: nowrap;
   }
 }

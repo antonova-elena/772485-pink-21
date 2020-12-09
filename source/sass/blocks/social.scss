@@ -1,1 +1,41 @@
-/* guhn */
+.social {
+  @include clear-list ();
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 53px;
+}
+
+.social__link {
+  margin-right: 14px;
+}
+
+.social__link--twitter {
+  margin-left: 74px;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-top: 39px;
+    margin-bottom: 40px;
+  }
+
+  .social__link--twitter {
+    margin-left: 79px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    margin-top: 74px;
+    margin-bottom: 75px;
+  }
+
+  .social__link {
+    margin-right: 11px;
+  }
+
+  .social__link--twitter {
+    margin-left: 240px;
+  }
+}

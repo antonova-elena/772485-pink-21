@@ -1,8 +1,94 @@
+.user-photo {
+  margin-bottom: 20px;
+}
+
+.user-photo__inner-first {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 17px;
+  padding-right: 10px;
+  background-color: $backgroundgrey;
+}
+
+.user-photo__inner {
+  background-color: $backgroundgrey;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 17px;
+  padding-right: 10px;
+}
+
 .user-photo__author {
-  @include font-set(700, 14px, 30px);
+  margin-top: 0;
+
+  @include font-set(700, 14px, 24px);
+}
+
+.user-photo__link {
+  box-sizing: border-box;
+  display: block;
+  font-size: 0;
+  line-height: 3px;
+
+  &--first {
+
+
+    background-image: url("../img/panorama-mobile.jpg");
+    background-position: 50%;
+    background-size: cover;
+
+    height: 137px;
+    width: 100%;
+  }
+}
+
+.user-photo__author-postdate {
+  text-transform: uppercase;
+
+  @include font-set(300, 12px, 24px);
+}
+
+.user-photo__description {
+  margin-bottom: 25px;
+}
+
+.user-photo__button {
+  margin-right: 18px;
 }
 
 .user-photo__likes {
   color: $pink;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .user-photo__inner {
+    padding-top: 30px;
+    padding-bottom: 31px;
+    padding-left: 30px;
+    padding-right: 24px;
+  }
+
+  .user-photo__link--fist {
+    height: 509px;
+  }
+
+  .user-photo__description {
+    padding-bottom: 24px;
+    margin-bottom: 27px;
+    height: 34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-photo__inner {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .user-photo__link--fist {
+    height: 506px;
+  }
 }
