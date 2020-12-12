@@ -10,10 +10,10 @@
   text-align: center;
 
   @include font-set(300, 24px, 29px);
-}
 
-.contacts__intro--bottom {
-  margin-bottom: 45px;
+  &--bottom {
+    margin-bottom: 45px;
+  }
 }
 
 .contacts__list {
@@ -41,27 +41,27 @@
   margin: 0;
 
   @include font-set(300, 24px, 33px);
-}
 
-.contacts__description--phone {
-  margin-bottom: 31px;
-}
+  &--phone {
+    margin-bottom: 31px;
+  }
 
-.contacts__description--email {
-  margin-bottom: 35px;
-}
+  &--email {
+    margin-bottom: 35px;
+  }
 
-.contacts__description--address {
-  font-style: normal;
+  &--address {
+    font-style: normal;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts__intro {
     @include font-set(300, 40px, 54px);
-  }
 
-  .contacts__intro--bottom {
-    margin-bottom: 51px;
+    &--bottom {
+      margin-bottom: 51px;
+    }
   }
 
   .contacts__list {
@@ -69,12 +69,14 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .contacts__item--address {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin-top: 55px;
+  .contacts__item {
+    &--address {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      margin-top: 55px;
+    }
   }
 
   .contacts__description {
@@ -91,9 +93,11 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .contacts__item--address {
-    grid-row: 1;
-    grid-column: 2;
-    margin: 0;
+  .contacts__item {
+    &--address {
+      grid-row: 1;
+      grid-column: 2;
+      margin: 0;
+    }
   }
 }
