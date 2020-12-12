@@ -35,15 +35,17 @@
     padding-bottom: 0;
   }
 
-  .controls__button--post {
-    margin-bottom: 45px;
-    padding-left: 81px;
-    padding-right: 80px;
-  }
+  .controls__button {
+    &--post {
+      margin-bottom: 45px;
+      padding-left: 81px;
+      padding-right: 80px;
+    }
 
-  .controls__button--cancel {
-    padding-left: 94px;
-    padding-right: 93px;
+    &--cancel {
+      padding-left: 94px;
+      padding-right: 93px;
+    }
   }
 }
 
@@ -53,15 +55,17 @@
     padding-top: 181px;
   }
 
-  .controls__button--post {
-    margin-bottom: 0;
-    margin-right: 44px;
-    padding-left: 42px;
-    padding-right: 42px;
-  }
+  .controls__button {
+    &--post {
+      margin-bottom: 0;
+      margin-right: 44px;
+      padding-left: 42px;
+      padding-right: 42px;
+    }
 
-  .controls__button--cancel {
-    padding-left: 55px;
-    padding-right: 55px;
+    &--cancel {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 }
