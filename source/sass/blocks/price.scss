@@ -23,7 +23,7 @@
   @include font-set(700, 16px, 30px);
 }
 
-span {
+.price__span {
   display: block;
 
   font-weight: 300;
@@ -71,7 +71,7 @@ span {
     }
   }
 
-  span {
+  .price__span {
     margin-top: -5px;
   }
 
@@ -92,17 +92,23 @@ span {
 }
 
 @media (min-width: $desktop-width) {
+  .price {
+    padding-top: 154px;
+    padding-bottom: 98px;
+    padding-right: 0;
+  }
+
   .price__title {
     height: 94px;
     font-size: 18px;
 
     @include font-set(700, 18px, 30px);
+  }
 
-    span {
-      margin-top: 0;
+  .price__span {
+    margin-top: 0;
 
-      @include font-set(300, 24px, 30px);
-    }
+    @include font-set(300, 24px, 30px);
   }
 
   .price__item {
@@ -110,12 +116,6 @@ span {
     height: 59px;
     padding-left: 22px;
     width: 233px;
-  }
-
-  .price {
-    padding-top: 154px;
-    padding-bottom: 98px;
-    padding-right: 0;
   }
 
   .price__table {
