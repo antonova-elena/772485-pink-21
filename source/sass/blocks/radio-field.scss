@@ -3,7 +3,7 @@
 }
 
 .radio-field__label {
-  margin-left: 31px;
+  padding-left: 31px;
 
   @include font-set(400, 18px, 30px);
 }
@@ -14,10 +14,6 @@
 
 @media (min-width: $tablet-width) {
   .radio-field__label {
-    margin-left: 22px;
-  }
-
-  .radio-field__input {
-    margin-left: 60px;
+    padding-left: 105px;
   }
 }
