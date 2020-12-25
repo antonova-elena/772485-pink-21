@@ -5,14 +5,60 @@
 @media (min-width: $tablet-width) {
   .investigation {
     display: block;
-    margin-bottom: 108px;
+    margin-bottom: 58px;
     padding-right: 20px;
     padding-left: 20px;
   }
 
   .investigation__wrapper {
-    padding-top: 102px;
-    padding-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-top: 54px;
+  }
+
+  .investigation__inner {
+    padding-top: 50px;
+    padding-bottom: 19px;
+    position: relative;
+    margin-left: auto;
+    width: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -309px;
+      z-index: auto;
+
+      box-sizing: border-box;
+      width: 238px;
+      height: 275px;
+
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-size: 238px 275px;
+    }
+
+    &::after {
+      @include font-set(700, 96px, 163px);
+
+      content: "24";
+      position: absolute;
+      top: 56px;
+      left: -291px;
+
+      box-sizing: border-box;
+      width: 202px;
+      height: 202px;
+
+      color: $pink;
+      text-align: center;
+      vertical-align: middle;
+
+      border: 13px solid $pink;
+      border-radius: 50%;
+    }
   }
 
   .investigation__title {
@@ -39,8 +85,53 @@
   }
 
   .investigation__wrapper {
-    padding-top: 115px;
+    margin: 0 auto;
+    padding-top: 16px;
     padding-bottom: 120px;
+    width: 940px;
+  }
+
+  .investigation__inner {
+    padding-top: 99px;
+    padding-bottom: 0;
+    width: 583px;
+
+    &::before {
+      background-image: url("../img/timer.svg");
+      background-size: 298px 345px;
+
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: -355px;
+      z-index: auto;
+
+      box-sizing: border-box;
+      width: 298px;
+      height: 345px;
+    }
+
+    &::after {
+      @include font-set(700, 120px, 163px);
+
+      content: "24";
+
+      box-sizing: border-box;
+      position: absolute;
+
+      border-width: 17px;
+      color: $pink;
+      text-align: center;
+      vertical-align: middle;
+
+      top: 70px;
+      left: -333px;
+
+      height: 252px;
+
+      width: 252px;
+    }
   }
 
   .investigation__title {
