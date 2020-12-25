@@ -1,14 +1,13 @@
 .feedback {
   background-color: $white;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 26px;
 }
 
 .feedback__slogan {
   margin: 0;
   padding-top: 54px;
   padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 
   @include font-set(400, 14px, 30px);
@@ -25,6 +24,22 @@
   text-align: center;
 
   @include font-set(400, 14px, 18px);
+
+  &--goals {
+    padding-bottom: 55px;
+  }
+
+  &--app {
+    padding-bottom: 52px;
+  }
+
+  &--comments {
+    padding-bottom: 22px;
+  }
+
+  &--contacts {
+    display: none;
+  }
 }
 
 .feedback__item {
@@ -32,17 +47,24 @@
   border: none;
   margin: 0;
   padding-top: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0;
 
   &--name {
-    padding-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   &--goals {
     background-color: $backgroundgrey;
-    padding-bottom: 55px;
+  }
+
+  &--contacts {
+    margin-bottom: 15px;
   }
 
   &--app {
+    background-color: $backgroundgrey;
     padding-bottom: 54px;
   }
 
@@ -51,16 +73,8 @@
   }
 }
 
-.feedback__title--goals {
-  padding-bottom: 55px;
-}
-
-.feedback__title--app {
-  padding-bottom: 52px;
-}
-
-.feedback__title--contacts {
-  display: none;
+.feedback__wrapper-progress:last-child .feedback__check:last-child input {
+  margin-bottom: 55px;
 }
 
 .feedback__contacts {
@@ -79,13 +93,17 @@
   @include font-set(400, 18px, 30px);
 }
 
+.feedback__wrapper-submit {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .feedback__button {
   background-color: $green;
   border: 2px solid $green;
   border-radius: 1px;
   color: $white;
   display: inline-block;
-  margin-bottom: 46px;
   padding-top: 23px;
   padding-bottom: 23px;
   padding-left: 45px;
@@ -98,7 +116,10 @@
 
 .feedback__text {
   margin: 0;
+  padding-top: 46px;
+  padding-bottom: 26px;
   text-transform: uppercase;
+  text-align: center;
 
   @include font-set(400, 14px, 30px);
 }
@@ -110,6 +131,8 @@
 @media (min-width: $tablet-width) {
   .feedback {
     margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .feedback__form {
@@ -120,6 +143,10 @@
   .feedback__slogan {
     padding-top: 100px;
     padding-bottom: 82px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    @include font-set(400, 18px, 30px);
   }
 
   .feedback__span {
@@ -137,7 +164,9 @@
     }
 
     &--app {
+      background-color: $white;
       order: 1;
+      padding-bottom: 66px;
     }
 
     &--contacts {
@@ -148,6 +177,7 @@
     }
 
     &--goals {
+      background-color: $white;
       padding-bottom: 61px;
       order: 3;
     }
@@ -158,6 +188,7 @@
   }
 
   .feedback__title {
+    background-color: $white;
     display: inline-block;
     left: 50%;
     padding-top: 0;
@@ -215,6 +246,9 @@
   .feedback__wrapper-submit {
     display: flex;
     order: 5;
+    padding-top: 5px;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
   }
 
@@ -225,13 +259,18 @@
   }
 
   .feedback__text {
-    margin-top: 30px;
     margin-left: auto;
-    margin-right: 0;
+    padding-top: 25px;
+    padding-bottom: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .feedback {
+    margin: 0 auto;
+    width: 936px;
+  }
+
   .feedback__form {
     flex-direction: row;
     flex-wrap: wrap;
@@ -251,16 +290,21 @@
   }
 
   .feedback__item {
-    margin-bottom: 69px;
+    margin-bottom: 64px;
     width: 100%;
-  }
 
-  .feedback__item--name {
-    max-width: 431px;
-  }
+    &--name {
+      max-width: 431px;
+    }
 
-  .feedback__item--app {
-    max-width: 431px;
+    &--app {
+      max-width: 431px;
+    }
+
+    &--goals {
+      padding-left: 60px;
+      padding-right: 59px;
+    }
   }
 
   .feedback__wrapper-contacts {
@@ -286,6 +330,8 @@
 
   .feedback__text {
     min-width: 315px;
+    padding-top: 24px;
+    padding-bottom: 26px;
   }
 
   .feedback__text-span {
