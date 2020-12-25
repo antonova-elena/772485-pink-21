@@ -4,8 +4,7 @@
   width: auto;
 
   &--closed {
-    background-color: $black;
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--opened {
@@ -23,7 +22,7 @@
   right: 20px;
   top: 21px;
   width: 50px;
-  z-index: 1;
+  z-index: 4;
 }
 
 .nav--closed .nav__toggle::before {
@@ -97,17 +96,22 @@
   .nav {
     min-height: 110px;
   }
+
+  .nav__toggle {
+    top: 43px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .nav {
+  .nav__wrapper {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    width: 940px;
+    margin: 0 auto;
   }
 
-  .nav__list {
+  .nav--closed .nav__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -128,7 +132,7 @@
   }
 
   .nav__item {
-    padding-right: 78px;
+    padding-right: 79px;
 
     &:last-child {
       padding-right: 0;
