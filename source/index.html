@@ -9,24 +9,24 @@
   <body class="page__body">
     <header class="header">
       <nav class="nav nav--closed nav--nojs">
-        <div class="nav__logo logo">
-          <a class="logo__link-nav">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
-          </a>
-        </div>
-        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="nav__wrapper">
+          <div class="nav__logo logo">
+            <a class="logo__link-nav">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+            </a>
+          </div>
+          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item"><a>Главная</a></li>
             <li class="nav__item"><a href="catalog.html">Фотографии</a></li>
             <li class="nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">Html Academy</a></li>
+            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
-      <div class="offer offer--start">
-        <div class="offer__wrapper offer__wrapper--start">
-          <p class="offer__title offer__title--start">Взгляните на жизнь иначе!</p>
+      <div class="offer">
+        <div class="offer__wrapper">
+          <p class="offer__title">Взгляните на жизнь иначе!</p>
           <div class="offer__inner offer__inner--start">
             <a class="offer__button" href="#">Скачать приложение</a>
             <ul class="offer__list">
@@ -55,25 +55,28 @@
       <h1 class="visually-hidden">Пинк - приложение для раскрашивания серых будней</h1>
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <div class="advantages__wrapper">
+        <div class="advantages__heading">
           <p class="advantages__slogan">Устали от серости мегаполиса?</p>
           <p class="advantages__slogan">Нам есть, что вам предложить!</p>
         </div>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <p class="advantages__title">Поднимает настроение</p>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__title">Меняет мир вокруг</p>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <p class="advantages__title">Заводит новых друзей</p>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <img class="advantages__picture" src="https://via.placeholder.com" width="157" height="320" alt="">
+        <div class="advantages__wrapper">
+          <div class="advantages__inner">
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--first">
+                <p class="advantages__title">Поднимает настроение</p>
+                <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item advantages__item--second">
+                <p class="advantages__title">Меняет мир вокруг</p>
+                <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="advantages__item advantages__item--third">
+                <p class="advantages__title">Заводит новых друзей</p>
+                <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="investigation">
         <div class="investigation__wrapper">
@@ -186,9 +189,7 @@
             <address class="contacts__description contacts__description--address">ул. Большая<br> Конюшенная, д. 19/8</address>
           </li>
         </ul>
-        <div class="map">
-          <iframe width="320" height="200" allowfullscreen title="Офис компании находится по адресу г.Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
-        </div>
+        <div class="map"></div>
       </section>
     </main>
     <footer class="footer">
