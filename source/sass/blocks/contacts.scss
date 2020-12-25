@@ -2,7 +2,6 @@
   background-color: $white;
   border: 1px solid red;
   padding-top: 50px;
-  padding-bottom: 22px;
 }
 
 .contacts__intro {
@@ -52,6 +51,7 @@
 
   &--address {
     font-style: normal;
+    margin-bottom: 41px;
   }
 }
 
@@ -67,6 +67,7 @@
   .contacts__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
   }
 
   .contacts__item {
@@ -85,12 +86,19 @@
 }
 
 @media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 74px;
+  }
+
   .contacts__intro {
     @include font-set(300, 50px, 68px);
   }
 
   .contacts__list {
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 940px;
   }
 
   .contacts__item {
