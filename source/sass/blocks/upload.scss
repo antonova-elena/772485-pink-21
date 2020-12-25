@@ -1,10 +1,15 @@
 .upload {
   border: 1px solid green;
-  padding-top: 29px;
   padding-bottom: 41px;
 }
 
+.upload__wrapper {
+  padding-top: 29px;
+  padding-bottom: 52px;
+}
+
 .upload__title {
+  margin: 0;
   text-align: center;
 
   @include font-set(400, 14px, 30px);
@@ -17,22 +22,32 @@
 }
 
 @media (min-width: $tablet-width) {
+  .upload {
+    padding-bottom: 0;
+  }
+
   .upload__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 47px;
     padding-top: 57px;
     padding-bottom: 54px;
+  }
+
+  .upload__title {
+    @include font-set(400, 18px, 30px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .upload {
+    margin: 0 auto;
     padding-bottom: 28px;
+    width: 940px;
   }
 
   .upload__form {
-    grid-gap: 80px;
-    padding-bottom: 54px;
+    padding-bottom: 57px;
+    padding-left: 80px;
   }
 }
