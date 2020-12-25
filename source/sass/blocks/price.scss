@@ -6,7 +6,6 @@
 .price__table {
   position: relative;
   box-sizing: border-box;
-  min-width: 660px;
 }
 
 .price__title {
@@ -47,6 +46,7 @@
 
 @media (min-width: $tablet-width) {
   .price {
+    display: block;
     padding-top: 88px;
     padding-bottom: 73px;
     padding-left: 20px;
@@ -95,7 +95,11 @@
   .price {
     padding-top: 154px;
     padding-bottom: 98px;
-    padding-right: 0;
+  }
+
+  .price__table {
+    margin: 0 auto;
+    width: 940px;
   }
 
   .price__title {
@@ -116,9 +120,5 @@
     height: 59px;
     padding-left: 22px;
     width: 233px;
-  }
-
-  .price__table {
-    width: 940px;
   }
 }
