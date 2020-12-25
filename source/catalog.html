@@ -8,14 +8,14 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav nav--opened nav--nojs">
-        <div class="nav__logo logo">
-          <a class="logo__link-nav" href="index.html">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
-          </a>
-        </div>
-        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="nav nav--closed nav--nojs">
         <div class="nav__wrapper">
+          <div class="nav__logo logo">
+            <a class="logo__link-nav" href="index.html">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+            </a>
+          </div>
+          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Главная</a></li>
             <li class="nav__item"><a>Фотографии</a></li>
@@ -24,7 +24,9 @@
           </ul>
         </div>
       </nav>
-      <h1 class="header__title">Фотографии пользователей</h1>
+      <div class="header__wrapper">
+        <h1 class="header__title">Фотографии<br> пользователей</h1>
+      </div>
     </header>
     <main>
       <section class="gallery">
@@ -32,7 +34,7 @@
         <ul class="gallery__list-first">
           <li class="gallery__item user-photo gallery__item--first">
             <a class="user-photo__link user-photo__link--first" href="#"></a>
-            <div class="user-photo__inner-first">
+            <div class="user-photo__inner--first">
               <p class="user-photo__author">Анна <time class="postdate user-photo__author-postdate" datetime="2020-11-13T07:05">(5 минут назад)</time></p>
               <p class="user-photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе задавайте свои вопросы!</p>
               <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 215</span>
@@ -42,7 +44,7 @@
         <ul class="gallery__list">
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-car-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Левон <time class="postdate user-photo__author-postdate" datetime="2020-11-13T02:00">(5 часов назад)</time></p>
@@ -52,7 +54,7 @@
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-drumset-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Антон <time class="postdate user-photo__author-postdate" datetime="2020-11-12T19:00">(12 часов назад)</time></p>
@@ -62,7 +64,7 @@
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-window-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Борис <time class="postdate user-photo__author-postdate" datetime="2020-11-12T11:00">(20 часов назад)</time></p>
@@ -72,7 +74,7 @@
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-fair-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Сергей <time class="postdate user-photo__author-postdate" datetime="2020-11-12T06:00">(25 часов назад)</time></p>
@@ -82,7 +84,7 @@
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-pov-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Максим <time class="postdate user-photo__author-postdate" datetime="2020-11-11T03:00">(40 часов назад)</time></p>
@@ -92,7 +94,7 @@
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <img class="user-photo__picture" src="./img/photo-wing-mobile.jpg" width="280" height="180" alt="">
             </a>
             <div class="user-photo__inner">
               <p class="user-photo__author">Надежда <time class="postdate user-photo__author-postdate" datetime="2020-11-10T22:00">(45 часов назад)</time></p>
@@ -111,7 +113,7 @@
         <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="upload__label">
             <input class="upload__input" type="file">
-            <img src="https://via.placeholder.com/280x374"  width="280" height="374" alt="">
+            <img src="./img/photo-road-mobile.jpg"  width="280" height="374" alt="">
           </label>
           <div class="edit">
             <div class="edit__filter">
