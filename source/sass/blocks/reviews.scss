@@ -29,6 +29,10 @@
   margin-bottom: 44px;
 }
 
+.reviews__toggles {
+  text-align: center;
+}
+
 @media (min-width: $tablet-width) {
   .reviews-item__author-info {
     display: flex;
@@ -36,32 +40,51 @@
   }
 
   .reviews-item__text {
+    @include font-set(400, 18px, 30px);
     margin-bottom: 51px;
   }
 
   .reviews-item__author-name {
+    @include font-set(700, 20px, 30px);
     margin-bottom: 17px;
     order: 2;
   }
 
   .reviews-item__author-description {
+    @include font-set(400, 14px, 30px);
     display: block;
     margin: 0;
     margin-bottom: 49px;
     order: 3;
-  }
-
-  .reviews__toggles {
-    text-align: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .reviews {
     padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .reviews__wrapper {
+    margin: 0 auto;
+    width: 940px;
   }
 
   .reviews__toggles {
     display: none;
+  }
+
+  .reviews-item__author-name {
+    @include font-set(700, 24px, 30px);
+  }
+
+  .reviews-item__text {
+    padding-left: 104px;
+    padding-right: 104px;
+  }
+
+  .reviews-item__author-description {
+    @include font-set(400, 18px, 30px);
+    margin-bottom: 41px;
   }
 }
