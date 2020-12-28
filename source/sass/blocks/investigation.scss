@@ -15,50 +15,44 @@
     justify-content: flex-end;
     box-sizing: border-box;
     padding-top: 54px;
+    position: relative;
+
+    &::before {
+      box-sizing: border-box;
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-size: 238px 275px;
+      content: "";
+      height: 275px;
+      left: 0;
+      position: absolute;
+      top: 54px;
+      width: 238px;
+      z-index: auto;
+    }
+
+    &::after {
+      @include font-set(700, 96px, 163px);
+      box-sizing: border-box;
+      border: 13px solid $pink;
+      border-radius: 50%;
+      content: "24";
+      color: $pink;
+      height: 202px;
+      left: 18px;
+      position: absolute;
+      top: 110px;
+      text-align: center;
+      vertical-align: middle;
+      width: 202px;
+    }
   }
 
   .investigation__inner {
     padding-top: 50px;
     padding-bottom: 19px;
-    position: relative;
     margin-left: auto;
     width: 50%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -309px;
-      z-index: auto;
-
-      box-sizing: border-box;
-      width: 238px;
-      height: 275px;
-
-      background-image: url("../img/timer.svg");
-      background-repeat: no-repeat;
-      background-size: 238px 275px;
-    }
-
-    &::after {
-      @include font-set(700, 96px, 163px);
-
-      content: "24";
-      position: absolute;
-      top: 56px;
-      left: -291px;
-
-      box-sizing: border-box;
-      width: 202px;
-      height: 202px;
-
-      color: $pink;
-      text-align: center;
-      vertical-align: middle;
-
-      border: 13px solid $pink;
-      border-radius: 50%;
-    }
   }
 
   .investigation__title {
@@ -89,49 +83,29 @@
     padding-top: 16px;
     padding-bottom: 120px;
     width: 940px;
+
+    &::before {
+      background-size: 298px 345px;
+      height: 345px;
+      left: 0;
+      top: 16px;
+      width: 298px;
+    }
+
+    &::after {
+      @include font-set(700, 120px, 163px);
+      border-width: 17px;
+      height: 252px;
+      left: 23px;
+      top: 87px;
+      width: 252px;
+    }
   }
 
   .investigation__inner {
     padding-top: 99px;
     padding-bottom: 0;
     width: 583px;
-
-    &::before {
-      background-image: url("../img/timer.svg");
-      background-size: 298px 345px;
-
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: -355px;
-      z-index: auto;
-
-      box-sizing: border-box;
-      width: 298px;
-      height: 345px;
-    }
-
-    &::after {
-      @include font-set(700, 120px, 163px);
-
-      content: "24";
-
-      box-sizing: border-box;
-      position: absolute;
-
-      border-width: 17px;
-      color: $pink;
-      text-align: center;
-      vertical-align: middle;
-
-      top: 70px;
-      left: -333px;
-
-      height: 252px;
-
-      width: 252px;
-    }
   }
 
   .investigation__title {
