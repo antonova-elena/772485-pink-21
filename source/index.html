@@ -12,8 +12,12 @@
         <div class="nav__wrapper">
           <div class="nav__logo logo">
             <a class="logo__link-nav">
-              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
-            </a>
+              <picture>
+                <source media="(min-width: 960px)" srcset="./img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
+                <img src="./img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+              </picture>
+              </a>
           </div>
           <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
@@ -32,17 +36,17 @@
             <ul class="offer__list">
               <li class="offer__item">
                 <a class="offer__link" href="#">
-                  <img src="https://via.placeholder.com/" width="47" height="56" alt="Ссылка для скачивания приложения для операционой системы IOS">
+                  <img src="./img/icons/apple.svg" width="47" height="56" alt="Ссылка для скачивания приложения для операционой системы IOS">
                 </a>
               </li>
               <li class="offer__item">
                 <a class="offer__link" href="#">
-                  <img src="https://via.placeholder.com/" width="43" height="47" alt="Ссылка для скачивания приложения для операционой системы Android">
+                  <img src="./img/icons/android.svg" width="43" height="47" alt="Ссылка для скачивания приложения для операционой системы Android">
                 </a>
               </li>
               <li class="offer__item">
                 <a class="offer__link" href="#">
-                  <img src="https://via.placeholder.com/" width="44" height="41" alt="Ссылка для скачивания приложения для операционой системы Microsoft">
+                  <img src="./img/icons/microsoft.svg" width="44" height="41" alt="Ссылка для скачивания приложения для операционой системы Microsoft">
                 </a>
               </li>
             </ul>
@@ -196,7 +200,10 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo-full" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+              <img class="logo-full" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
+            </picture>
           </a>
         </div>
         <ul class="social">
