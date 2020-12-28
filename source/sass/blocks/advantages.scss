@@ -27,22 +27,20 @@
 
 .advantages__list {
   @include clear-list ();
-
   box-sizing: border-box;
-  background-image: url("../img/iphone-screen-mobile.png");
+  background-image: url("../img/iphone/iphone-screen-mobile.png");
   background-repeat: no-repeat;
   background-position: left 50% bottom -42px;
   background-size: 157px 320px;
-
   position: relative;
-
-  width: 100%;
-
-  background-color: $backgroundgrey;
   padding-top: 81px;
   padding-bottom: 284px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone/iphone-screen-mobile@2x.png");
+  }
 }
 
 .advantages__item {
@@ -85,11 +83,15 @@
   }
 
   .advantages__inner {
-    background-image: url("../img/iphone-screen-3-tablet.png");
+    background-image: url("../img/iphone/iphone-screen-3-tablet.png");
     background-repeat: no-repeat;
     background-position: left 21px bottom 0;
     background-size: 268px 482px;
     width: 660px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone/iphone-screen-3-tablet@2x.png");
+    }
   }
 
   .advantages__list {
@@ -155,15 +157,27 @@
     width: 297px;
 
     &--first {
-      background-image: url("../img/iphone-screen-1-desktop.png");
+      background-image: url("../img/iphone/iphone-screen-1-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/iphone/iphone-screen-1-desktop@2x.png");
+      }
     }
 
     &--second {
-      background-image: url("../img/iphone-screen-2-desktop.png");
+      background-image: url("../img/iphone/iphone-screen-2-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/iphone/iphone-screen-2-desktop@2x.png");
+      }
     }
 
     &--third {
-      background-image: url("../img/iphone-screen-3-desktop.png");
+      background-image: url("../img/iphone/iphone-screen-3-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/iphone/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 

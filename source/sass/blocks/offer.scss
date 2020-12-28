@@ -1,13 +1,18 @@
 .offer {
   box-sizing: border-box;
-  background-image: url("../img/iphone-hand-mobile.png"),
-    url("../img/bg-back-mobile.jpg");
+  background-image: url("../img/iphone/iphone-hand-mobile.png"),
+    url("../img/bg/back-mobile.jpg");
   background-position: left 0 top 184px, center top;
   background-size: 256px 286px, 320px 462px;
   background-color: $fontcolor;
   min-height: 171px;
   margin-top: -70px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone/iphone-hand-mobile@2x.png"),
+      url("../img/bg/back-mobile@2x.jpg");
+  }
 }
 
 .offer__inner {
@@ -73,13 +78,18 @@
 
 @media (min-width: $tablet-width) {
   .offer {
-    background-image: url("../img/iphone-hand-tablet.png"),
-      url("../img/bg-back-tablet.jpg");
+    background-image: url("../img/iphone/iphone-hand-tablet.png"),
+      url("../img/bg/back-tablet.jpg");
     background-position: right -20px bottom 0, center;
     background-repeat: no-repeat;
     background-size: 660px 545px, 1200px 729px;
     margin-top: -110px;
     max-height: 729px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone/iphone-hand-tablet@2x.png"),
+        url("../img/bg/back-tablet@2x.jpg");
+    }
   }
 
   .offer__wrapper {
@@ -132,21 +142,29 @@
 
 @media (min-width: $desktop-width) {
   .offer {
-    background-image: url("../img/bg-back-desktop.jpg");
+    background-image: url("../img/bg/back-desktop.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 2560px 853px;
     max-height: 853px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/back-desktop@2x.jpg");
+    }
   }
 
   .offer__wrapper {
-    background-image: url("../img/iphone-hand-desktop.png");
+    background-image: url("../img/iphone/iphone-hand-desktop.png");
     background-repeat: no-repeat;
     background-size: 1050px 645px;
     background-position: right -116px bottom 0;
     margin: 0 auto;
     padding-top: 115px;
     width: 960px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone/iphone-hand-desktop@2x.png");
+    }
   }
 
   .offer__title {

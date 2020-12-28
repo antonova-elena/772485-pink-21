@@ -1,6 +1,6 @@
 .header__wrapper {
   box-sizing: border-box;
-  background-image: url("../img/bg-back-mobile.jpg");
+  background-image: url("../img/bg/back-mobile.jpg");
   background-position: center top;
   background-size: 320px 462px;
   background-color: $fontcolor;
@@ -8,21 +8,8 @@
   margin-top: -70px;
   background-repeat: no-repeat;
 
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/bg-back-tablet.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 1200px 729px;
-    margin-top: -110px;
-    min-height: 440px;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/bg-back-desktop.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 2560px 853px;
-    min-height: 394px;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/back-mobile@2x.jpg");
   }
 }
 
@@ -37,8 +24,23 @@
   padding-right: 26px;
 
   @include font-set(300, 24px, 33px);
+}
 
-  @media (min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
+  .header__wrapper {
+    background-image: url("../img/bg/back-tablet.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1200px 729px;
+    margin-top: -110px;
+    min-height: 440px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/back-tablet@2x.jpg");
+    }
+  }
+
+  .header__title {
     padding-top: 191px;
     padding-bottom: 143px;
     padding-left: 93px;
@@ -46,8 +48,22 @@
 
     @include font-set(300, 50px, 68px);
   }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .header__wrapper {
+    background-image: url("../img/bg/back-desktop.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 2560px 853px;
+    min-height: 394px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/back-desktop@2x.jpg");
+    }
+  }
+
+  .header__title {
     padding-top: 184px;
     padding-bottom: 104px;
     padding-left: 94px;

@@ -26,7 +26,7 @@
 }
 
 .nav--closed .nav__toggle::before {
-  background-image: url("../img/icon-menu-burger.svg");
+  background-image: url("../img/icons/icon-menu-burger.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   content: "";
@@ -47,7 +47,7 @@
 }
 
 .nav--opened .nav__toggle::after {
-  background-image: url("../img/icon-menu-cross.svg");
+  background-image: url("../img/icons/icon-menu-cross.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   content: "";
@@ -73,8 +73,6 @@
 }
 
 .nav__list {
-  border: 1px solid blue;
-
   @include clear-list ();
 }
 

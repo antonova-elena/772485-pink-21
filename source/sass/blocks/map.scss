@@ -1,17 +1,21 @@
 .map {
   border: none;
-  background-image: url("../img/map.png");
+  background-image: url("../img/bg/map.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   height: 202px;
+  position: relative;
   width: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/map@2x.jpg");
+  }
 
   &::after {
     content: "";
     position: absolute;
 
-    background-image: url("../img/bg-triangle-white-map.svg");
+    background-image: url("../img/bg/bg-triangle-white-map.svg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% 100%;
@@ -28,8 +32,12 @@
   .map {
     height: 374px;
 
-    background-image: url("../img/bg-map-tablet.jpg");
+    background-image: url("../img/bg/map-tablet.jpg");
     background-position: 85% 87%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/map-tablet@2x.jpg");
+    }
 
     &::after {
       height: 68px;
@@ -40,8 +48,13 @@
 @media (min-width: $desktop-width) {
   .map {
     height: 502px;
-    background-image: url("../img/bg-map-desktop.jpg");
+    background-image: url("../img/bg/map-desktop.jpg");
     background-position: 50% 58.5%;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/map-desktop@2x.jpg");
+    }
 
     &::after {
       height: 100px;

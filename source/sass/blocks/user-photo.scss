@@ -33,11 +33,15 @@
   line-height: 3px;
 
   &--first {
-    background-image: url("../img/panorama-mobile.jpg");
+    background-image: url("../img/photos/panorama-mobile.jpg");
     background-position: 50%;
     background-size: cover;
     height: 137px;
     width: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photos/panorama-mobile@2x.jpg");
+    }
   }
 }
 
@@ -68,8 +72,15 @@
     padding-right: 24px;
   }
 
-  .user-photo__link--fist {
-    height: 509px;
+  .user-photo__link {
+    &--fist {
+      background-image: url("../img/photos/panorama-tablet.jpg");
+      height: 509px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photos/panorama-tablet@2x.jpg");
+      }
+    }
   }
 
   .user-photo__description {
@@ -85,12 +96,19 @@
     padding-right: 27px;
 
     &--first {
-      width: 940px;
       margin: 0 auto;
+      width: 940px;
     }
   }
 
-  .user-photo__link--fist {
-    height: 506px;
+  .user-photo__link {
+    &--fist {
+      background-image: url("../img/photos/panorama-desktop.jpg");
+      height: 506px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photos/panorama-desktop@2x.jpg");
+      }
+    }
   }
 }
