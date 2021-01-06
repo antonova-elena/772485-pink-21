@@ -6,22 +6,43 @@
   @include clear-list ();
 }
 
+.gallery__item {
+  &--first {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+
+    &::before {
+      @include font-set(700, 12px, 24px);
+      background-color: $pink;
+      content: "Панорама дня";
+      color: $white;
+      position: absolute;
+      padding-top: 6px;
+      padding-right: 20px;
+      padding-bottom: 9px;
+      padding-left: 19px;
+      text-transform: uppercase;
+      top: 0;
+      right: 20px;
+    }
+  }
+}
+
 .gallery__list {
   @include clear-list ();
-
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .gallery__title {
+  @include font-set(400, 14px, 30px);
   margin: 0;
   padding-top: 54px;
   padding-bottom: 60px;
   padding-left: 35px;
   padding-right: 35px;
   text-align: center;
-
-  @include font-set(400, 14px, 30px);
 }
 
 @media (min-width: $tablet-width) {
@@ -31,20 +52,31 @@
     grid-gap: 20px;
   }
 
+  .gallery__list-first {
+    margin-bottom: 50px;
+  }
+
   .gallery__title {
     padding-top: 100px;
     padding-bottom: 85px;
-    padding-left: 44px;
-    padding-right: 44px;
+    padding-left: 85px;
+    padding-right: 85px;
 
     @include font-set(400, 18px, 30px);
   }
 
-  .gallery__item--first {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 3;
-    grid-column-end: 3;
+  .gallery__item {
+    &--first {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 3;
+      grid-column-end: 3;
+      margin-bottom: 0;
+
+      &::before {
+        top: 57px;
+      }
+    }
   }
 }
 
@@ -52,16 +84,25 @@
   .gallery__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    row-gap: 54px;
+    column-gap: 20px;
     max-width: 940px;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .gallery__item--first {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 4;
-    grid-column-end: 4;
+  .gallery__item {
+    &--first {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 4;
+      grid-column-end: 4;
+
+      &::before {
+        top: 54px;
+      }
+    }
   }
 
   .gallery__title {
