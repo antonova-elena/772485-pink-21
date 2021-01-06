@@ -1,0 +1,151 @@
+.popup {
+  background: $white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 1px;
+  padding-top: 49px;
+
+  &--succes {
+    padding-top: 44px;
+  }
+}
+
+.popup__title {
+  @include font-set(700, 18px, 24px);
+  color: $black;
+  margin: 0;
+  padding-bottom: 37px;
+  text-align: center;
+
+  &--succes {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+}
+
+.popup__description {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 50px;
+
+  &--succes {
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 41px;
+  }
+}
+
+.popup__button {
+  @include font-set(700, 18px, 30px);
+  background-color: $green;
+  border: 2px solid $green;
+  border-radius: 1px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 125px;
+  padding-right: 124px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &--succes {
+    padding-left: 63px;
+    padding-right: 64px;
+  }
+
+  &:hover {
+    background-color: $greenhover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: $bordercolor;
+  }
+}
+
+.popup__background {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 52px;
+
+  &--succes {
+    background-color: $backgroundgrey;
+    padding-top: 52px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .popup {
+    width: 460px;
+  }
+
+  .popup__title {
+    @include font-set(700, 30px, 40px);
+    padding-left: 66px;
+    padding-right: 66px;
+  }
+
+  .popup__description {
+    @include font-set(400, 18px, 24px);
+    padding-left: 69px;
+    padding-right: 69px;
+    padding-bottom: 40px;
+  }
+
+  .popup__background {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+
+  .popup__button {
+    padding-left: 135px;
+    padding-right: 134px;
+
+    &--succes {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popup {
+    width: 780px;
+  }
+
+  .popup__description {
+    padding-left: 201px;
+    padding-right: 201px;
+    padding-bottom: 68px;
+
+    &--succes {
+      padding-bottom: 44px;
+    }
+  }
+
+  .popup__background {
+    background-color: $backgroundgrey;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    padding-left: 242px;
+    padding-right: 242px;
+
+    &--succes {
+      padding-left: 153px;
+      padding-right: 153px;
+    }
+  }
+
+  .popup__button {
+    &--succes {
+      padding-left: 156px;
+      padding-right: 155px;
+    }
+  }
+}
