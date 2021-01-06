@@ -1,15 +1,17 @@
 .controls {
   padding-top: 38px;
   padding-bottom: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .controls__button {
+  @include font-set(700, 18px, 18px);
   box-sizing: border-box;
   border-radius: 30px;
+  cursor: pointer;
   padding-top: 21px;
   padding-bottom: 21px;
-
-  @include font-set(700, 18px, 18px);
 
   &--post {
     border: 3px solid $pink;
@@ -17,6 +19,15 @@
     margin-bottom: 12px;
     padding-left: 91px;
     padding-right: 90px;
+
+    &:hover {
+      background-color: $pink;
+      color: $white;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--cancel {
@@ -24,6 +35,16 @@
     opacity: 0.1;
     padding-left: 104px;
     padding-right: 103px;
+
+    &:hover {
+      border-color: rgba(40, 54, 69, 0.3);
+      color: rgba(40, 54, 69, 0.3);
+    }
+
+    &:active {
+      background: rgba(40, 54, 69, 0.3);
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
