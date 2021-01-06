@@ -59,7 +59,8 @@
     @include font-set(700, 30px, 36px);
 
     margin: 0;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
+    padding-right: 142px;
   }
 
   .investigation__description {
@@ -76,6 +77,8 @@
   .investigation {
     background-color: $backgroundgrey;
     margin-bottom: 72px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .investigation__wrapper {
