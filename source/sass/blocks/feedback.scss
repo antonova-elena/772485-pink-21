@@ -3,14 +3,13 @@
 }
 
 .feedback__slogan {
+  @include font-set(400, 14px, 30px);
   margin: 0;
   padding-top: 54px;
   padding-bottom: 13px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-
-  @include font-set(400, 14px, 30px);
 }
 
 .feedback__span {
@@ -18,12 +17,11 @@
 }
 
 .feedback__title {
+  @include font-set(400, 14px, 18px);
   color: $pink;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
-
-  @include font-set(400, 14px, 18px);
 
   &--goals {
     padding-bottom: 55px;
@@ -73,15 +71,12 @@
   }
 }
 
-.feedback__wrapper-progress:last-child .feedback__check:last-child input {
-  margin-bottom: 55px;
-}
-
 .feedback__contacts {
   flex-direction: column;
 }
 
 .feedback__review textarea {
+  @include font-set(400, 18px, 30px);
   box-sizing: border-box;
   border: 2px solid $bordercolor;
   border-radius: 1px;
@@ -89,8 +84,6 @@
   padding-bottom: 134px;
   padding-left: 21px;
   padding-right: 24px;
-
-  @include font-set(400, 18px, 30px);
 }
 
 .feedback__wrapper-submit {
@@ -99,6 +92,7 @@
 }
 
 .feedback__button {
+  @include font-set(700, 18px, 30px);
   background-color: $green;
   border: 2px solid $green;
   border-radius: 1px;
@@ -111,17 +105,26 @@
   text-transform: uppercase;
   vertical-align: middle;
 
-  @include font-set(700, 18px, 30px);
+  &:hover {
+    background-color: $greenhover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: $bordercolor;
+  }
 }
 
 .feedback__text {
+  @include font-set(400, 14px, 30px);
   margin: 0;
   padding-top: 46px;
   padding-bottom: 26px;
   text-transform: uppercase;
   text-align: center;
-
-  @include font-set(400, 14px, 30px);
 }
 
 .feedback__text-span {
@@ -141,12 +144,11 @@
   }
 
   .feedback__slogan {
+    @include font-set(400, 18px, 30px);
     padding-top: 100px;
     padding-bottom: 82px;
     padding-left: 65px;
     padding-right: 65px;
-
-    @include font-set(400, 18px, 30px);
   }
 
   .feedback__span {
@@ -178,7 +180,6 @@
 
     &--goals {
       background-color: $white;
-      padding-bottom: 61px;
       order: 3;
     }
 
@@ -188,6 +189,7 @@
   }
 
   .feedback__title {
+    @include font-set(400, 14px, 30px);
     background-color: $white;
     display: inline-block;
     left: 50%;
@@ -198,8 +200,6 @@
     top: -16px;
     transform: translateX(-50%);
     vertical-align: top;
-
-    @include font-set(400, 14px, 30px);
 
     &--app {
       padding-bottom: 61px;
@@ -302,8 +302,16 @@
     }
 
     &--goals {
-      padding-left: 60px;
-      padding-right: 59px;
+      padding-left: 59px;
+      padding-right: 60px;
+    }
+  }
+
+  .feedback__wrapper-progress {
+    padding-right: 56px;
+
+    &:last-of-type {
+      padding-right: 0;
     }
   }
 
@@ -320,8 +328,8 @@
   }
 
   .feedback__progress {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .feedback__review textarea {
