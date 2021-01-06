@@ -1,5 +1,11 @@
 .price {
   background-color: $backgroundgrey;
+  background-image: url("../img/bg/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: -5px 0;
+  background-size: contain;
+  padding-top: 77px;
+  padding-bottom: 101px;
 }
 
 .price__table {
@@ -46,7 +52,7 @@
 @media (min-width: $tablet-width) {
   .price {
     display: block;
-    padding-top: 88px;
+    padding-top: 114px;
     padding-bottom: 73px;
     padding-left: 20px;
     padding-right: 20px;
@@ -94,6 +100,8 @@
   .price {
     padding-top: 154px;
     padding-bottom: 98px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .price__table {
