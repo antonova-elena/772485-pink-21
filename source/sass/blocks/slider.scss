@@ -1,0 +1,42 @@
+.slider__list {
+  position: relative;
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 112px;
+  height: 12px;
+  width: 56px;
+}
+
+.slider__toggle {
+  background-color: rgba(40, 54, 69, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 6px;
+  padding: 0;
+  width: 6px;
+
+  &--current {
+    background-color: $white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: $fontcolor;
+    height: 12px;
+    width: 12px;
+  }
+
+  &:hover {
+    background-color: $fontcolor;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
