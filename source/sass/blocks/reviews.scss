@@ -33,6 +33,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    padding-bottom: 0;
+  }
+
   .reviews-item__author-info {
     display: flex;
     flex-direction: column;
@@ -60,17 +64,29 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
+    margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 0;
-  }
-
-  .reviews__wrapper {
-    margin: 0 auto;
+    position: relative;
     width: 940px;
+
+    &::after {
+      content: "";
+      background-image: url("../img/icons/icon-quotes.svg");
+      height: 63px;
+      left: 431px;
+      position: absolute;
+      top: 0;
+      width: 79px;
+    }
   }
 
   .reviews__toggles {
     display: none;
+  }
+
+  .reviews-item {
+    margin: 0;
   }
 
   .reviews-item__author-name {
