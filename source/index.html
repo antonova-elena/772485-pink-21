@@ -15,7 +15,7 @@
               <picture>
                 <source media="(min-width: 960px)" srcset="./img/logo-pink-white-desktop.svg">
                 <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
-                <img src="./img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+                <img class="logo-nav-img" src="./img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
               </picture>
               </a>
           </div>
@@ -31,22 +31,22 @@
       <div class="offer">
         <div class="offer__wrapper">
           <p class="offer__title">Взгляните на жизнь иначе!</p>
-          <div class="offer__inner offer__inner--start">
-            <a class="offer__button" href="#">Скачать приложение</a>
+          <div class="offer__inner">
+            <a class="offer__button" href="https://www.apple.com/itunes">Скачать приложение</a>
             <ul class="offer__list">
               <li class="offer__item">
-                <a class="offer__link" href="#">
-                  <img src="./img/icons/apple.svg" width="47" height="56" alt="Ссылка для скачивания приложения для операционой системы IOS">
+                <a class="offer__link offer__link--apple" href="https://www.apple.com/itunes">
+                  <svg width="47" height="56" tabindex="0" aria-label="Ссылка для скачивания приложения для операционой системы IOS"><use xlink:href="./img/icons/sprite.svg#apple"></use></svg>
                 </a>
               </li>
-              <li class="offer__item">
-                <a class="offer__link" href="#">
-                  <img src="./img/icons/android.svg" width="43" height="47" alt="Ссылка для скачивания приложения для операционой системы Android">
+              <li class="offer__item offer__item--android">
+                <a class="offer__link offer__link--android" href="https://play.google.com/store">
+                  <svg width="43" height="47" tabindex="0" aria-label="Ссылка для скачивания приложения для операционой системы Android"><use xlink:href="./img/icons/sprite.svg#android"></use></svg>
                 </a>
               </li>
-              <li class="offer__item">
-                <a class="offer__link" href="#">
-                  <img src="./img/icons/microsoft.svg" width="44" height="41" alt="Ссылка для скачивания приложения для операционой системы Microsoft">
+              <li class="offer__item offer__item--microsoft">
+                <a class="offer__link offer__link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                  <svg width="44" height="41" tabindex="0" aria-label="Ссылка для скачивания приложения для операционой системы Microsoft"><use xlink:href="./img/icons/sprite.svg#microsoft"></use></svg>
                 </a>
               </li>
             </ul>
@@ -85,7 +85,7 @@
       <section class="investigation">
         <div class="investigation__wrapper">
           <div class="investigation__inner">
-            <h2 class="investigation__title">Эффект на 24 часа!</h2>
+            <h2 class="investigation__title">Эффект на&nbsp;24 часа!</h2>
             <p class="investigation__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
             <a class="investigation__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -104,9 +104,9 @@
             </blockquote>
           </div>
           <div class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle slider__toggle--current" type="button" aria-label="1"></button>
+            <button class="slider__toggle" type="button" aria-label="2"></button>
+            <button class="slider__toggle" type="button" aria-label="3"></button>
           </div>
         </div>
       </section>
@@ -170,9 +170,9 @@
           </tbody>
         </table>
         <div class="price__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle slider__toggle--current" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button" aria-label="1"></button>
+          <button class="slider__toggle slider__toggle--current" type="button" aria-label="2"></button>
+          <button class="slider__toggle" type="button" aria-label="3"></button>
         </div>
       </section>
       <section class="contacts">
@@ -201,27 +201,24 @@
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-              <img class="logo-full" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
+              <source srcset="img/logo-pink-blue-desktop.svg" media="(min-width: 960px)">
+              <img class="logo-footer-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
             </picture>
           </a>
         </div>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#"><span>Твиттер</span></a>
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
           </li>
           <li class="social__item">
-            <a class=" social__link social__link--facebook" href="#"><span>Фейсбук</span></a>
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#"><span>Ютюб</span></a>
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Ютюб</span></a>
           </li>
         </ul>
         <div class="copyright">
-          <p class="copyright__title">Разработано
-            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
-            </a>
-          </p>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">Разработано</a>
         </div>
       </div>
     </footer>
