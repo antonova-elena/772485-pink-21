@@ -17,12 +17,9 @@
 
 .offer__inner {
   background-color: $backgroundblack;
+  margin-top: 231px;
   padding-top: 28px;
-  padding-bottom: 38px;
-}
-
-.offer__inner--start {
-  margin-top: 220px;
+  padding-bottom: 31px;
 }
 
 .offer__list {
@@ -30,9 +27,10 @@
 
   display: flex;
   justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 21px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 52px;
   height: 56px;
 }
 
@@ -52,9 +50,28 @@
   @include font-set(300, 24px, 29px);
 }
 
+.offer__item {
+  &--android {
+    margin-top: 6px;
+  }
+
+  &--microsoft {
+    margin-top: 12px;
+  }
+}
+
+.offer__link {
+  &--android {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+}
+
 .offer__description {
   color: $white;
   margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 
   @include font-set(300, 14px, 24px);
@@ -67,13 +84,23 @@
   color: $white;
   display: inline-block;
   margin-left: 20px;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 38px;
-  padding-right: 39px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 35px;
+  padding-right: 37px;
   text-decoration: none;
 
   @include font-set(700, 18px, 18px);
+
+  &:hover {
+    background-color: $white;
+    box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
+    color: $pink;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -123,20 +150,31 @@
   .offer__inner {
     background-color: transparent;
     min-width: 300px;
-    margin-top: 20px;
+    margin-top: 0;
     padding-bottom: 0;
   }
 
-  .offer__inner--start {
-    margin-top: 0;
+  .offer__list {
+    max-width: 313px;
+    padding-top: 46px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .offer__item {
+    &--android {
+      margin-top: 5px;
+    }
+
+    &--microsoft {
+      margin-top: 8px;
+    }
   }
 
   .offer__description {
     @include font-set(300, 18px, 24px);
-
-    margin-top: 36px;
-    padding-bottom: 119px;
     max-width: 300px;
+    padding-bottom: 119px;
   }
 }
 
@@ -160,7 +198,9 @@
     background-position: right -116px bottom 0;
     margin: 0 auto;
     padding-top: 115px;
-    width: 960px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 940px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/iphone/iphone-hand-desktop@2x.png");
@@ -173,19 +213,6 @@
     padding-top: 93px;
 
     @include font-set(300, 50px, 68px);
-
-    &--start {
-      display: block;
-      min-height: 165px;
-      margin-top: 0;
-      margin-left: 25px;
-      margin-bottom: 0;
-      padding-top: 100px;
-      padding-left: 0;
-      padding-bottom: 0;
-      padding-right: 0;
-      width: 250px;
-    }
   }
 
   .offer__inner {
@@ -203,11 +230,21 @@
   }
 
   .offer__list {
-    margin-top: 67px;
+    padding-top: 67px;
+    padding-bottom: 58px;
+  }
+
+  .offer__item {
+    &--android {
+      margin-top: 8px;
+    }
+
+    &--microsoft {
+      margin-top: 12px;
+    }
   }
 
   .offer__description {
-    margin-top: 55px;
     margin-bottom: 130px;
   }
 }
