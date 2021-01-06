@@ -37,12 +37,11 @@
   width: 50px;
 
   &:hover {
-    background-color: $pink;
+    fill: $pink;
   }
 
   &:active {
-    background-color: $pink;
-    opacity: 0.3;
+    fill: rgba(210, 40, 86, 0.3);
   }
 }
 
@@ -59,12 +58,11 @@
   width: 23px;
 
   &:hover {
-    background-color: $pink;
+    fill: $pink;
   }
 
   &:active {
-    background-color: $pink;
-    opacity: 0.3;
+    fill: rgba(210, 40, 86, 0.3);
   }
 }
 
@@ -77,6 +75,7 @@
 }
 
 .nav__list a {
+  @include font-set(700, 18px, 32px);
   border-top: 1px solid $black;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: block;
@@ -86,8 +85,16 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
 
-  @include font-set(700, 18px, 32px);
+.nav__item a {
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -109,6 +116,7 @@
     margin: 0 auto;
   }
 
+  .nav--opened .nav__list,
   .nav--closed .nav__list {
     display: flex;
     flex-direction: row;
@@ -116,24 +124,40 @@
   }
 
   .nav__list a {
+    @include font-set(400, 18px, 18px);
     border: none;
     display: inline-flex;
     padding-top: 48px;
-    padding-bottom: 49px;
+    padding-bottom: 2px;
     text-transform: none;
+  }
 
-    @include font-set(400, 18px, 18px);
+  .nav__item {
+    margin-right: 79px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .nav__item a {
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .nav__item--active::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -13px;
+    left: 0;
+    height: 2px;
+    background: $white;
   }
 
   .nav__toggle {
     display: none;
-  }
-
-  .nav__item {
-    padding-right: 79px;
-
-    &:last-child {
-      padding-right: 0;
-    }
   }
 }
