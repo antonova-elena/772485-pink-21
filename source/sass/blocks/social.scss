@@ -4,38 +4,97 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 53px;
+  padding-left: 54px;
 }
 
 .social__link {
-  margin-right: 14px;
-}
+  background-color: $white;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(40, 54, 69, 0.1);
+  display: block;
+  height: 48px;
+  position: relative;
+  text-align: center;
+  width: 48px;
 
-.social__link--twitter {
-  margin-left: 74px;
+  &:hover {
+    border-color: $fontcolor;
+  }
+
+  &:active {
+    border-color: rgba(40, 54, 69, 0.1);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--twitter {
+    &::after {
+      background-image: url("../img/icons/icon-twitter.svg");
+      background-repeat: no-repeat;
+      content: "";
+      height: 14px;
+      left: 15px;
+      top: 17px;
+      position: absolute;
+      width: 18px;
+    }
+  }
+
+  &--facebook {
+    margin-left: 14px;
+    margin-right: 14px;
+
+    &::after {
+      background-image: url("../img/icons/icon-facebook.svg");
+      background-repeat: no-repeat;
+      content: "";
+      height: 18px;
+      left: 20px;
+      top: 15px;
+      position: absolute;
+      width: 9px;
+    }
+  }
+
+  &--youtube {
+    &::after {
+      background-image: url("../img/icons/icon-youtube.svg");
+      background-repeat: no-repeat;
+      content: "";
+      height: 13px;
+      left: 19px;
+      top: 18px;
+      position: absolute;
+      width: 15px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .social {
-    margin-top: 39px;
-    margin-bottom: 40px;
-  }
-
-  .social__link--twitter {
-    margin-left: 79px;
+    margin-bottom: 0;
+    padding-top: 39px;
+    padding-bottom: 40px;
+    padding-left: 79px;
+    padding-right: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .social {
-    margin-top: 74px;
-    margin-bottom: 75px;
+    padding-top: 74px;
+    padding-bottom: 75px;
+    padding-left: 240px;
   }
 
   .social__link {
-    margin-right: 11px;
-  }
-
-  .social__link--twitter {
-    margin-left: 240px;
+    &--facebook {
+      margin-left: 14px;
+      margin-right: 14px;
+    }
   }
 }
