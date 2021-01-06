@@ -1,0 +1,12 @@
+.range__input {
+  background-color: $fontcolor;
+  cursor: pointer;
+  height: 2px;
+  width: 230px;
+}
+
+@media (min-width: $tablet-width) {
+  .range__input {
+    width: 202px;
+  }
+}
