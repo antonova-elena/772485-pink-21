@@ -1,12 +1,12 @@
 .text-field__label {
+  @include font-set (400, 14px, 30px);
   color: $pink;
   padding-left: 23px;
   text-transform: uppercase;
-
-  @include font-set (400, 14px, 30px);
 }
 
 .text-field__input {
+  @include font-set(400, 18px, 30px);
   box-sizing: border-box;
   border: 2px solid $bordercolor;
   border-radius: 1px;
@@ -19,7 +19,14 @@
   vertical-align: middle;
   width: 100%;
 
-  @include font-set(400, 18px, 30px);
+  &:hover {
+    border-color: $fontcolor;
+  }
+
+  &:active,
+  :focus {
+    border-color: $pink;
+  }
 }
 
 @media (min-width: $tablet-width) {
