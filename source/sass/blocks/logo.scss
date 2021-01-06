@@ -1,17 +1,36 @@
 .logo__link-nav {
   display: block;
   height: 23px;
-  padding: 22px 21px;
-  padding-left: 20px;
+  fill: $white;
+  padding-top: 22px;
+  margin-left: 20px;
   width: 74px;
+}
 
-  @media (min-width: $tablet-width) {
+.logo-nav-img {
+  fill: $white;
+
+  &:hover {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: $white;
+    fill-opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo__link-nav {
     height: 40px;
     padding-top: 27px;
     width: 145px;
   }
+}
 
-  @media (min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .logo__link-nav {
+    margin-left: 0;
     width: 147px;
   }
 }
