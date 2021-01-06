@@ -1,0 +1,95 @@
+.edit__filter {
+  position: relative;
+
+  ::before {
+    background-color: rgba(40, 54, 69, 0.1);
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 85px;
+    width: 320px;
+  }
+
+  &--active .edit__svg {
+    fill: $pink;
+  }
+
+  &--active .edit__range {
+    display: block;
+  }
+}
+
+.edit__svg {
+  fill: $fontcolor;
+  fill-opacity: 0.3;
+
+  &:hover {
+    fill: $fontcolor;
+    fill-opacity: 0.5;
+  }
+
+  &:active {
+    fill: $pink;
+  }
+}
+
+.edit__button {
+  border: none;
+  padding-left: 57px;
+}
+
+.edit__range {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .edit__filter {
+    display: flex;
+    flex-direction: row;
+
+    &::before {
+      right: 20px;
+      width: 275px;
+    }
+  }
+
+  .edit__svg {
+    &--crop {
+      height: 22px;
+      width: 22px;
+    }
+
+    &--fill {
+      height: 24px;
+      width: 22px;
+    }
+
+    &--contrast {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .edit__svg {
+    &--crop {
+      height: 44px;
+      width: 44px;
+    }
+
+    &--fill {
+      height: 48px;
+      width: 43px;
+    }
+
+    &--contrast {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
