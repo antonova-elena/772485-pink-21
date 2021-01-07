@@ -2,9 +2,8 @@
   box-sizing: border-box;
   background-image: url("../img/bg/back-mobile.jpg");
   background-position: center top;
-  background-size: 320px 462px;
+  background-size: 320px 471px;
   background-color: $fontcolor;
-  height: 237px;
   margin-top: -70px;
   background-repeat: no-repeat;
 
@@ -14,16 +13,15 @@
 }
 
 .header__title {
+  @include font-set(300, 24px, 33px);
   box-sizing: border-box;
   color: $white;
   text-align: center;
   margin: 0;
-  padding-top: 102px;
-  padding-bottom: 84px;
+  padding-top: 100px;
+  padding-bottom: 76px;
   padding-left: 26px;
   padding-right: 26px;
-
-  @include font-set(300, 24px, 33px);
 }
 
 @media (min-width: $tablet-width) {
@@ -33,7 +31,6 @@
     background-repeat: no-repeat;
     background-size: 1200px 729px;
     margin-top: -110px;
-    min-height: 440px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg/back-tablet@2x.jpg");
@@ -41,12 +38,11 @@
   }
 
   .header__title {
-    padding-top: 191px;
-    padding-bottom: 143px;
+    @include font-set(300, 50px, 68px);
+    padding-top: 176px;
+    padding-bottom: 129px;
     padding-left: 93px;
     padding-right: 93px;
-
-    @include font-set(300, 50px, 68px);
   }
 }
 
@@ -55,8 +51,7 @@
     background-image: url("../img/bg/back-desktop.jpg");
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 2560px 853px;
-    min-height: 394px;
+    background-size: 2567px 934px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg/back-desktop@2x.jpg");
@@ -64,11 +59,10 @@
   }
 
   .header__title {
-    padding-top: 184px;
-    padding-bottom: 104px;
+    @include font-set(300, 50px, 68px);
+    padding-top: 180px;
+    padding-bottom: 89px;
     padding-left: 94px;
     padding-right: 94px;
-
-    @include font-set(300, 50px, 68px);
   }
 }
