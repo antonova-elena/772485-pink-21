@@ -2,35 +2,30 @@
   margin-bottom: 20px;
 }
 
-.user-photo__inner--first {
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  padding-left: 17px;
-  padding-right: 10px;
-  background-color: $backgroundgrey;
-}
-
 .user-photo__inner {
   background-color: $backgroundgrey;
   padding-top: 26px;
   padding-bottom: 26px;
   padding-left: 17px;
-  padding-right: 10px;
+  padding-right: 31px;
+
+  &--first {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 13px;
+  }
 }
 
 .user-photo__author {
-  margin-top: 0;
-
   @include font-set(700, 14px, 24px);
+  margin-top: 0;
 }
 
 .user-photo__link {
   box-sizing: border-box;
   display: block;
   font-size: 0;
-  line-height: 3px;
+  line-height: 0;
 
   &--first {
     background-image: url("../img/photos/panorama-mobile.jpg");
@@ -56,7 +51,22 @@
 }
 
 .user-photo__button {
+  border: none;
+  cursor: pointer;
   margin-right: 18px;
+  position: relative;
+  padding-left: 31px;
+
+  &::before {
+    background-image: url("../img/icons/icon-heart.svg");
+    background-repeat: no-repeat;
+    content: "";
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+  }
 }
 
 .user-photo__likes {
@@ -65,15 +75,24 @@
 }
 
 @media (min-width: $tablet-width) {
+  .user-photo {
+    margin-bottom: 0;
+  }
+
   .user-photo__inner {
     padding-top: 30px;
     padding-bottom: 31px;
     padding-left: 30px;
-    padding-right: 24px;
+    padding-right: 38px;
+
+    &--first {
+      padding-left: 30px;
+      padding-right: 70px;
+    }
   }
 
   .user-photo__link {
-    &--fist {
+    &--first {
       background-image: url("../img/photos/panorama-tablet.jpg");
       height: 509px;
 
@@ -84,9 +103,16 @@
   }
 
   .user-photo__description {
-    padding-bottom: 24px;
     margin-bottom: 27px;
-    height: 34px;
+    padding-bottom: 24px;
+  }
+
+  .user-photo__button {
+    padding-left: 0;
+
+    &::before {
+      left: 235px;
+    }
   }
 }
 
@@ -97,12 +123,12 @@
 
     &--first {
       margin: 0 auto;
-      width: 940px;
+      width: 886px;
     }
   }
 
   .user-photo__link {
-    &--fist {
+    &--first {
       background-image: url("../img/photos/panorama-desktop.jpg");
       height: 506px;
 
@@ -110,5 +136,10 @@
         background-image: url("../img/photos/panorama-desktop@2x.jpg");
       }
     }
+  }
+
+  .user-photo__description {
+    margin-bottom: 0;
+    padding-bottom: 31px;
   }
 }
