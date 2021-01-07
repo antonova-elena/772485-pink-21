@@ -112,8 +112,8 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 940px;
     margin: 0 auto;
+    width: 940px;
   }
 
   .nav--opened .nav__list,
@@ -121,6 +121,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .nav__list {
+    min-height: 110px;
   }
 
   .nav__list a {
@@ -133,8 +137,9 @@
   }
 
   .nav__item {
-    margin-right: 79px;
+    margin-right: 80px;
     position: relative;
+    padding-top: 8px;
 
     &:last-child {
       margin-right: 0;
@@ -151,7 +156,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: -13px;
+    bottom: 22px;
     left: 0;
     height: 2px;
     background: $white;
