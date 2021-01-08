@@ -12,7 +12,7 @@
 }
 
 .slider__toggle {
-  background-color: rgba(40, 54, 69, 0.3);
+  background-color: transparentize($fontcolor, 0.3);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -31,12 +31,10 @@
   }
 
   &:hover {
-    background-color: $fontcolor;
-    opacity: 0.6;
+    background-color: transparentize($fontcolor, 0.6);
   }
 
   &:active {
-    opacity: 0.1;
+    background-color: transparentize($fontcolor, 0.1);
   }
 }
-

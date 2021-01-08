@@ -12,7 +12,7 @@
   border-radius: 50%;
   border-style: solid;
   border-width: 3px;
-  border-color: rgba(40, 54, 69, 0.1);
+  border-color: transparentize($fontcolor, 0.1);
   display: block;
   height: 48px;
   position: relative;
@@ -24,7 +24,7 @@
   }
 
   &:active {
-    border-color: rgba(40, 54, 69, 0.1);
+    border-color: transparentize($fontcolor, 0.1);
 
     &::after {
       opacity: 0.3;
