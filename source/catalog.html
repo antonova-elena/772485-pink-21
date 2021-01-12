@@ -8,15 +8,19 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--nojs">
         <div class="nav__wrapper">
           <div class="nav__logo logo">
             <a class="logo__link" href="index.html">
-              <picture>
-                <source media="(min-width: 960px)" srcset="./img/logo-pink-white-desktop.svg">
-                <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
-                <img src="./img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
-              </picture>
+              <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
+                <use xlink:href="./img/icons/sprite.svg#desktop-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
+                <use xlink:href="./img/icons/sprite.svg#tablet-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
+                <use xlink:href="./img/icons/sprite.svg#mobile-white-logo"></use>
+              </svg>
             </a>
           </div>
           <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -173,48 +177,57 @@
           <p class="upload__title">Затмите их всех!</p>
           <p class="upload__title">Выкладывайте все, что накопилось в телефоне!</p>
         </div>
-        <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="upload__inner">
-            <label class="upload__label">
-              <input class="upload__input" type="file">
-              <picture>
-                <source media="(min-width: 960px)" srcset="./img/photos/photo-7-desktop.jpg 1x, ./img/photos/photo-7-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="./img/photos/photo-7-tablet.jpg 1x, ./img/photos/photo-7-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-7-mobile.jpg" srcset="./img/photos/photo-7-mobile.jpg 1x, ./img/photos/photo-7-mobile@2x.jpg 2x" width="100%" alt="">
-              </picture>
-            </label>
-          </div>
-          <div class="edit">
-            <div class="edit__filter">
-              <button class="edit__button edit__button--active" type="button" title="Обрезать">
-                <svg class="edit__svg  edit__svg--crop" width="44" height="44" tabindex="0" aria-label="Обрезать"><use xlink:href="./img/icons/sprite.svg#crop"></use></svg>
-              </button>
-              <div class="edit__range range edit__range--active">
-                <input class="range__input" type="range" name="crop-points" id="crop-points" min="0" max="100" step="1" value="80">
-                <label class="range__label" for="crop-points"></label>
+        <form class="upload-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="upload-form__label">
+            <input class="upload-form__input" type="file">
+            <picture>
+              <source media="(min-width: 960px)" srcset="./img/photos/photo-7-desktop.jpg 1x, ./img/photos/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="./img/photos/photo-7-tablet.jpg 1x, ./img/photos/photo-7-tablet@2x.jpg 2x">
+              <img src="./img/photos/photo-7-mobile.jpg" srcset="./img/photos/photo-7-mobile.jpg 1x, ./img/photos/photo-7-mobile@2x.jpg 2x" width="100%" alt="">
+            </picture>
+          </label>
+          <div class="upload-form__wrapper">
+            <div class="upload-form__inner-top">
+              <div class="upload-form__inner-filter  upload-form__inner-filter--active">
+                <button class="upload-form__filter-button" type="button" title="Кадрировать">
+                  <svg class="upload-form__svg  upload-form__svg--crop" width="48" height="48" tabindex="0" aria-label="Кадрировать">
+                    <use xlink:href="./img/icons/sprite.svg#crop"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="upload-form__inner-filter">
+                <button class="upload-form__filter-button" type="button" title="Изменить заливку">
+                  <svg class="upload-form__svg  upload-form__svg--fill" width="48" height="43" tabindex="0" aria-label="Изменить заливку">
+                    <use xlink:href="./img/icons/sprite.svg#fill"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="upload-form__inner-filter">
+                <button class="upload-form__filter-button" type="button" title="Изменить контраст">
+                  <svg class="upload-form__svg  upload-form__svg--contrast" width="32" height="32" tabindex="0" aria-label="Изменить контраст">
+                    <use xlink:href="./img/icons/sprite.svg#contrast"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="edit__filter">
-              <button class="edit__button" type="button" title="Изменить заливку">
-                <svg class="edit__svg  edit__svg--fill" width="48" height="43" tabindex="0" aria-label="Изменить заливку"><use xlink:href="./img/icons/sprite.svg#fill"></use></svg>
-              </button>
-              <div class="edit__range range">
-                <input class="range__input" type="range" name="fill-points" id="fill-points" min="0" max="100" step="1" value="20">
-                <label class="range__label" for="fill-points"></label>
-              </div>
-            </div>
-            <div class="edit__filter">
-              <button class="edit__button" type="button" title="Изменить контрастность">
-                <svg class="edit__svg  edit__svg--contrast" width="32" height="32" tabindex="0" aria-label="Изменить контрастность"><use xlink:href="./img/icons/sprite.svg#contrast"></use></svg>
-              </button>
-              <div class="edit__range range">
-                <input class="range__input" type="range" name="contrast-points" id="contrast-points" min="0" max="100" step="1" value="50">
-                <label class="range__label" for="contrast-points"></label>
-              </div>
-            </div>
-            <div class="controls">
-              <button class="controls__button controls__button--post" type="submit">Запостить</button>
-              <button class="controls__button controls__button--cancel" type="reset">Отмена</button>
+            <div class="upload-form__inner-bottom">
+              <button class="upload-form__button  upload-form__button--post" type="submit">Запостить</button>
+              <button class="upload-form__button  upload-form__button--cancel" type="reset">Отмена</button>
             </div>
           </div>
         </form>
@@ -224,10 +237,12 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <picture>
-              <source media="(min-width: 960px)" srcset="./img/logo-pink-blue-desktop.svg">
-              <img class="logo-full" src="./img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-            </picture>
+            <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
+              <use xlink:href="./img/icons/sprite.svg#desktop-blue-logo"></use>
+            </svg>
+            <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
+              <use xlink:href="./img/icons/sprite.svg#mobile-blue-logo"></use>
+            </svg>
           </a>
         </div>
         <ul class="social">

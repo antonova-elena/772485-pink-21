@@ -8,15 +8,19 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--nojs">
         <div class="nav__wrapper">
           <div class="nav__logo logo">
-            <a class="logo__link-nav">
-              <picture>
-                <source media="(min-width: 960px)" srcset="./img/logo-pink-white-desktop.svg">
-                <source media="(min-width: 660px)" srcset="./img/logo-pink-white-tablet.svg">
-                <img class="logo-nav-img" src="./img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
-              </picture>
+            <a class="logo__link">
+              <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
+                <use xlink:href="./img/icons/sprite.svg#desktop-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
+                <use xlink:href="./img/icons/sprite.svg#tablet-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
+                <use xlink:href="./img/icons/sprite.svg#mobile-white-logo"></use>
+              </svg>
             </a>
           </div>
           <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -115,59 +119,68 @@
       </section>
       <section class="price">
         <h2 class="visually-hidden">Прайс-лист</h2>
-        <table class="price__table slider">
-          <thead class="slider__list">
+        <table class="price__table">
+          <thead>
             <tr>
-              <th class="price__title price__title--transparent"></th>
-              <th class="price__title slider__item">
+              <th class="price__title  price__title--transparent"></th>
+              <th class="price__title">
                 База
-                <span class="price__span">1,99 USD</span>
+                <span>1,99 USD</span>
               </th>
-              <th class="price__title slider__item">
+              <th class="price__title  price__title--hit">
                 Стандарт
-                <span class="price__span">3,99 USD</span>
+                <span>3,99 USD</span>
               </th>
-              <th class="price__title slider__item">
+              <th class="price__title">
                 Анлим
-                <span class="price__span">9,99 USD</span>
+                <span>9,99 USD</span>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr class="price__row">
-              <td class="price__item price__item--title">Розовый фильтр</td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
+              <td class="price__item  price__item--feature-title">Розовый фильтр</td>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Розовый фильтр</span>
+                <span class="price__feature-status">Да</span>
               </td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Розовый фильтр</span>
+                <span class="price__feature-status">Да</span>
               </td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
-              </td>
-            </tr>
-            <tr class="price__row">
-              <td class="price__item price__item--title">Смайлики</td>
-              <td class="price__item price__item--no">
-                <span class="price__item-status">Нет</span>
-              </td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
-              </td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Розовый фильтр</span>
+                <span class="price__feature-status">Да</span>
               </td>
             </tr>
             <tr class="price__row">
-              <td class="price__item price__item--title">Комментарии</td>
-              <td class="price__item price__item--no">
-                <span class="price__item-status">Нет</span>
+              <td class="price__item  price__item--feature-title">Смайлики</td>
+              <td class="price__item  price__item--no">
+                <span class="price__feature-title">Смайлики</span>
+                <span class="price__feature-status">Нет</span>
               </td>
-              <td class="price__item price__item--no">
-                <span class="price__item-status">Нет</span>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Смайлики</span>
+                <span class="price__feature-status">Да</span>
               </td>
-              <td class="price__item price__item--yes">
-                <span class="price__item-status">Да</span>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Смайлики</span>
+                <span class="price__feature-status">Да</span>
+              </td>
+            </tr>
+            <tr class="price__row">
+              <td class="price__item  price__item--feature-title">Комментарии</td>
+              <td class="price__item  price__item--no">
+                <span class="price__feature-title">Комментарии</span>
+                <span class="price__feature-status">Нет</span>
+              </td>
+              <td class="price__item  price__item--no">
+                <span class="price__feature-title">Комментарии</span>
+                <span class="price__feature-status">Нет</span>
+              </td>
+              <td class="price__item  price__item--yes">
+                <span class="price__feature-title">Комментарии</span>
+                <span class="price__feature-status">Да</span>
               </td>
             </tr>
           </tbody>
@@ -203,10 +216,12 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <picture>
-              <source srcset="img/logo-pink-blue-desktop.svg" media="(min-width: 960px)">
-              <img class="logo-footer-img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-            </picture>
+            <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
+              <use xlink:href="./img/icons/sprite.svg#desktop-blue-logo"></use>
+            </svg>
+            <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
+              <use xlink:href="./img/icons/sprite.svg#mobile-blue-logo"></use>
+            </svg>
           </a>
         </div>
         <ul class="social">
@@ -221,7 +236,9 @@
           </li>
         </ul>
         <div class="copyright">
-          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">Разработано</a>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/icons/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>

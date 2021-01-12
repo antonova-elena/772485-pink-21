@@ -11,12 +11,16 @@
       <nav class="nav nav--closed nav--nojs">
         <div class="nav__wrapper">
           <div class="nav__logo logo">
-            <a class="logo__link-nav" href="index.html">
-              <picture>
-                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-                <img src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
-              </picture>
+            <a class="logo__link" href="index.html">
+              <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
+                <use xlink:href="./img/icons/sprite.svg#desktop-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
+                <use xlink:href="./img/icons/sprite.svg#tablet-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
+                <use xlink:href="./img/icons/sprite.svg#mobile-white-logo"></use>
+              </svg>
             </a>
           </div>
           <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -134,10 +138,12 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-              <img class="logo-full" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
-            </picture>
+            <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
+              <use xlink:href="./img/icons/sprite.svg#desktop-blue-logo"></use>
+            </svg>
+            <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
+              <use xlink:href="./img/icons/sprite.svg#mobile-blue-logo"></use>
+            </svg>
           </a>
         </div>
         <ul class="social">
