@@ -2,24 +2,94 @@
   min-height: 66px;
   position: relative;
   width: auto;
+  background-color: $fontcolor;
 
   &--closed {
     background-color: transparentize($black, 0.7);
   }
-
-  &--opened {
-    background-color: $fontcolor;
-  }
 }
 
 .nav__logo {
-  display: block;
   margin-left: 20px;
-  padding-top: 22px;
+  padding-top: 18px;
   padding-bottom: 21px;
 }
 
-.nav__toggle {
+.nav__list {
+  @include clear-list ();
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__list a {
+  @include font-set(700, 18px, 32px);
+  border-top: 1px solid $black;
+  box-shadow: 0 1px 0 $black, inset 0 1px 0 transparentize($white, 0.85);
+  display: block;
+  color: $white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__item a {
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    color: transparentize($white, 0.7);
+  }
+}
+
+.nav--opened .nav__toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 23px;
+  position: absolute;
+  right: 23px;
+  top: 23px;
+  width: 23px;
+  z-index: 4;
+
+  &::before,
+  &::after {
+    cursor: pointer;
+    display: block;
+    content: "";
+    top: 10px;
+    right: 0;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $pink;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade($pink, 30%);
+  }
+}
+
+.nav--closed .nav__toggle {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -63,77 +133,13 @@
 
 .nav--nojs .nav__wrapper {
   position: static;
-  // min-height: 0;
-}
-
-.nav--nojs .nav__item {
-  display: block;
-}
-
-.nav--opened .nav__toggle {
-  width: 25px;
-
-  &::before,
-  &::after {
-    content: "";
-    top: 10px;
-    right: 0;
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: $white;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: $pink;
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: fade($pink, 30%);
-  }
-}
-
-.nav__list {
-  @include clear-list ();
-  display: flex;
-  flex-direction: column;
-}
-
-.nav__list a {
-  @include font-set(700, 18px, 32px);
-  border-top: 1px solid $black;
-  box-shadow: 0 1px 0 $black, inset 0 1px 0 transparentize($white, 0.85);
-  display: block;
-  color: $white;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.nav__item a {
-  &:hover {
-    color: $pink;
-  }
-
-  &:active {
-    color: transparentize($white, 0.7);
-  }
 }
 
 @media (min-width: $tablet-width) {
+  .nav__logo {
+    padding-top: 27px;
+  }
+
   .nav {
     min-height: 110px;
   }
@@ -144,8 +150,24 @@
 }
 
 @media (min-width: $desktop-width) {
-  .nav__toggle {
+  .nav__logo {
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav--opened .nav__toggle {
     display: none;
+  }
+
+  .nav--closed .nav__toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    background-color: transparentize($black, 0.7);
   }
 
   .nav__wrapper {
@@ -157,11 +179,9 @@
     width: 940px;
   }
 
-  .nav--opened {
-    background-color: transparentize($black, 0.7);
-  }
-
+  .nav--closed .nav__list,
   .nav__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
