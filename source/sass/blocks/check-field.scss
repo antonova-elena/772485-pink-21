@@ -29,7 +29,7 @@
     border-color: $fontcolor;
   }
 
-  &:active {
+  &:disabled {
     border-color: $pink;
   }
 }
@@ -48,26 +48,22 @@
 
 @media (min-width: $tablet-width) {
   .check-field__label {
-    padding-left: 117px;
+    padding-left: 58px;
+    margin-bottom: 52px;
 
     &--last {
-      margin-bottom: 61px;
+      margin-bottom: 53px;
     }
-  }
-
-  .check-field__input + label::before,
-  .check-field__input:checked + label::before {
-    left: 60px;
-  }
-
-  .check-field__input:checked + label::after {
-    left: 67px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .check-field__label {
     padding-left: 57px;
+
+    &--last {
+      margin-bottom: 60px;
+    }
   }
 
   .check-field__input + label::before,

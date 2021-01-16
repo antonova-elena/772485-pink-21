@@ -28,7 +28,7 @@
     border-color: $fontcolor;
   }
 
-  &:active {
+  &:disabled {
     border-color: $pink;
   }
 }
@@ -48,21 +48,25 @@
 
 @media (min-width: $tablet-width) {
   .radio-field__label {
-    padding-left: 105px;
+    padding-left: 59px;
+  }
+
+  .radio-field:not(:last-child) {
+    margin-bottom: 45px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .radio-field__label {
-    padding-left: 131px;
+    padding-left: 71px;
   }
 
   .radio-field__input + label::before,
   .radio-field__input:checked + label::before {
-    left: 74px;
+    left: 10px;
   }
 
   .radio-field__input:checked + label::after {
-    left: 86px;
+    left: 23px;
   }
 }

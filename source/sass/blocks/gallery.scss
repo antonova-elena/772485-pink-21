@@ -18,9 +18,9 @@
       content: "Панорама дня";
       color: $white;
       position: absolute;
-      padding-top: 7px;
+      padding-top: 6px;
       padding-right: 20px;
-      padding-bottom: 7px;
+      padding-bottom: 5px;
       padding-left: 19px;
       text-transform: uppercase;
       top: 0;
@@ -75,7 +75,7 @@
 
       &::before {
         top: 57px;
-        right: 129px;
+        right: 20px;
       }
     }
   }
@@ -112,6 +112,7 @@
 
   .gallery__title {
     margin: 0 auto;
+    padding-top: 91px;
     padding-bottom: 89px;
     max-width: 572px;
   }

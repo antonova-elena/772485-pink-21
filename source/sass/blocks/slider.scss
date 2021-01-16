@@ -1,23 +1,19 @@
-.slider__list {
-  position: relative;
-}
-
 .slider__toggles {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  left: 112px;
   height: 12px;
-  width: 56px;
+  justify-content: space-between;
+  width: 62px;
 }
 
 .slider__toggle {
-  background-color: transparentize($fontcolor, 0.3);
+  background-color: $fontcolor;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   display: block;
   height: 6px;
+  opacity: 0.3;
   padding: 0;
   width: 6px;
 
@@ -27,14 +23,15 @@
     border-style: solid;
     border-color: $fontcolor;
     height: 12px;
+    opacity: 1;
     width: 12px;
   }
 
   &:hover {
-    background-color: transparentize($fontcolor, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
-    background-color: transparentize($fontcolor, 0.1);
+    opacity: 0.1;
   }
 }

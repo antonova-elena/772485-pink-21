@@ -1,37 +1,79 @@
 .price {
   background-color: $backgroundgrey;
   background-image: url("../img/bg/bg-triangle-white.svg");
-  background-repeat: no-repeat;
   background-position: -5px 0;
   background-size: contain;
-  padding-top: 77px;
-  padding-bottom: 101px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.price__wrapper {
+  margin: 0 auto;
+  min-height: 331px;
+  overflow: hidden;
+  padding-top: 106px;
+  padding-bottom: 47px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
 }
 
 .price__table {
-  position: relative;
   box-sizing: border-box;
+  border-spacing: 0;
+  border-collapse: collapse;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 255%;
+}
+
+.price__toggles {
+  top: 462px;
 }
 
 .price__title {
   box-sizing: border-box;
   background-color: $fontcolor;
-  border: 2px solid $bordercolor;
+  border: 2px solid $backgroundgrey;
   border-top: none;
   border-bottom: none;
   color: $white;
-  height: 94px;
   text-transform: uppercase;
-  width: 152px;
+  padding-top: 11px;
+  padding-bottom: 26px;
+  padding-left: 94px;
+  padding-right: 95px;
 
-  @include font-set(700, 16px, 30px);
+  &--transparent {
+    display: none;
+  }
+
+  &--hit {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      @include font-set(400, 14px, 30px);
+      background-color: $pink;
+      content: "хит";
+      left: -32px;
+      position: absolute;
+      top: 14px;
+      transform: rotate(-45deg);
+      width: 120px;
+    }
+  }
 }
 
-.price__span {
-  display: block;
+.price__title-top {
+  @include font-set(700, 16px, 30px);
+  margin: 0;
+}
 
-  font-weight: 300;
-  font-size: 18px;
+.price__title-bottom {
+  @include font-set(300, 18px, 30px);
+  margin: 0;
 }
 
 .price__row {
@@ -39,56 +81,151 @@
 }
 
 .price__item {
+  @include font-set(400, 14px, 30px);
   box-sizing: border-box;
   border: 2px solid $bordercolor;
   border-top: none;
-  height: 59px;
-  padding-left: 20px;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 16px;
+  padding-left: 21px;
+  padding-right: 22px;
   text-transform: uppercase;
 
-  @include font-set(400, 14px, 30px);
+  &--feature-title {
+    display: none;
+  }
+
+  &--yes {
+    &::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      border: 3px solid $greenyes;
+      border-top: none;
+      border-right: none;
+      height: 15px;
+      right: 18px;
+      transform: rotate(-45deg);
+      top: 18px;
+      width: 30px;
+    }
+  }
+
+  &--no {
+    &::before {
+      box-sizing: border-box;
+      background-color: $redno;
+      border-radius: 5px;
+      content: "";
+      height: 3px;
+      position: absolute;
+      right: 15px;
+      top: 26px;
+      transform: rotate(-44deg);
+      width: 35px;
+    }
+
+    &::after {
+      box-sizing: border-box;
+      background-color: $redno;
+      border-radius: 5px;
+      content: "";
+      height: 3px;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 26px;
+      right: 15px;
+      width: 35px;
+    }
+  }
+}
+
+.price__feature-status {
+  display: none;
+}
+
+.price__toggle {
+  top: 436px;
+  left: 40px;
 }
 
 @media (min-width: $tablet-width) {
-  .price {
-    display: block;
-    padding-top: 114px;
-    padding-bottom: 73px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .price__wrapper {
+    min-height: auto;
+    padding-top: 102px;
+    padding-bottom: 68px;
   }
 
   .price__table {
+    margin: 0 auto;
+    position: static;
+    transform: none;
     width: 620px;
   }
 
   .price__title {
     box-sizing: border-box;
-    height: 75px;
-    font-size: 16px;
-    width: 152px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+    padding-left: 29px;
+    padding-right: 29px;
 
     &--transparent {
       border: none;
-      border-bottom: 2px solid $white;
+      border-bottom: 2px solid $bordercolor;
       display: table-cell;
       visibility: hidden;
     }
+
+    &--hit {
+      &::before {
+        left: -38px;
+        top: 10px;
+      }
+    }
   }
 
-  .price__span {
+  .price__title-bottom {
     margin-top: -5px;
   }
 
   .price__item {
-    height: 45px;
-    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 14px;
 
-    &--title {
+    &--feature-title {
       display: table-cell;
-      font-size: 14px;
       text-transform: none;
     }
+
+    &--yes {
+      &::before {
+        right: 50%;
+        top: 0;
+        transform: translate(50%, 67%) rotate(-45deg);
+      }
+    }
+
+    &--no {
+      &::before {
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%) rotate(-44deg);
+      }
+
+      &::after {
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%) rotate(45deg);
+      }
+    }
+  }
+
+  .price__feature-title {
+    display: none;
   }
 
   .price__toggles {
@@ -97,35 +234,67 @@
 }
 
 @media (min-width: $desktop-width) {
-  .price {
-    padding-top: 154px;
-    padding-bottom: 98px;
-    padding-left: 0;
-    padding-right: 0;
+  .price__wrapper {
+    padding-top: 148px;
+    padding-bottom: 95px;
   }
 
   .price__table {
-    margin: 0 auto;
     width: 940px;
   }
 
   .price__title {
-    height: 94px;
+    padding-top: 12px;
+    padding-bottom: 22px;
+
+    &--hit {
+      &::before {
+        left: -34px;
+        top: 17px;
+        width: 123px;
+      }
+    }
+  }
+
+  .price__title-top {
     font-size: 18px;
-
-    @include font-set(700, 18px, 30px);
   }
 
-  .price__span {
+  .price__title-bottom {
+    font-size: 24px;
     margin-top: 0;
-
-    @include font-set(300, 24px, 30px);
   }
+
 
   .price__item {
-    @include font-set(400, 18px, 30px);
-    height: 59px;
-    padding-left: 22px;
-    width: 233px;
+    height: 61px;
+    padding-left: 21px;
+    width: 25%;
+
+    &--feature-title {
+      font-size: 18px;
+    }
+
+    &--yes {
+      &::before {
+        right: 50%;
+        top: 7px;
+        transform: translate(50%, 67%) rotate(-45deg);
+      }
+    }
+
+    &--no {
+      &::before {
+        left: 50%;
+        top: 27px;
+        transform: translate(-50%) rotate(-44deg);
+      }
+
+      &::after {
+        left: 50%;
+        top: 27px;
+        transform: translate(-50%) rotate(45deg);
+      }
+    }
   }
 }

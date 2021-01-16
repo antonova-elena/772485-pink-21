@@ -6,16 +6,16 @@
 .user-photo__inner {
   box-sizing: border-box;
   background-color: $backgroundgrey;
-  padding-top: 17px;
+  padding-top: 18px;
   padding-bottom: 17px;
   padding-left: 17px;
-  padding-right: 31px;
+  padding-right: 30px;
   min-height: 121px;
 
   &--first {
     margin-left: 20px;
     margin-right: 20px;
-    padding-right: 11px;
+    padding-right: 10px;
     padding-top: 18px;
     padding-bottom: 19px;
   }
@@ -68,7 +68,7 @@
 .user-photo__likes {
   @include font-set(400, 12px, 24px);
   color: $pink;
-  padding-left: 18px;
+  padding-left: 15px;
   text-transform: uppercase;
 }
 
@@ -83,7 +83,7 @@
     padding-top: 23px;
     padding-bottom: 23px;
     padding-left: 30px;
-    padding-right: 38px;
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -92,7 +92,7 @@
 
     &--first {
       padding-left: 30px;
-      padding-right: 32px;
+      padding-right: 29px;
       padding-bottom: 15px;
       display: flex;
       flex-direction: row;

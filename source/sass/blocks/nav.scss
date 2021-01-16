@@ -11,8 +11,8 @@
 
 .nav__logo {
   margin-left: 20px;
-  padding-top: 18px;
-  padding-bottom: 21px;
+  padding-top: 21px;
+  padding-bottom: 15px;
 }
 
 .nav__list {
@@ -27,8 +27,8 @@
   box-shadow: 0 1px 0 $black, inset 0 1px 0 transparentize($white, 0.85);
   display: block;
   color: $white;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 15px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
   display: block;
   height: 23px;
   position: absolute;
-  right: 23px;
+  right: 20px;
   top: 23px;
   width: 23px;
   z-index: 4;
@@ -61,10 +61,10 @@
     cursor: pointer;
     display: block;
     content: "";
-    top: 10px;
-    right: 0;
+    top: 7px;
+    left: 0;
     position: absolute;
-    width: 30px;
+    width: 29px;
     height: 3px;
     background-color: $white;
   }
@@ -138,14 +138,20 @@
 @media (min-width: $tablet-width) {
   .nav__logo {
     padding-top: 27px;
+    padding-bottom: 43px;
   }
 
   .nav {
     min-height: 110px;
   }
 
+  .nav__list a {
+    padding-top: 14px;
+    padding-bottom: 17px;
+  }
+
   .nav__toggle {
-    top: 43px;
+    margin-top: 23px;
   }
 }
 
@@ -191,6 +197,7 @@
     border: none;
     box-shadow: none;
     display: flex;
+    padding-top: 30px;
     text-transform: none;
   }
 
@@ -207,7 +214,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: 22px;
+    bottom: 5px;
     left: 0;
     height: 2px;
     background: $white;

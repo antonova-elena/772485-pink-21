@@ -1,7 +1,9 @@
 .reviews {
   background-color: $white;
-  padding-top: 50px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .reviews__pager {
@@ -9,36 +11,44 @@
 }
 
 .reviews__list {
+  position: relative;
   text-align: center;
 }
 
+.reviews-item {
+  margin: 0;
+}
+
 .reviews-item__author-name {
+  @include font-set(700, 18px, 30px);
   color: $black;
+  display: block;
   font-style: normal;
   margin: 0;
-  margin-bottom: 31px;
-
-  @include font-set(700, 18px, 30px);
+  padding-bottom: 13px;
 }
 
 .reviews-item__author-description {
   display: none;
+  margin: 0;
 }
 
 .reviews-item__text {
   @include font-set(400, 14px, 30px);
-
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 31px;
 }
 
 .reviews__toggles {
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: $tablet-width) {
   .reviews {
-    padding-bottom: 0;
+    padding-top: 45px;
+    padding-bottom: 22px;
   }
 
   .reviews-item__author-info {
@@ -48,20 +58,20 @@
 
   .reviews-item__text {
     @include font-set(400, 18px, 30px);
-    margin-bottom: 51px;
+    margin-bottom: 36px;
   }
 
   .reviews-item__author-name {
     @include font-set(700, 20px, 30px);
-    margin-bottom: 17px;
     order: 2;
+    padding-bottom: 0;
   }
 
   .reviews-item__author-description {
     @include font-set(400, 14px, 30px);
     display: block;
     margin: 0;
-    margin-bottom: 49px;
+    margin-bottom: 35px;
     order: 3;
   }
 }
@@ -69,7 +79,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     margin: 0 auto;
-    padding-top: 120px;
+    padding-top: 73px;
     padding-bottom: 0;
     position: relative;
     width: 940px;
@@ -78,7 +88,7 @@
       content: "";
       background-image: url("../img/icons/icon-quotes.svg");
       height: 63px;
-      left: 431px;
+      left: 453px;
       position: absolute;
       top: 0;
       width: 79px;
@@ -103,14 +113,13 @@
     display: block;
     height: 41px;
     position: relative;
-    top: 80px;
-    width: 22px;
+    top: 70px;
 
     &::before {
       box-sizing: border-box;
       border-width: 2px;
       border-style: solid;
-      border-color: transparentize($fontcolor, 0.3);
+      border-color: transparentize($fontcolor, 0.7);
       content: "";
       display: block;
       height: 32px;
@@ -120,11 +129,11 @@
     }
 
     &:hover::before {
-      border-color: transparentize($fontcolor, 0.6);
+      border-color: transparentize($fontcolor, 0.4);
     }
 
     &:active::before {
-      border-color: transparentize($fontcolor, 0.1);
+      border-color: transparentize($fontcolor, 0.9);
     }
 
     &--previous {
@@ -150,6 +159,7 @@
 
   .reviews-item__author-name {
     @include font-set(700, 24px, 30px);
+    margin-bottom: 2px;
   }
 
   .reviews-item__text {
@@ -159,6 +169,6 @@
 
   .reviews-item__author-description {
     @include font-set(400, 18px, 30px);
-    margin-bottom: 41px;
+    margin-bottom: 45px;
   }
 }

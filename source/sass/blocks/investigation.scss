@@ -38,10 +38,10 @@
       border-radius: 50%;
       content: "24";
       color: $pink;
-      height: 202px;
+      height: 198px;
       left: 18px;
       position: absolute;
-      top: 110px;
+      top: 114px;
       text-align: center;
       vertical-align: middle;
       width: 202px;
@@ -49,7 +49,6 @@
   }
 
   .investigation__inner {
-    padding-top: 50px;
     padding-bottom: 19px;
     margin-left: auto;
     width: 50%;
@@ -59,13 +58,14 @@
     @include font-set(700, 30px, 36px);
 
     margin: 0;
-    padding-bottom: 24px;
+    padding-top: 44px;
+    padding-bottom: 10px;
     padding-right: 142px;
   }
 
   .investigation__description {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 
   .investigation__link {
@@ -83,15 +83,15 @@
 
   .investigation__wrapper {
     margin: 0 auto;
-    padding-top: 16px;
-    padding-bottom: 120px;
+    padding-top: 19px;
+    padding-bottom: 110px;
     width: 940px;
 
     &::before {
       background-size: 298px 345px;
       height: 345px;
       left: 0;
-      top: 16px;
+      top: 19px;
       width: 298px;
     }
 
@@ -106,17 +106,19 @@
   }
 
   .investigation__inner {
-    padding-top: 99px;
+    padding-top: 51px;
     padding-bottom: 0;
-    width: 583px;
+    width: 571px;
   }
 
   .investigation__title {
     @include font-set(700, 30px, 30px);
+    padding-bottom: 25px;
   }
 
   .investigation__description {
     @include font-set(400, 18px, 30px);
+    margin-bottom: 30px;
   }
 
   .investigation__link {

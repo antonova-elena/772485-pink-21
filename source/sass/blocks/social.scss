@@ -1,10 +1,12 @@
 .social {
   @include clear-list ();
-
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 53px;
-  padding-left: 54px;
+  max-width: 240px;
+  padding-left: 45px;
+  padding-right: 46px;
+  padding-top: 38px;
+  padding-bottom: 43px;
 }
 
 .social__link {
@@ -12,7 +14,7 @@
   border-radius: 50%;
   border-style: solid;
   border-width: 3px;
-  border-color: transparentize($fontcolor, 0.1);
+  border-color: transparentize($fontcolor, 0.9);
   display: block;
   height: 48px;
   position: relative;
@@ -24,7 +26,7 @@
   }
 
   &:active {
-    border-color: transparentize($fontcolor, 0.1);
+    border-color: transparentize($fontcolor, 0.9);
 
     &::after {
       opacity: 0.3;
@@ -37,16 +39,16 @@
       background-repeat: no-repeat;
       content: "";
       height: 14px;
-      left: 15px;
-      top: 17px;
+      left: 16px;
+      top: 16px;
       position: absolute;
       width: 18px;
     }
   }
 
   &--facebook {
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-left: 9px;
+    margin-right: 9px;
 
     &::after {
       background-image: url("../img/icons/icon-facebook.svg");
@@ -54,7 +56,7 @@
       content: "";
       height: 18px;
       left: 20px;
-      top: 15px;
+      top: 14px;
       position: absolute;
       width: 9px;
     }
@@ -66,8 +68,8 @@
       background-repeat: no-repeat;
       content: "";
       height: 13px;
-      left: 19px;
-      top: 18px;
+      left: 18px;
+      top: 17px;
       position: absolute;
       width: 15px;
     }
@@ -77,24 +79,23 @@
 @media (min-width: $tablet-width) {
   .social {
     margin-bottom: 0;
-    padding-top: 39px;
+    padding-top: 31px;
     padding-bottom: 40px;
-    padding-left: 79px;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .social {
-    padding-top: 74px;
-    padding-bottom: 75px;
-    padding-left: 240px;
+    padding-top: 37px;
+    padding-bottom: 40px;
+    padding-left: 21px;
   }
 
   .social__link {
     &--facebook {
-      margin-left: 14px;
-      margin-right: 14px;
+      margin-right: 6px;
     }
   }
 }
