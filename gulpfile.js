@@ -9,6 +9,7 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
 const terser = require("gulp-terser");
 const sync = require("browser-sync").create();
@@ -84,6 +85,17 @@ const createWebp = () => {
 
 exports.createWebp = createWebp;
 
+//Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/sprite/*.svg")
+  .pipe(svgstore({ inlineSvg: true}))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("build/img/sprite"));
+}
+
+exports.sprite = sprite;
+
 // Copy
 
 const copy = (done) => {
@@ -150,6 +162,7 @@ const build = gulp.series(
     scripts,
     images,
     createWebp,
+    sprite
   )
 );
 
@@ -164,6 +177,7 @@ exports.default = gulp.series(
     scripts,
     images,
     createWebp,
+    sprite
   ),
   gulp.series(
     server,
