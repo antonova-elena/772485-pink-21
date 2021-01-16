@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Приложение Пинк Фотографии</title>
+    <link rel="preload" type="font/woff2" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -190,13 +193,13 @@
             <div class="upload-form__inner-top">
               <div class="upload-form__inner-filter  upload-form__inner-filter--active">
                 <button class="upload-form__filter-button" type="button" title="Кадрировать">
-                  <svg class="upload-form__svg  upload-form__svg--crop" width="48" height="48" tabindex="0" aria-label="Кадрировать">
+                  <svg class="upload-form__svg  upload-form__svg--crop" width="44" height="44" tabindex="0" aria-label="Кадрировать">
                     <use xlink:href="./img/icons/sprite.svg#crop"></use>
                   </svg>
                 </button>
                 <div class="photo-tweak" tabindex="0">
                   <div class="photo-tweak__scale">
-                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                    <div class="photo-tweak__circle  photo-tweak__circle--crop"></div>
                   </div>
                 </div>
               </div>
@@ -220,7 +223,7 @@
                 </button>
                 <div class="photo-tweak" tabindex="0">
                   <div class="photo-tweak__scale">
-                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                    <div class="photo-tweak__circle  photo-tweak__circle--contrast"></div>
                   </div>
                 </div>
               </div>
@@ -257,10 +260,9 @@
           </li>
         </ul>
         <div class="copyright">
-          <p class="copyright__title">Разработано
-            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
-            </a>
-          </p>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/icons/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
