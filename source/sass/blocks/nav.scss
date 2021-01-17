@@ -44,6 +44,10 @@
   }
 }
 
+.nav__item--active a:hover {
+  color: $white;
+}
+
 .nav--opened .nav__toggle {
   border: none;
   background-color: transparent;
