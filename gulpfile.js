@@ -64,7 +64,7 @@ exports.scripts = scripts;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
    .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
