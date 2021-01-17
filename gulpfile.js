@@ -65,12 +65,12 @@ exports.scripts = scripts;
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
-   .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
-      imagemin.svgo()
-    ]))
-   .pipe(gulp.dest("build/img"));
+      .pipe(imagemin([
+          imagemin.optipng({optimizationLevel: 3}),
+          imagemin.mozjpeg({progressive: true}),
+          imagemin.svgo()
+        ]))
+      .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
@@ -85,7 +85,7 @@ const createWebp = () => {
 
 exports.createWebp = createWebp;
 
-//Sprite
+// Sprite
 
 const sprite = () => {
   return gulp.src("source/img/sprite/*.svg")
@@ -112,7 +112,7 @@ const copy = (done) => {
 
 exports.copy = copy;
 
-//Clean
+// Clean
 
 const clean = () => {
   return del("build");
@@ -151,7 +151,7 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
-//Build
+// Build
 
 const build = gulp.series(
   clean,

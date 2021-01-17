@@ -44,27 +44,6 @@
   }
 }
 
-  // &--mobile {
-  //   display: block;
-  //   height: 40px;
-  //   width: 145px;
-  //   fill: $fontcolor;
-
-  //   &:hover {
-  //     fill: $pink;
-  //   }
-
-  //   &:active {
-  //     fill: $fontcolor;
-  //     fill-opacity: 0.3;
-  //   }
-  // }
-
-  // &--desktop {
-  //   display: none;
-  // }
-
-
 @media (min-width: $tablet-width) {
   .logo__svg-header {
     &--mobile {
