@@ -16,13 +16,13 @@
           <div class="nav__logo logo">
             <a class="logo__link" href="index.html">
               <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
-                <use xlink:href="./img/icons/sprite.svg#desktop-white-logo"></use>
+                <use xlink:href="img/sprite/sprite.svg#desktop-white-logo"></use>
               </svg>
               <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
-                <use xlink:href="./img/icons/sprite.svg#tablet-white-logo"></use>
+                <use xlink:href="img/sprite/sprite.svg#tablet-white-logo"></use>
               </svg>
               <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
-                <use xlink:href="./img/icons/sprite.svg#mobile-white-logo"></use>
+                <use xlink:href="img/sprite/sprite.svg#mobile-white-logo"></use>
               </svg>
             </a>
           </div>
@@ -41,16 +41,17 @@
     </header>
     <main>
       <section class="gallery">
+        <h2 class="visually-hidden">Галерея</h2>
         <p class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="gallery__list-first">
           <li class="gallery__item user-photo gallery__item--first">
             <a class="user-photo__link user-photo__link--first" href="#"></a>
             <div class="user-photo__inner user-photo__inner--first">
               <p class="user-photo__author">Анна <time class="postdate user-photo__author-postdate" datetime="2020-11-13T07:05">(5 минут назад)</time></p>
-              <p class="user-photo__description user-photo__description--first">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbspпрямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="user-photo__description user-photo__description--first">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbsp;прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="user-photo__footer user-photo__footer--first">
                 <button class="user-photo__button user-photo__button--first" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 215</span>
               </div>
@@ -63,10 +64,10 @@
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-1-desktop.webp 1x, ./img/photos/photo-1-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-1-tablet.webp 1x, ./img/photos/photo-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="./img/photos/photo-1-mobile.webp 1x, ./img/photos/photo-1-mobile@2x.webp 2x" width="100%" alt="Фото 1">
+                <source type="image/webp" srcset="./img/photos/photo-1-mobile.webp 1x, ./img/photos/photo-1-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-1-desktop.jpg 1x, ./img/photos/photo-1-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-1-tablet.jpg 1x, ./img/photos/photo-1-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-1-mobile.jpg" srcset="./img/photos/photo-1-mobile.jpg 1x, ./img/photos/photo-1-mobile@2x.jpg 2x" width="100%" alt="Фото 1">
+                <img class="user-photo__picture" src="./img/photos/photo-1-mobile.jpg" srcset="./img/photos/photo-1-mobile.jpg 1x, ./img/photos/photo-1-mobile@2x.jpg 2x" alt="Фото 1">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -74,7 +75,7 @@
               <p class="user-photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 356</span>
               </div>
@@ -88,7 +89,7 @@
                 <source type="image/webp" srcset="./img/photos/photo-2-mobile.webp 1x, ./img/photos/photo-2-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-2-desktop.jpg 1x, ./img/photos/photo-2-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-2-tablet.jpg 1x, ./img/photos/photo-2-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-2-mobile.jpg" srcset="./img/photos/photo-2-mobile.jpg 1x, ./img/photos/photo-2-mobile@2x.jpg 2x" width="100%" alt="Фото 2">
+                <img class="user-photo__picture" src="./img/photos/photo-2-mobile.jpg" srcset="./img/photos/photo-2-mobile.jpg 1x, ./img/photos/photo-2-mobile@2x.jpg 2x" alt="Фото 2">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -96,7 +97,7 @@
               <p class="user-photo__description">Соседи будут рады!</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 666</span>
               </div>
@@ -110,7 +111,7 @@
                 <source type="image/webp" srcset="./img/photos/photo-3-mobile.webp 1x, ./img/photos/photo-3-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-3-desktop.jpg 1x, ./img/photos/photo-3-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-3-tablet.jpg 1x, ./img/photos/photo-3-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-3-mobile.jpg" srcset="./img/photos/photo-3-mobile.jpg 1x, ./img/photos/photo-3-mobile@2x.jpg 2x" width="100%" alt="Фото 3">
+                <img class="user-photo__picture" src="./img/photos/photo-3-mobile.jpg" srcset="./img/photos/photo-3-mobile.jpg 1x, ./img/photos/photo-3-mobile@2x.jpg 2x" alt="Фото 3">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -118,10 +119,10 @@
               <p class="user-photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 215</span>
-              <div class="user-photo__wrapper">
+              </div>
             </div>
           </li>
           <li class="gallery__item user-photo">
@@ -132,7 +133,7 @@
                 <source type="image/webp" srcset="./img/photos/photo-4-mobile.webp 1x, ./img/photos/photo-4-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-4-desktop.jpg 1x, ./img/photos/photo-4-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-4-tablet.jpg 1x, ./img/photos/photo-4-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-4-mobile.jpg" srcset="./img/photos/photo-4-mobile.jpg 1x, ./img/photos/photo-4-mobile@2x.jpg 2x" width="100%" alt="Фото 4">
+                <img class="user-photo__picture" src="./img/photos/photo-4-mobile.jpg" srcset="./img/photos/photo-4-mobile.jpg 1x, ./img/photos/photo-4-mobile@2x.jpg 2x" alt="Фото 4">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -140,7 +141,7 @@
               <p class="user-photo__description">Самая кубанская в мире!</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 4</span>
               </div>
@@ -154,7 +155,7 @@
                 <source type="image/webp" srcset="./img/photos/photo-5-mobile.webp 1x, ./img/photos/photo-5-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-5-desktop.jpg 1x, ./img/photos/photo-5-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-5-tablet.jpg 1x, ./img/photos/photo-5-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-5-mobile.jpg" srcset="./img/photos/photo-5-mobile.jpg 1x, ./img/photos/photo-5-mobile@2x.jpg 2x" width="100%" alt="Фото 5">
+                <img class="user-photo__picture" src="./img/photos/photo-5-mobile.jpg" srcset="./img/photos/photo-5-mobile.jpg 1x, ./img/photos/photo-5-mobile@2x.jpg 2x" alt="Фото 5">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -162,7 +163,7 @@
               <p class="user-photo__description">Где снег-то?</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 150</span>
               </div>
@@ -176,7 +177,7 @@
                 <source type="image/webp" srcset="./img/photos/photo-6-mobile.webp 1x, ./img/photos/photo-6-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="./img/photos/photo-6-desktop.jpg 1x, ./img/photos/photo-6-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="./img/photos/photo-6-tablet.jpg 1x, ./img/photos/photo-6-tablet@2x.jpg 2x">
-                <img class="user-photo__picture" src="./img/photos/photo-6-mobile.jpg" srcset="./img/photos/photo-6-mobile.jpg 1x, ./img/photos/photo-6-mobile@2x.jpg 2x" width="100%" alt="Фото 6">
+                <img class="user-photo__picture" src="./img/photos/photo-6-mobile.jpg" srcset="./img/photos/photo-6-mobile.jpg 1x, ./img/photos/photo-6-mobile@2x.jpg 2x" alt="Фото 6">
               </picture>
             </a>
             <div class="user-photo__inner">
@@ -184,7 +185,7 @@
               <p class="user-photo__description">Всем GM и взаимные лайки!</p>
               <div class="user-photo__footer">
                 <button class="user-photo__button" type="button">
-                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/icons/sprite.svg#heart"></use></svg>
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
                 </button>
                 <span class="user-photo__likes">Нравится: 2560</span>
               </div>
@@ -207,7 +208,7 @@
               <source type="image/webp" srcset="./img/photos/photo-7-mobile.webp 1x, ./img/photos/photo-7-mobile@2x.webp 2x">
               <source media="(min-width: 960px)" srcset="./img/photos/photo-7-desktop.jpg 1x, ./img/photos/photo-7-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="./img/photos/photo-7-tablet.jpg 1x, ./img/photos/photo-7-tablet@2x.jpg 2x">
-              <img src="./img/photos/photo-7-mobile.jpg" srcset="./img/photos/photo-7-mobile.jpg 1x, ./img/photos/photo-7-mobile@2x.jpg 2x" width="100%" alt="">
+              <img src="./img/photos/photo-7-mobile.jpg" srcset="./img/photos/photo-7-mobile.jpg 1x, ./img/photos/photo-7-mobile@2x.jpg 2x" alt="Загружаемое фото">
             </picture>
           </label>
           <div class="upload-form__wrapper">
@@ -215,7 +216,7 @@
               <div class="upload-form__inner-filter  upload-form__inner-filter--active">
                 <button class="upload-form__filter-button" type="button" title="Кадрировать">
                   <svg class="upload-form__svg  upload-form__svg--crop" width="44" height="44" tabindex="0" aria-label="Кадрировать">
-                    <use xlink:href="./img/icons/sprite.svg#crop"></use>
+                    <use xlink:href="img/sprite/sprite.svg#crop"></use>
                   </svg>
                 </button>
                 <div class="photo-tweak" tabindex="0">
@@ -227,7 +228,7 @@
               <div class="upload-form__inner-filter">
                 <button class="upload-form__filter-button" type="button" title="Изменить заливку">
                   <svg class="upload-form__svg  upload-form__svg--fill" width="48" height="43" tabindex="0" aria-label="Изменить заливку">
-                    <use xlink:href="./img/icons/sprite.svg#fill"></use>
+                    <use xlink:href="img/sprite/sprite.svg#fill"></use>
                   </svg>
                 </button>
                 <div class="photo-tweak" tabindex="0">
@@ -239,7 +240,7 @@
               <div class="upload-form__inner-filter">
                 <button class="upload-form__filter-button" type="button" title="Изменить контраст">
                   <svg class="upload-form__svg  upload-form__svg--contrast" width="32" height="32" tabindex="0" aria-label="Изменить контраст">
-                    <use xlink:href="./img/icons/sprite.svg#contrast"></use>
+                    <use xlink:href="img/sprite/sprite.svg#contrast"></use>
                   </svg>
                 </button>
                 <div class="photo-tweak" tabindex="0">
@@ -262,10 +263,10 @@
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
             <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
-              <use xlink:href="./img/icons/sprite.svg#desktop-blue-logo"></use>
+              <use xlink:href="img/sprite/sprite.svg#desktop-blue-logo"></use>
             </svg>
             <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
-              <use xlink:href="./img/icons/sprite.svg#mobile-blue-logo"></use>
+              <use xlink:href="img/sprite/sprite.svg#mobile-blue-logo"></use>
             </svg>
           </a>
         </div>
@@ -282,7 +283,7 @@
         </ul>
         <div class="copyright">
           <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">
-            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/icons/sprite.svg#htmlacademy"></use></svg>
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
