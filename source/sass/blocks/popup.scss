@@ -5,13 +5,16 @@
   box-shadow: 0 7px 15px transparentize($blackshadow, 0.85);
   border-radius: 1px;
   bottom: 180px;
-  // display: none;
+  display: none;
   margin: 0 auto;
+  position: absolute;
+  top: 1171px;
   width: 320px;
   z-index: 20;
 
   &--succes {
     padding-top: 44px;
+    top: 1642px;
   }
 }
 
@@ -90,7 +93,12 @@
 
 @media (min-width: $tablet-width) {
   .popup {
+    top: 909px;
     width: 460px;
+
+    &--succes {
+      top: 1383px;
+    }
   }
 
   .popup__title {
@@ -137,7 +145,12 @@
 
 @media (min-width: $desktop-width) {
   .popup {
+    top: 817px;
     width: 780px;
+
+    &--succes {
+      top: 1275px;
+    }
   }
 
   .popup__title {
