@@ -1,12 +1,12 @@
 .check-field__label {
   @include font-set(400, 18px, 30px);
   display: block;
-  margin-bottom: 69px;
+  margin-bottom: 52px;
   position: relative;
   padding-left: 57px;
 
   &--last {
-    margin-bottom: 55px;
+    margin-bottom: 46px;
   }
 }
 

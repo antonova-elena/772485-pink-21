@@ -18,33 +18,15 @@
     position: relative;
 
     &::before {
-      box-sizing: border-box;
       background-image: url("../img/icons/timer.svg");
       background-repeat: no-repeat;
-      background-size: 238px 275px;
       content: "";
       height: 275px;
       left: 0;
       position: absolute;
       top: 54px;
       width: 238px;
-      z-index: auto;
-    }
-
-    &::after {
-      @include font-set(700, 96px, 163px);
-      box-sizing: border-box;
-      border: 13px solid $pink;
-      border-radius: 50%;
-      content: "24";
-      color: $pink;
-      height: 198px;
-      left: 18px;
-      position: absolute;
-      top: 114px;
-      text-align: center;
-      vertical-align: middle;
-      width: 202px;
+      z-index: 5;
     }
   }
 
@@ -88,20 +70,10 @@
     width: 940px;
 
     &::before {
-      background-size: 298px 345px;
       height: 345px;
-      left: 0;
+      left: 1px;
       top: 19px;
       width: 298px;
-    }
-
-    &::after {
-      @include font-set(700, 120px, 163px);
-      border-width: 17px;
-      height: 252px;
-      left: 23px;
-      top: 87px;
-      width: 252px;
     }
   }
 
