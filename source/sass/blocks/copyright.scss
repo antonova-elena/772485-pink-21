@@ -1,3 +1,54 @@
-.copyright__title {
+.copyright {
+  position: relative;
+}
+
+.copyright__link {
   @include font-set(400, 14px, 18px);
+  box-sizing: border-box;
+  color: $fontcolor;
+  position: relative;
+  padding-right: 42px;
+  text-decoration: none;
+}
+
+.copyright__svg {
+  fill: $pink;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  top: -7px;
+  width: 27px;
+
+  &:hover {
+    fill: $fontcolor;
+  }
+
+  &:active {
+    fill: $fontcolor;
+    fill-opacity: 0.3;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-top: 51px;
+    padding-bottom: 59px;
+    padding-left: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    padding-top: 88px;
+    padding-bottom: 87px;
+  }
+
+  .copyright__link {
+    @include font-set(400, 18px, 18px);
+  }
+
+  .copyright__svg {
+    top: -4px;
+  }
 }

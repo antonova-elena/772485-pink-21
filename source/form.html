@@ -3,33 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Приложение Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Приложение Пинк Конкурс</title>
+    <link rel="preload" type="font/woff2" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav">
-        <div class="nav__logo logo">
-          <a class="logo__link" href="index.html">
-            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
-          </a>
-        </div>
-        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="nav nav--nojs">
         <div class="nav__wrapper">
+          <div class="nav__logo logo">
+            <a class="logo__link" href="index.html">
+              <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
+                <use xlink:href="img/sprite/sprite.svg#desktop-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
+                <use xlink:href="img/sprite/sprite.svg#tablet-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
+                <use xlink:href="img/sprite/sprite.svg#mobile-white-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Главная</a></li>
             <li class="nav__item"><a href="catalog.html">Фотографии</a></li>
-            <li class="nav__item"><a>Конкурс</a></li>
-            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">Html Academy</a></li>
+            <li class="nav__item nav__item--active"><a>Конкурс</a></li>
+            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
-      <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <div class="header__wrapper">
+        <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </header>
     <main>
       <section class="feedback">
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
+          <p class="feedback__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="feedback__span">Пожалуйста, заполните форму ниже:</span>
           </p>
           <fieldset class="feedback__item feedback__item--name">
             <div class="feedback__name text-field">
@@ -46,80 +59,80 @@
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--goals">
-            <h3 class="feedback__title">Ваши безбашенные достижения в путешествии</h3>
+            <h3 class="feedback__title feedback__title--goals">Ваши безбашенные<br> достижения в путешествии</h3>
             <div class="feedback__progress">
               <div class="feedback__wrapper-progress">
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="took a selfie with a shark" id="goal-1" checked>
+                  <input class="visually-hidden check-field__input" type="checkbox" name="took a selfie with a shark" id="goal-1" checked>
                   <label class="check-field__label" for="goal-1">Сделал селфи с акулой</label>
                 </div>
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="burned on the beach" id="goal-2" checked>
+                  <input class="visually-hidden check-field__input" type="checkbox" name="burned on the beach" id="goal-2" checked>
                   <label class="check-field__label" for="goal-2">Обгорел на пляже</label>
                 </div>
               </div>
               <div class="feedback__wrapper-progress">
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="saw chuck noris" id="goal-3">
+                  <input class="visually-hidden check-field__input" type="checkbox" name="saw chuck noris" id="goal-3">
                   <label class="check-field__label" for="goal-3">Видел Чака Норриса</label>
                 </div>
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="bought some souvenirs" id="goal-4">
+                  <input class="visually-hidden check-field__input" type="checkbox" name="bought some souvenirs" id="goal-4">
                   <label class="check-field__label" for="goal-4">Накупил сувениров</label>
                 </div>
               </div>
               <div class="feedback__wrapper-progress">
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="held the tower" id="goal-5" checked>
+                  <input class="visually-hidden check-field__input" type="checkbox" name="held the tower" id="goal-5" checked>
                   <label class="check-field__label" for="goal-5">Удержал башню</label>
                 </div>
                 <div class="feedback__check check-field">
-                  <input class="check-field__input" type="checkbox" name="trashed the hotel" id="goal-6">
-                  <label class="check-field__label" for="goal-6">Разгромил отель</label>
+                  <input class="visually-hidden check-field__input" type="checkbox" name="trashed the hotel" id="goal-6">
+                  <label class="check-field__label check-field__label--last" for="goal-6">Разгромил отель</label>
                 </div>
               </div>
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--contacts">
+            <h3 class="feedback__title feedback__title--contacts">Контактная информация</h3>
             <div class="feedback__wrapper-contacts">
-              <div class="feedback__contacts text-field">
-                <label class="text-field__label" for="tel">Номер телефона</label>
-                <input class="text-field__input" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
+              <div class="feedback__contacts text-field feedback__contacts--phone">
+                <label class="text-field__label text-field__label--contacts" for="tel">Номер телефона</label>
+                <input class="text-field__input text-field__input--contacts" type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Номер, пожалуйста">
               </div>
-              <div class="feedback__contacts text-field">
-                <label class="text-field__label" for="email">Адрес почты</label>
-                <input class="text-field__input" type="email" id="email" name="email" placeholder="Введите почту*" required>
+              <div class="feedback__contacts text-field feedback__contacts--mail">
+                <label class="text-field__label text-field__label--contacts" for="email">Адрес почты</label>
+                <input class="text-field__input text-field__input--contacts" type="email" id="email" name="email" placeholder="Введите почту*" required>
               </div>
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--app">
-            <h3 class="feedback__title">С каким приложением путешествовали?</h3>
+            <h3 class="feedback__title feedback__title--app">С каким приложением путешествовали?</h3>
             <div class="feedback__radio radio-field">
-              <input class="radio-field__input" type="radio" name="application" id="ios" value="ios" checked>
+              <input class="visually-hidden radio-field__input" type="radio" name="application" id="ios" value="ios" checked>
               <label class="radio-field__label" for="ios">Pink для iOS</label>
             </div>
             <div class="feedback__radio radio-field">
-              <input class="radio-field__input" type="radio" name="application" id="android" value="android">
+              <input class="visually-hidden radio-field__input" type="radio" name="application" id="android" value="android">
               <label class="radio-field__label" for="android">Pink на Android</label>
             </div>
             <div class="feedback__radio radio-field">
-              <input class="radio-field__input" type="radio" name="application" id="windows" value="windows">
+              <input class="visually-hidden radio-field__input" type="radio" name="application" id="windows" value="windows">
               <label class="radio-field__label" for="windows">Windows Phone</label>
             </div>
           </fieldset>
           <fieldset class="feedback__item feedback__item--comments">
-            <h3 class="feedback__title">Опишите свои эмоции</h3>
+            <h3 class="feedback__title feedback__title--comments">Опишите свои эмоции</h3>
             <div class="feedback__review">
-              <label class="feedback__label" for="review"></label>
-              <textarea class="feedback__review" name="review" id="review" placeholder="Можно прям в красках, не
-              стесняясь в выражениях"></textarea>
+              <label class="feedback__review__label" for="review"></label>
+              <textarea class="feedback__review-textarea" name="review" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
           <div class="feedback__wrapper-submit">
             <div class="feedback__submit">
               <button class="feedback__button" type="submit">Отправить форму</button>
             </div>
-            <p class="feedback__text"><sup>*</sup> — обязательные поля</p>
+            <p class="feedback__text"><sup>*</sup> — обязательные <span class="feedback__text-span">для заполнения</span> поля</p>
           </div>
         </form>
       </section>
@@ -128,7 +141,12 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+            <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
+              <use xlink:href="img/sprite/sprite.svg#desktop-blue-logo"></use>
+            </svg>
+            <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
+              <use xlink:href="img/sprite/sprite.svg#mobile-blue-logo"></use>
+            </svg>
           </a>
         </div>
         <ul class="social">
@@ -143,12 +161,26 @@
           </li>
         </ul>
         <div class="copyright">
-          <p class="copyright__title">Разработано
-            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
-            </a>
-          </p>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
+    <div class="popup">
+      <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
+      <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="popup__background">
+        <button class="popup__button" type="submit">Ок</button>
+      </div>
+    </div>
+    <div class="popup popup--succes">
+      <h2 class="popup__title popup__title--succes">Ваша заявка отправлена</h2>
+      <p class="popup__description popup__description--succes">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.</p>
+      <div class="popup__background popup__background--succes">
+        <button class="popup__button popup__button--succes" type="submit">Закрыть окно</button>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

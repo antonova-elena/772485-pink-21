@@ -1,0 +1,84 @@
+.photo-tweak {
+  box-sizing: border-box;
+  display: block;
+  height: 14px;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 107px;
+  left: 50%;
+  width: 75%;
+}
+
+
+.photo-tweak__scale {
+  background-color: $fontcolor;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 100%;
+}
+
+.photo-tweak__circle {
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $pink;
+  height: 10px;
+  left: 83%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 10px;
+
+  &:active {
+    background-color: $pink;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo-tweak {
+    display: block;
+    flex-grow: 1;
+    left: auto;
+    margin-right: 18px;
+    position: relative;
+    top: auto;
+    transform: none;
+    width: 74%;
+  }
+
+  .photo-tweak__circle {
+    &--crop {
+      left: 76%;
+    }
+
+    &--contrast {
+      left: 51%;
+    }
+
+    &--fill {
+      left: 16%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo-tweak {
+    margin-right: 30px;
+  }
+
+  .photo-tweak__circle {
+    &--crop {
+      left: 27%;
+    }
+
+    &--contrast {
+      left: 58%;
+    }
+
+    &--fill {
+      left: 88%;
+    }
+  }
+}

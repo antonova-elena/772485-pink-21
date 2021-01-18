@@ -1,3 +1,77 @@
 .check-field__label {
   @include font-set(400, 18px, 30px);
+  display: block;
+  margin-bottom: 52px;
+  position: relative;
+  padding-left: 57px;
+
+  &--last {
+    margin-bottom: 46px;
+  }
+}
+
+.check-field__input + label::before,
+.check-field__input:checked + label::before {
+  margin-bottom: 69px;
+  border: 2px solid $bordercolor;
+  background-color: $white;
+  border-radius: 1px;
+  content: "";
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: -6px;
+  width: 35px;
+
+  &:hover {
+    border-color: $fontcolor;
+  }
+
+  &:disabled {
+    border-color: $pink;
+  }
+}
+
+.check-field__input:checked + label::after {
+  background-image: url("../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  content: "";
+  cursor: pointer;
+  height: 16px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .check-field__label {
+    padding-left: 58px;
+    margin-bottom: 52px;
+
+    &--last {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .check-field__label {
+    padding-left: 57px;
+
+    &--last {
+      margin-bottom: 60px;
+    }
+  }
+
+  .check-field__input + label::before,
+  .check-field__input:checked + label::before {
+    left: 0;
+  }
+
+  .check-field__input:checked + label::after {
+    left: 7px;
+  }
 }

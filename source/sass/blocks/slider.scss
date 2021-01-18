@@ -1,0 +1,37 @@
+.slider__toggles {
+  align-items: center;
+  display: flex;
+  height: 12px;
+  justify-content: space-between;
+  width: 62px;
+}
+
+.slider__toggle {
+  background-color: $fontcolor;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 6px;
+  opacity: 0.3;
+  padding: 0;
+  width: 6px;
+
+  &--current {
+    background-color: $white;
+    border-width: 3px;
+    border-style: solid;
+    border-color: $fontcolor;
+    height: 12px;
+    opacity: 1;
+    width: 12px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

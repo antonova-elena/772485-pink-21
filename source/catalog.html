@@ -3,88 +3,193 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Приложение Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Приложение Пинк Фотографии</title>
+    <link rel="preload" type="font/woff2" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="nav">
-        <div class="nav__logo logo">
-          <a class="logo__link" href="index.html">
-            <img src="https://via.placeholder.com" width="74" height="23" alt="Логотип Пинк">
-          </a>
-        </div>
-        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="nav nav--nojs">
         <div class="nav__wrapper">
+          <div class="nav__logo logo">
+            <a class="logo__link" href="index.html">
+              <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
+                <use xlink:href="img/sprite/sprite.svg#desktop-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--tablet" width="145" height="40">
+                <use xlink:href="img/sprite/sprite.svg#tablet-white-logo"></use>
+              </svg>
+              <svg class="logo__svg-header logo__svg-header--mobile" width="74" height="23">
+                <use xlink:href="img/sprite/sprite.svg#mobile-white-logo"></use>
+              </svg>
+            </a>
+          </div>
+          <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Главная</a></li>
-            <li class="nav__item"><a>Фотографии</a></li>
+            <li class="nav__item nav__item--active"><a>Фотографии</a></li>
             <li class="nav__item"><a href="form.html">Конкурс</a></li>
-            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">Html Academy</a></li>
+            <li class="nav__item"><a href="https://up.htmlacademy.ru/adaptive/21">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
-      <h1 class="header__title">Фотографии пользователей</h1>
+      <div class="header__wrapper">
+        <h1 class="header__title">Фотографии<br> пользователей</h1>
+      </div>
     </header>
     <main>
       <section class="gallery">
+        <h2 class="visually-hidden">Галерея</h2>
         <p class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-        <ul class="gallery__list">
+        <ul class="gallery__list-first">
           <li class="gallery__item user-photo gallery__item--first">
+            <a class="user-photo__link user-photo__link--first" href="#"></a>
+            <div class="user-photo__inner user-photo__inner--first">
+              <p class="user-photo__author">Анна <time class="postdate user-photo__author-postdate" datetime="2020-11-13T07:05">(5 минут назад)</time></p>
+              <p class="user-photo__description user-photo__description--first">Прыгать или нет? Напишите в комментарии свой совет и смотрите&nbsp;прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="user-photo__footer user-photo__footer--first">
+                <button class="user-photo__button user-photo__button--first" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 215</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="gallery__list">
+          <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/320x137" width="320" height="137" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-1-desktop.webp 1x, ./img/photos/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-1-tablet.webp 1x, ./img/photos/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-1-mobile.webp 1x, ./img/photos/photo-1-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-1-desktop.jpg 1x, ./img/photos/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-1-tablet.jpg 1x, ./img/photos/photo-1-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-1-mobile.jpg" srcset="./img/photos/photo-1-mobile.jpg 1x, ./img/photos/photo-1-mobile@2x.jpg 2x" alt="Фото 1">
+              </picture>
             </a>
-            <p class="user-photo__author">Анна <time class="postdate" datetime="2020-11-13T07:05">(5 минут назад)</time></p>
-            <p class="user-photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе задавайте свои вопросы!</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 215</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Левон <time class="postdate user-photo__author-postdate" datetime="2020-11-13T02:00">(5 часов назад)</time></p>
+              <p class="user-photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 356</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-2-desktop.webp 1x, ./img/photos/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-2-tablet.webp 1x, ./img/photos/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-2-mobile.webp 1x, ./img/photos/photo-2-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-2-desktop.jpg 1x, ./img/photos/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-2-tablet.jpg 1x, ./img/photos/photo-2-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-2-mobile.jpg" srcset="./img/photos/photo-2-mobile.jpg 1x, ./img/photos/photo-2-mobile@2x.jpg 2x" alt="Фото 2">
+              </picture>
             </a>
-            <p class="user-photo__author">Левон <time class="postdate" datetime="2020-11-13T02:00">(5 часов назад)</time></p>
-            <p class="user-photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 356</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Антон <time class="postdate user-photo__author-postdate" datetime="2020-11-12T19:00">(12 часов назад)</time></p>
+              <p class="user-photo__description">Соседи будут рады!</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 666</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-3-desktop.webp 1x, ./img/photos/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-3-tablet.webp 1x, ./img/photos/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-3-mobile.webp 1x, ./img/photos/photo-3-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-3-desktop.jpg 1x, ./img/photos/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-3-tablet.jpg 1x, ./img/photos/photo-3-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-3-mobile.jpg" srcset="./img/photos/photo-3-mobile.jpg 1x, ./img/photos/photo-3-mobile@2x.jpg 2x" alt="Фото 3">
+              </picture>
             </a>
-            <p class="user-photo__author">Антон <time class="postdate" datetime="2020-11-12T19:00">(12 часов назад)</time></p>
-            <p class="user-photo__description">Соседи будут рады!</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 666</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Борис <time class="postdate user-photo__author-postdate" datetime="2020-11-12T11:00">(20 часов назад)</time></p>
+              <p class="user-photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 215</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-4-desktop.webp 1x, ./img/photos/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-4-tablet.webp 1x, ./img/photos/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-4-mobile.webp 1x, ./img/photos/photo-4-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-4-desktop.jpg 1x, ./img/photos/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-4-tablet.jpg 1x, ./img/photos/photo-4-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-4-mobile.jpg" srcset="./img/photos/photo-4-mobile.jpg 1x, ./img/photos/photo-4-mobile@2x.jpg 2x" alt="Фото 4">
+              </picture>
             </a>
-            <p class="user-photo__author">Борис <time class="postdate" datetime="2020-11-12T11:00">(20 часов назад)</time></p>
-            <p class="user-photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 215</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Сергей <time class="postdate user-photo__author-postdate" datetime="2020-11-12T06:00">(25 часов назад)</time></p>
+              <p class="user-photo__description">Самая кубанская в мире!</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 4</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-5-desktop.webp 1x, ./img/photos/photo-5-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-5-tablet.webp 1x, ./img/photos/photo-5-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-5-mobile.webp 1x, ./img/photos/photo-5-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-5-desktop.jpg 1x, ./img/photos/photo-5-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-5-tablet.jpg 1x, ./img/photos/photo-5-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-5-mobile.jpg" srcset="./img/photos/photo-5-mobile.jpg 1x, ./img/photos/photo-5-mobile@2x.jpg 2x" alt="Фото 5">
+              </picture>
             </a>
-            <p class="user-photo__author">Сергей <time class="postdate" datetime="2020-11-12T06:00">(25 часов назад)</time></p>
-            <p class="user-photo__description">Самая кубанская в мире!</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 4</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Максим <time class="postdate user-photo__author-postdate" datetime="2020-11-11T03:00">(40 часов назад)</time></p>
+              <p class="user-photo__description">Где снег-то?</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 150</span>
+              </div>
+            </div>
           </li>
           <li class="gallery__item user-photo">
             <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-6-desktop.webp 1x, ./img/photos/photo-6-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-6-tablet.webp 1x, ./img/photos/photo-6-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/photos/photo-6-mobile.webp 1x, ./img/photos/photo-6-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="./img/photos/photo-6-desktop.jpg 1x, ./img/photos/photo-6-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="./img/photos/photo-6-tablet.jpg 1x, ./img/photos/photo-6-tablet@2x.jpg 2x">
+                <img class="user-photo__picture" src="./img/photos/photo-6-mobile.jpg" srcset="./img/photos/photo-6-mobile.jpg 1x, ./img/photos/photo-6-mobile@2x.jpg 2x" alt="Фото 6">
+              </picture>
             </a>
-            <p class="user-photo__author">Максим <time class="postdate" datetime="2020-11-11T03:00">(40 часов назад)</time></p>
-            <p class="user-photo__description">Где снег-то?</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 150</span>
-          </li>
-          <li class="gallery__item user-photo">
-            <a class="user-photo__link" href="#">
-              <img class="user-photo__picture" src="https://via.placeholder.com/280x180" width="280" height="180" alt="">
-            </a>
-            <p class="user-photo__author">Надежда <time class="postdate" datetime="2020-11-10T22:00">(45 часов назад)</time></p>
-            <p class="user-photo__description">Всем GM и взаимные лайки!</p>
-            <button class="user-photo__button">Сердечко</button><span class="user-photo__likes">Нравится: 2560</span>
+            <div class="user-photo__inner">
+              <p class="user-photo__author">Надежда <time class="postdate user-photo__author-postdate" datetime="2020-11-10T22:00">(45 часов назад)</time></p>
+              <p class="user-photo__description">Всем GM и взаимные лайки!</p>
+              <div class="user-photo__footer">
+                <button class="user-photo__button" type="button">
+                  <svg class="user-photo__svg-heart" width="13" height="12"><use xlink:href="img/sprite/sprite.svg#heart"></use></svg>
+                </button>
+                <span class="user-photo__likes">Нравится: 2560</span>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -94,36 +199,60 @@
           <p class="upload__title">Затмите их всех!</p>
           <p class="upload__title">Выкладывайте все, что накопилось в телефоне!</p>
         </div>
-        <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="upload__label">
-            <input class="upload__input" type="file">
-            <img src="https://via.placeholder.com/280x374"  width="280" height="374" alt="">
+        <form class="upload-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="upload-form__label">
+            <input class="upload-form__input" type="file">
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="./img/photos/photo-7-desktop.webp 1x, ./img/photos/photo-7-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="./img/photos/photo-7-tablet.webp 1x, ./img/photos/photo-7-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/photos/photo-7-mobile.webp 1x, ./img/photos/photo-7-mobile@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="./img/photos/photo-7-desktop.jpg 1x, ./img/photos/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="./img/photos/photo-7-tablet.jpg 1x, ./img/photos/photo-7-tablet@2x.jpg 2x">
+              <img class="upload-form__picture" src="./img/photos/photo-7-mobile.jpg" srcset="./img/photos/photo-7-mobile.jpg 1x, ./img/photos/photo-7-mobile@2x.jpg 2x" alt="Загружаемое фото">
+            </picture>
           </label>
-          <div class="edit">
-            <div class="edit__filter">
-              <button class="edit__button edit__button--crop" type="button" title="Обрезать"><svg></svg></button>
-              <div class="edit__range range edit__range--active">
-                <input class="range__input" type="range" name="crop-points" id="crop-points" min="0" max="100" step="1" value="80">
-                <label class="range__label" for="crop-points"></label>
+          <div class="upload-form__wrapper">
+            <div class="upload-form__inner-top">
+              <div class="upload-form__inner-filter  upload-form__inner-filter--active">
+                <button class="upload-form__filter-button" type="button" title="Кадрировать">
+                  <svg class="upload-form__svg  upload-form__svg--crop" width="44" height="44" tabindex="0" aria-label="Кадрировать">
+                    <use xlink:href="img/sprite/sprite.svg#crop"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--crop"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="upload-form__inner-filter">
+                <button class="upload-form__filter-button" type="button" title="Изменить заливку">
+                  <svg class="upload-form__svg  upload-form__svg--fill" width="48" height="43" tabindex="0" aria-label="Изменить заливку">
+                    <use xlink:href="img/sprite/sprite.svg#fill"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--fill"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="upload-form__inner-filter">
+                <button class="upload-form__filter-button" type="button" title="Изменить контраст">
+                  <svg class="upload-form__svg  upload-form__svg--contrast" width="32" height="32" tabindex="0" aria-label="Изменить контраст">
+                    <use xlink:href="img/sprite/sprite.svg#contrast"></use>
+                  </svg>
+                </button>
+                <div class="photo-tweak" tabindex="0">
+                  <div class="photo-tweak__scale">
+                    <div class="photo-tweak__circle  photo-tweak__circle--contrast"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="edit__filter">
-              <button class="edit__button edit__button--fill" type="button" title="Изменить заливку"><svg></svg></button>
-              <div class="edit__range range">
-                <input class="range__input" type="range" name="fill-points" id="fill-points" min="0" max="100" step="1" value="20">
-                <label class="range__label" for="fill-points"></label>
-              </div>
-            </div>
-            <div class="edit__filter">
-              <button class="edit__button edit__button--contrast" type="button" title="Изменить контрастность"><svg></svg></button>
-              <div class="edit__range range">
-                <input class="range__input" type="range" name="contrast-points" id="contrast-points" min="0" max="100" step="1" value="50">
-                <label class="range__label" for="contrast-points"></label>
-              </div>
-            </div>
-            <div class="controls">
-              <button class="controls__button controls__button--post" type="submit">Запостить</button>
-              <button class="controls__button controls__button--cancel" type="reset">Отмена</button>
+            <div class="upload-form__inner-bottom">
+              <button class="upload-form__button  upload-form__button--post" type="submit">Запостить</button>
+              <button class="upload-form__button  upload-form__button--cancel" type="reset">Отмена</button>
             </div>
           </div>
         </form>
@@ -133,7 +262,12 @@
       <div class="footer__wrapper">
         <div class="footer__logo logo">
           <a class="logo__link" href="index.html">
-            <img class="logo-full" src="https://via.placeholder.com/" width="145" height="40" alt="Логотип Пинк">
+            <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
+              <use xlink:href="img/sprite/sprite.svg#desktop-blue-logo"></use>
+            </svg>
+            <svg class="logo__svg-footer logo__svg-footer--mobile" width="145" height="40">
+              <use xlink:href="img/sprite/sprite.svg#mobile-blue-logo"></use>
+            </svg>
           </a>
         </div>
         <ul class="social">
@@ -148,12 +282,12 @@
           </li>
         </ul>
         <div class="copyright">
-          <p class="copyright__title">Разработано
-            <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span class="visually-hidden">Ссылка на htmlacademy</span>
-            </a>
-          </p>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21">
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
