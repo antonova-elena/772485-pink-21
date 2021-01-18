@@ -29,7 +29,11 @@
 }
 
 .price__toggles {
-  top: 462px;
+  left: 50%;
+  position: absolute;
+  top: 425px;
+  transform: translateX(-50%);
+  z-index: 3;
 }
 
 .price__title {
