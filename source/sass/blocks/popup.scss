@@ -14,10 +14,8 @@
   z-index: 20;
 
   &--succes {
-    position: fixed;
     min-height: 380px;
     top: 50%;
-    display: block;
   }
 }
 
@@ -55,13 +53,13 @@
   color: $white;
   cursor: pointer;
   display: block;
+  margin: 0 auto;
   padding-top: 14px;
   padding-bottom: 15px;
   padding-left: 125px;
   padding-right: 124px;
   text-transform: uppercase;
   width: 276px;
-  margin: 0 auto;
 
   &--succes {
     padding-left: 56px;
@@ -184,7 +182,6 @@
       padding-left: 144px;
       padding-right: 147px;
       width: 456px;
-      margin: 0 auto;
     }
   }
 }

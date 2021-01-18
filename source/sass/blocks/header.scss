@@ -54,6 +54,8 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 2567px 934px;
+    display: flex;
+    justify-content: center;
     min-height: 394px;
 
     @media (min-resolution: 2dppx) {
@@ -67,5 +69,6 @@
     padding-bottom: 89px;
     padding-left: 94px;
     padding-right: 94px;
+    max-width: 940px;
   }
 }

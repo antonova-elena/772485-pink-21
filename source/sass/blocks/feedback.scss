@@ -77,22 +77,19 @@
   flex-direction: column;
 }
 
-.feedback__review textarea {
+.feedback__review__textarea {
   @include font-set(400, 18px, 30px);
   box-sizing: border-box;
   border: 2px solid $bordercolor;
   border-radius: 1px;
+  font-family: inherit;
   min-height: 202px;
-  padding-top: 20px;
-  padding-bottom: 28px;
-  padding-left: 21px;
-  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 21px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
 }
-
-.feedback__review textarea::placeholder {
-  @include font-set(400, 18px, 30px);
-}
-
 
 .feedback__wrapper-submit {
   padding-left: 20px;
@@ -292,11 +289,10 @@
 
   .feedback__review textarea {
     min-height: 194px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 22px;
-    padding-right: 22px;
-    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .feedback__wrapper-submit {
@@ -401,8 +397,8 @@
     min-height: 126px;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .feedback__text {

@@ -52,6 +52,15 @@
 
   .investigation__link {
     color: $pink;
+
+    &:hover {
+      color: $fontcolor;
+    }
+
+    &:active {
+      color: $fontcolor;
+      opacity: 0.3;
+    }
   }
 }
 
