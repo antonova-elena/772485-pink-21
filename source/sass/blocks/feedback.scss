@@ -77,7 +77,7 @@
   flex-direction: column;
 }
 
-.feedback__review__textarea {
+.feedback__review-textarea {
   @include font-set(400, 18px, 30px);
   box-sizing: border-box;
   border: 2px solid $bordercolor;
@@ -287,7 +287,7 @@
     }
   }
 
-  .feedback__review textarea {
+  .feedback__review-textarea {
     min-height: 194px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -393,7 +393,7 @@
     flex-wrap: wrap;
   }
 
-  .feedback__review textarea {
+  .feedback__review-textarea {
     min-height: 126px;
     padding-top: 12px;
     padding-bottom: 12px;
