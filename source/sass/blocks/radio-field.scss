@@ -23,14 +23,18 @@
   position: absolute;
   top: -6px;
   width: 37px;
+}
 
-  &:hover {
-    border-color: $fontcolor;
-  }
+.radio-field__input:hover + label::before,
+.radio-field__input:checked:hover + label::before,
+.radio-field__input:focus + label::before,
+.radio-field__input:checked:focus + label::before {
+  border-color: $fontcolor;
+}
 
-  &:disabled {
-    border-color: $pink;
-  }
+.radio-field__input:active + label::before,
+.radio-field__input:checked:active + label::before {
+  border-color: $pink;
 }
 
 .radio-field__input:checked + label::after {

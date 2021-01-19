@@ -24,14 +24,18 @@
   position: absolute;
   top: -6px;
   width: 35px;
+}
 
-  &:hover {
-    border-color: $fontcolor;
-  }
+.check-field__input:hover + label::before,
+.check-field__input:checked:hover + label::before,
+.check-field__input:focus + label::before,
+.check-field__input:checked:focus + label::before {
+  border-color: $fontcolor;
+}
 
-  &:disabled {
-    border-color: $pink;
-  }
+.check-field__input:active + label::before,
+.check-field__input:checked:active + label::before {
+  border-color: $pink;
 }
 
 .check-field__input:checked + label::after {
