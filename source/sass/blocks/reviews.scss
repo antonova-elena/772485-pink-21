@@ -15,29 +15,6 @@
   text-align: center;
 }
 
-.reviews-item {
-  margin: 0;
-}
-
-.reviews-item__author-name {
-  @include font-set(700, 18px, 30px);
-  color: $black;
-  display: block;
-  font-style: normal;
-  margin: 0;
-  padding-bottom: 13px;
-}
-
-.reviews-item__author-description {
-  display: none;
-  margin: 0;
-}
-
-.reviews-item__text {
-  @include font-set(400, 14px, 30px);
-  margin: 0;
-  margin-bottom: 31px;
-}
 
 .reviews__toggles {
   position: absolute;
@@ -49,30 +26,6 @@
   .reviews {
     padding-top: 45px;
     padding-bottom: 22px;
-  }
-
-  .reviews-item__author-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .reviews-item__text {
-    @include font-set(400, 18px, 30px);
-    margin-bottom: 35px;
-  }
-
-  .reviews-item__author-name {
-    @include font-set(700, 20px, 30px);
-    order: 2;
-    padding-bottom: 0;
-  }
-
-  .reviews-item__author-description {
-    @include font-set(400, 14px, 30px);
-    display: block;
-    margin: 0;
-    margin-bottom: 35px;
-    order: 3;
   }
 }
 
@@ -151,24 +104,5 @@
         right: 0;
       }
     }
-  }
-
-  .reviews-item {
-    margin: 0;
-  }
-
-  .reviews-item__author-name {
-    @include font-set(700, 24px, 30px);
-    margin-bottom: 2px;
-  }
-
-  .reviews-item__text {
-    padding-left: 104px;
-    padding-right: 104px;
-  }
-
-  .reviews-item__author-description {
-    @include font-set(400, 18px, 30px);
-    margin-bottom: 45px;
   }
 }
