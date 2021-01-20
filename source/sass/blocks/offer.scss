@@ -106,11 +106,11 @@
   .offer {
     background-image: url("../img/iphone/iphone-hand-tablet.png"),
       url("../img/bg/back-tablet.jpg");
-    background-position: right -20px bottom 0, center;
+    background-position: right -20px bottom 0, center top;
     background-repeat: no-repeat;
     background-size: 702px 545px, 1200px 729px;
     margin-top: -110px;
-    max-height: 729px;
+    // max-height: 729px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/iphone/iphone-hand-tablet@2x.png"),
@@ -184,10 +184,9 @@
 @media (min-width: $desktop-width) {
   .offer {
     background-image: url("../img/bg/back-desktop.jpg");
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: 2560px 853px;
-    max-height: 860px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg/back-desktop@2x.jpg");
