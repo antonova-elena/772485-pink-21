@@ -14,7 +14,7 @@
       <nav class="nav nav--nojs">
         <div class="nav__wrapper">
           <div class="nav__logo logo">
-            <a class="logo__link">
+            <a class="logo__link" aria-label="Логотип сайта Pink">
               <svg class="logo__svg-header logo__svg-header--desktop" width="147" height="40">
                 <use xlink:href="img/sprite/sprite.svg#desktop-white-logo"></use>
               </svg>
@@ -215,13 +215,16 @@
             <address class="contacts__description contacts__description--address">ул. Большая<br>Конюшенная, 19/8</address>
           </li>
         </ul>
-        <div class="map"></div>
+        <div class="map">
+          <h3 class="visually-hidden">Карта</h3>
+          <iframe class="map__block" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3208587!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1608214710322!5m2!1sru!2sru" width="320" height="280" allowfullscreen="" aria-hidden="false" tabindex="0" allowfullscreen title="Офис компании находится по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__logo logo">
-          <a class="logo__link" href="index.html">
+          <a class="logo__link" href="index.html" aria-label="Логотип сайта Pink">
             <svg class="logo__svg-footer logo__svg-footer--desktop" width="147" height="40">
               <use xlink:href="img/sprite/sprite.svg#desktop-blue-logo"></use>
             </svg>
@@ -242,8 +245,8 @@
           </li>
         </ul>
         <div class="copyright">
-          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21"><span>Разработано</span>
-            <svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite/sprite.svg#htmlacademy"></use></svg>
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/21" aria-label="Логотип HTML Academy">
+            <span>Разработано</span><svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
