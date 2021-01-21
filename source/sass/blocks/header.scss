@@ -19,8 +19,8 @@
   color: $white;
   text-align: center;
   margin: 0;
-  padding-top: 98px;
-  padding-bottom: 43px;
+  padding-top: 99px;
+  padding-bottom: 45px;
   padding-left: 26px;
   padding-right: 26px;
 }
@@ -49,23 +49,28 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header__wrapper {
+  .header {
     background-image: url("../img/bg/back-desktop.jpg");
-    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 2567px 934px;
-    display: flex;
-    justify-content: center;
-    min-height: 394px;
+    background-position: top 0 left 51%;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg/back-desktop@2x.jpg");
     }
   }
 
+  .header__wrapper {
+    background-image: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    min-height: 394px;
+  }
+
   .header__title {
     @include font-set(300, 50px, 68px);
-    padding-top: 176px;
+    padding-top: 169px;
     padding-bottom: 89px;
     padding-left: 94px;
     padding-right: 94px;

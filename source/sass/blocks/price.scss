@@ -33,6 +33,7 @@
   position: absolute;
   top: 425px;
   transform: translateX(-50%);
+  width: 56px;
   z-index: 3;
 }
 
@@ -58,14 +59,15 @@
     position: relative;
 
     &::before {
-      @include font-set(400, 14px, 30px);
-      background-color: $pink;
-      content: "хит";
-      left: -32px;
+      background-image: url("../img/icons/hit.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+      height: 74px;
+      left: -1px;
       position: absolute;
-      top: 14px;
-      transform: rotate(-45deg);
-      width: 120px;
+      top: 0;
+      width: 74px;
     }
   }
 }
@@ -165,14 +167,14 @@
     margin: 0 auto;
     position: static;
     transform: none;
-    width: 620px;
+    width: 616px;
   }
 
   .price__title {
     box-sizing: border-box;
-    padding-top: 12px;
-    padding-bottom: 7px;
-    padding-left: 29px;
+    padding-top: 14px;
+    padding-bottom: 9px;
+    padding-left: 28px;
     padding-right: 29px;
 
     &--transparent {
@@ -184,8 +186,10 @@
 
     &--hit {
       &::before {
-        left: -38px;
-        top: 10px;
+        height: 61px;
+        left: 0;
+        top: 2px;
+        width: 61px;
       }
     }
   }
@@ -197,18 +201,20 @@
   .price__item {
     padding-top: 9px;
     padding-bottom: 7px;
-    padding-left: 16px;
-    padding-right: 14px;
+    padding-left: 15px;
+    padding-right: 11px;
 
     &--feature-title {
       display: table-cell;
       text-transform: none;
+      padding-left: 14px;
+      padding-right: 11px;
     }
 
     &--yes {
       &::before {
         right: 50%;
-        top: 0;
+        top: 2px;
         transform: translate(50%, 67%) rotate(-45deg);
       }
     }
@@ -216,13 +222,13 @@
     &--no {
       &::before {
         left: 50%;
-        top: 20px;
+        top: 21px;
         transform: translate(-50%) rotate(-44deg);
       }
 
       &::after {
         left: 50%;
-        top: 20px;
+        top: 21px;
         transform: translate(-50%) rotate(45deg);
       }
     }
@@ -248,20 +254,22 @@
   }
 
   .price__title {
-    padding-top: 12px;
+    padding-top: 14px;
     padding-bottom: 22px;
 
     &--hit {
       &::before {
-        left: -34px;
-        top: 17px;
-        width: 123px;
+        height: 74px;
+        left: 0;
+        top: -2px;
+        width: 74px;
       }
     }
   }
 
   .price__title-top {
     font-size: 18px;
+    padding-bottom: 1px;
   }
 
   .price__title-bottom {
@@ -274,6 +282,7 @@
     height: 61px;
     padding-left: 21px;
     width: 25%;
+    padding-bottom: 14px;
 
     &--feature-title {
       font-size: 18px;
@@ -282,7 +291,7 @@
     &--yes {
       &::before {
         right: 50%;
-        top: 7px;
+        top: 6px;
         transform: translate(50%, 67%) rotate(-45deg);
       }
     }
@@ -290,7 +299,7 @@
     &--no {
       &::before {
         left: 50%;
-        top: 27px;
+        top: 26px;
         transform: translate(-50%) rotate(-44deg);
       }
 

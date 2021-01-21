@@ -5,7 +5,7 @@
 .feedback__slogan {
   @include font-set(400, 14px, 30px);
   margin: 0;
-  padding-top: 46px;
+  padding-top: 43px;
   padding-bottom: 26px;
   padding-left: 20px;
   padding-right: 20px;
@@ -348,12 +348,12 @@
     width: 100%;
 
     &--name {
-      max-width: 431px;
+      max-width: 433px;
       padding-top: 7px;
     }
 
     &--app {
-      max-width: 431px;
+      max-width: 435px;
       padding-bottom: 60px;
     }
 
