@@ -130,10 +130,10 @@
   padding-bottom: 16px;
   text-transform: uppercase;
   text-align: center;
+}
 
-  sup {
-    color: $pink;
-  }
+.feedback__symbol {
+  color: $pink;
 }
 
 .feedback__text-span {
