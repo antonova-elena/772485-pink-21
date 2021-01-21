@@ -4,17 +4,6 @@
   width: 100%;
   z-index: 1;
 
-  // &::before {
-  //   background-image: url("../img/icons/map-marker.svg");
-  //   background-repeat: no-repeat;
-  //   content: "";
-  //   height: 36px;
-  //   left: 44%;
-  //   top: 48%;
-  //   position: absolute;
-  //   width: 36px;
-  // }
-
   &::after {
     background-image: url("../img/bg/bg-triangle-white-map.svg");
     background-repeat: no-repeat;
@@ -51,13 +40,9 @@
     height: 374px;
 
     &::after {
+      background-size: 97% 100%;
       height: 68px;
     }
-
-    // &::before {
-    //   left: 47%;
-    //   top: 52%;
-    // }
   }
 
   .map__block {
@@ -77,13 +62,9 @@
     height: 502px;
 
     &::after {
+      background-size: 126% 100%;
       height: 105px;
-      // top: 0;
     }
-
-    // &::before {
-    //   left: 48%;
-    // }
   }
 
   .map__block {
